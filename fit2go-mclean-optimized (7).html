@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="McLean's premier in-home personal training since 2013. Expert trainers come to your home, office, or Nottoway Park. Free consultation. 100% satisfaction guarantee. Call (703) 854-9587.">
+<meta name="keywords" content="personal trainer McLean VA, in-home personal training McLean, mobile personal trainer Tysons, fitness trainer Great Falls, private personal training Northern Virginia">
+<title>In-Home Personal Training McLean VA | Fit2Go - Elite Since 2013</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fit2go-dark-green: #14880C;
+    --fit2go-light-green: #09D200;
+    --fit2go-white: #FFFFFF;
+    --fit2go-black: #000000;
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --bg-light-gray: #f8f9fa;
+    --accent-gold: #D4AF37;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-weight: 400;
+    background: var(--fit2go-white);
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--fit2go-black);
+}
+
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Trust Badge Bar */
+.trust-badge-bar {
+    background: var(--fit2go-dark-green);
+    color: var(--fit2go-white);
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 20px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 50px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-link {
+    color: var(--fit2go-black);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--fit2go-light-green);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 16px 36px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--fit2go-dark-green);
+    color: var(--fit2go-white);
+}
+
+.btn-primary:hover {
+    background: var(--fit2go-light-green);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(9, 210, 0, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--fit2go-dark-green);
+    border: 2px solid var(--fit2go-dark-green);
+}
+
+.btn-outline:hover {
+    background: var(--fit2go-dark-green);
+    color: var(--fit2go-white);
+}
+
+.btn-white {
+    background: var(--fit2go-white);
+    color: var(--fit2go-dark-green);
+    font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-4-1-scaled.jpg') center/cover no-repeat;
+    color: var(--fit2go-white);
+    padding: 80px 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: var(--fit2go-black);
+    padding: 8px 24px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    border-radius: 30px;
+}
+
+.hero h1 {
+    color: var(--fit2go-white);
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.375rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: var(--fit2go-white);
+}
+
+.hero-features {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 50px;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--fit2go-light-green);
+    font-family: var(--font-heading);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Value Props */
+.value-props {
+    background: var(--fit2go-white);
+    padding: 60px 0;
+    margin-top: -40px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 20px 20px 0 0;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.value-item {
+    padding: 30px 20px;
+}
+
+.value-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.value-item h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--fit2go-black);
+}
+
+.value-item p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Section Styles */
+section {
+    padding: 100px 0;
+}
+
+.section-gray {
+    background: var(--bg-light-gray);
+}
+
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.about-content h3 {
+    color: var(--fit2go-dark-green);
+    margin-bottom: 1.5rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Process Steps */
+.process-timeline {
+    max-width: 1000px;
+    margin: 60px auto 0;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    opacity: 1;
+}
+
+.step-number {
+    background: var(--fit2go-dark-green);
+    color: var(--fit2go-white);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    font-family: var(--font-heading);
+}
+
+.step-content {
+    margin-left: 40px;
+    flex: 1;
+}
+
+.step-duration {
+    color: var(--fit2go-dark-green);
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* Service Cards */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.service-card {
+    background: var(--fit2go-white);
+    padding: 50px 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+.service-card.featured {
+    background: var(--fit2go-dark-green);
+    color: var(--fit2go-white);
+}
+
+.service-card.featured h3,
+.service-card.featured p,
+.service-card.featured li {
+    color: var(--fit2go-white);
+}
+
+.service-card ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.service-card li {
+    padding: 10px 0;
+    padding-left: 28px;
+    position: relative;
+}
+
+.service-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--fit2go-light-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+    margin-top: 60px;
+}
+
+.team-member {
+    background: var(--fit2go-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.team-member img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.team-member-info {
+    padding: 40px;
+}
+
+.team-title {
+    color: var(--fit2go-dark-green);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.team-credentials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.credential {
+    background: var(--fit2go-dark-green);
+    color: var(--fit2go-white);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Testimonials */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.testimonial-card {
+    background: var(--bg-light-gray);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.testimonial-stars {
+    color: #FFD700;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--fit2go-dark-green);
+}
+
+.testimonial-location {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Pricing */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 60px auto 0;
+}
+
+.pricing-card {
+    background: var(--fit2go-white);
+    padding: 50px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.pricing-card.featured {
+    transform: scale(1.05);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--fit2go-dark-green);
+    margin: 20px 0;
+    font-family: var(--font-heading);
+}
+
+.price-note {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.pricing-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.pricing-features li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.pricing-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--fit2go-light-green);
+    font-weight: bold;
+}
+
+/* Special Offer */
+.special-offer {
+    background: var(--fit2go-dark-green);
+    color: var(--fit2go-white);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 60px auto 0;
+    max-width: 800px;
+}
+
+.special-offer h3 {
+    color: var(--fit2go-white);
+    margin-bottom: 1rem;
+}
+
+/* FAQ */
+.faq-container {
+    max-width: 800px;
+    margin: 60px auto 0;
+}
+
+.faq-item {
+    background: var(--bg-light-gray);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 25px 30px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: rgba(20, 136, 12, 0.05);
+}
+
+.faq-answer {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 20px 30px 30px;
+}
+
+.faq-toggle {
+    transition: transform 0.3s;
+    color: var(--fit2go-dark-green);
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, var(--fit2go-dark-green), var(--fit2go-light-green));
+    color: var(--fit2go-white);
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: var(--fit2go-white);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-section p {
+    color: var(--fit2go-white);
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.guarantee-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid var(--fit2go-white);
+    padding: 15px 30px;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Footer */
+.footer {
+    background: var(--fit2go-black);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 80px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-brand img {
+    height: 50px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-section h4 {
+    color: var(--fit2go-white);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 12px;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--fit2go-light-green);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.875rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    
+    .nav-menu { display: none; }
+    
+    .hero-stats,
+    .hero-features {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .about-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .process-step {
+        flex-direction: column;
+    }
+    
+    .step-content {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .pricing-card.featured {
+        transform: none;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Trust Badge Bar -->
+<div class="trust-badge-bar">
+    <span>📞 (703) 854-9587</span>
+    <span>✓ 100% Satisfaction Guarantee</span>
+    <span>🏆 Serving McLean Since 2013</span>
+    <span>📱 24/7 Trainer Support</span>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container nav-container">
+        <img src="https://www.fit2gopt.com/wp-content/uploads/2019/05/Contrast-logo.png" alt="Fit2Go Personal Training" class="nav-logo">
+        <ul class="nav-menu">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#process" class="nav-link">How It Works</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#team" class="nav-link">Your Team</a></li>
+            <li><a href="#testimonials" class="nav-link">Results</a></li>
+            <li><a href="#pricing" class="nav-link">Investment</a></li>
+            <li><a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Apply Now</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-badge">McLean's Premier Training Service • Est. 2013</span>
+            <h1>Elite In-Home Personal Training for Northern Virginia's Leaders</h1>
+            <p class="hero-subtitle">
+                Skip Beltway traffic and crowded gyms. Our expert trainers bring a private fitness experience 
+                to your McLean home, Tysons office, or the scenic trails of Nottoway Park—delivering results 
+                that transform your health, energy, and confidence.
+            </p>
+            
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <span>✓ One Dedicated Coach</span>
+                </div>
+                <div class="hero-feature">
+                    <span>✓ Director Oversight</span>
+                </div>
+                <div class="hero-feature">
+                    <span>✓ Results Guaranteed</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta">
+                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary" style="font-size: 1.1rem; padding: 18px 40px;">Apply for Free Assessment</a>
+                <a href="#process" class="btn btn-white">See How It Works</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">Client Success Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Lives Transformed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5.0</div>
+                    <div class="stat-label">Google Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">Response Time</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Value Props -->
+<section class="value-props">
+    <div class="container">
+        <div class="value-grid">
+            <div class="value-item">
+                <div class="value-icon">🏠</div>
+                <h4>We Come to You</h4>
+                <p>Home, office, or Nottoway Park — no gym commute needed</p>
+            </div>
+            <div class="value-item">
+                <div class="value-icon">👨‍🏫</div>
+                <h4>Expert Trainers</h4>
+                <p>NASM, ACE & ACSM certified professionals with 5+ years experience</p>
+            </div>
+            <div class="value-item">
+                <div class="value-icon">📊</div>
+                <h4>Proven System</h4>
+                <p>Custom programs + nutrition coaching + app tracking = real results</p>
+            </div>
+            <div class="value-item">
+                <div class="value-icon">📈</div>
+                <h4>Track Progress</h4>
+                <p>Advanced body composition analysis & monthly reassessments</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section-gray">
+    <div class="container">
+        <h2>Why McLean Professionals Choose Fit2Go</h2>
+        <div class="about-grid">
+            <div class="about-content">
+                <h3>The Fit2Go Difference: Where Excellence Meets Convenience</h3>
+                <p>
+                    Since 2013, we've been Northern Virginia's most trusted in-home training service. 
+                    Unlike franchise operations that rotate trainers weekly, Fit2Go assigns you one 
+                    dedicated coach who designs your program, leads every session, and guarantees your results.
+                </p>
+                <p>
+                    <strong>Your success is our only metric.</strong> While competitors evaluate trainers on sales quotas, 
+                    we measure performance exclusively on client outcomes. Your trainer meets weekly with our 
+                    Division Director to analyze your progress and optimize your program.
+                </p>
+                <p>
+                    Whether you prefer morning sessions at your Langley home, lunch workouts at your Tysons 
+                    office, or evening training at Nottoway Park's scenic trails, we bring everything you 
+                    need for a world-class fitness experience.
+                </p>
+                <a href="#process" class="btn btn-outline" style="margin-top: 20px;">Discover Our Process</a>
+            </div>
+            <div class="about-image">
+                <img src="https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-3-scaled.jpg" 
+                     alt="Fit2Go trainer coaching at Nottoway Park in McLean">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section id="process">
+    <div class="container">
+        <h2>Your Journey to Peak Performance in 4 Simple Steps</h2>
+        <p style="text-align: center; font-size: 1.25rem; margin-bottom: 60px;">
+            From application to transformation, every detail is optimized for busy professionals 
+            who value their time and demand excellence.
+        </p>
+        
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Submit Your Application</h3>
+                    <div class="step-duration">2 Minutes Online</div>
+                    <p>
+                        Complete our brief online form and you'll be immediately redirected to schedule 
+                        a 15-30 minute vetting call with James, your McLean Division Director.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Director Vetting Call</h3>
+                    <div class="step-duration">15-30 Minute Phone Consultation</div>
+                    <p>
+                        James personally reviews your goals, injuries, schedule, and location to ensure 
+                        mutual fit. We'll confirm pricing aligns with your budget before proceeding—this 
+                        ensures we only meet if we can deliver the results you expect.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Free Comprehensive Assessment</h3>
+                    <div class="step-duration">60 Minutes at Your Location</div>
+                    <p>
+                        The cornerstone of your transformation. James conducts advanced body composition 
+                        testing, movement screening, and performance benchmarks. You'll receive your 
+                        custom program instantly via Trainerize app. <strong>99% of qualified prospects 
+                        become clients at this stage.</strong>
+                    </p>
+                    <a href="#assessment" class="btn btn-outline" style="margin-top: 15px;">See What's Included</a>
+                </div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Begin Your Transformation</h3>
+                    <div class="step-duration">First Session Within 7 Days</div>
+                    <p>
+                        Your dedicated coach arrives with all equipment for your first 45-minute session. 
+                        This same trainer will guide every workout, track every metric, and ensure your 
+                        success with weekly director oversight. Welcome to the Fit2Go family.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Assessment Section -->
+<section id="assessment" class="section-gray">
+    <div class="container">
+        <h2>Your Complimentary Comprehensive Assessment</h2>
+        <p style="text-align: center; font-size: 1.25rem; color: var(--fit2go-dark-green); font-weight: 600; margin-bottom: 60px;">
+            A $300 value, absolutely free • No obligation to continue
+        </p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🔬 Body Composition Analysis</h3>
+                <ul>
+                    <li>Bio-electrical impedance testing</li>
+                    <li>Body fat percentage & lean muscle mass</li>
+                    <li>Visceral fat & metabolic age</li>
+                    <li>Hydration levels & bone density</li>
+                    <li>Circumference measurements via MyoTape</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>🏃 Performance Testing</h3>
+                <ul>
+                    <li>Full-body mobility screening</li>
+                    <li>Functional movement assessment</li>
+                    <li>Cardiovascular capacity testing</li>
+                    <li>Strength benchmarks (push/pull/core)</li>
+                    <li>Balance & coordination evaluation</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>📱 Instant Deliverables</h3>
+                <ul>
+                    <li>Complete assessment report in app</li>
+                    <li>Custom calorie & macro targets</li>
+                    <li>7-day personalized meal plan</li>
+                    <li>Pre-loaded mobility & workout routines</li>
+                    <li>24/7 trainer messaging access</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Reserve Your Free Assessment</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <div class="container">
+        <h2>Training Programs Tailored to Your Lifestyle</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>1-on-1 Personal Training</h3>
+                <p>The gold standard in personalized fitness. Perfect for executives, busy parents, and anyone serious about transformation.</p>
+                <ul>
+                    <li>One dedicated coach for entire program</li>
+                    <li>Weekly director oversight</li>
+                    <li>Flexible scheduling 6am-8pm</li>
+                    <li>All equipment provided</li>
+                    <li>Nutrition coaching included</li>
+                </ul>
+            </div>
+            
+            <div class="service-card featured">
+                <h3>Semi-Private Training (2-4)</h3>
+                <p>Train with your spouse, friends, or colleagues. Get motivated together while saving 20% per person.</p>
+                <ul>
+                    <li>Individual programs within group</li>
+                    <li>Built-in accountability partners</li>
+                    <li>Fun partner exercises</li>
+                    <li>Perfect for couples or families</li>
+                    <li>Same premium service, better value</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>Corporate Wellness</h3>
+                <p>Boost productivity and reduce healthcare costs with on-site training for your Tysons or McLean office.</p>
+                <ul>
+                    <li>Lunch-hour group classes</li>
+                    <li>Executive 1-on-1 sessions</li>
+                    <li>Quarterly health screenings</li>
+                    <li>Wellness workshops & seminars</li>
+                    <li>Employee fitness challenges</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Specialized Programs -->
+        <h3 style="text-align: center; margin-top: 80px; margin-bottom: 40px;">Specialized Programs for Every Stage of Life</h3>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🤰 Pre & Post-Natal Training</h3>
+                <p>Safe, effective exercises for expecting and new mothers. Core recovery, diastasis recti rehabilitation, and stroller workouts at Nottoway Park.</p>
+            </div>
+            <div class="service-card">
+                <h3>👴 Senior Fitness (55+)</h3>
+                <p>Maintain independence with balance training, fall prevention, bone density exercises, and functional strength for daily activities.</p>
+            </div>
+            <div class="service-card">
+                <h3>⚡ Youth Athletic Development</h3>
+                <p>Build proper movement patterns, injury prevention, and sport-specific training for young athletes (ages 12-18).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="section-gray">
+    <div class="container">
+        <h2>Meet Your McLean Training Team</h2>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-2-scaled.jpg" 
+                     alt="James Thompson, Fit2Go McLean Director">
+                <div class="team-member-info">
+                    <h3>James Thompson</h3>
+                    <p class="team-title">McLean Division Director & Lead Trainer</p>
+                    <p>
+                        James personally conducts every initial assessment and oversees all McLean programs. 
+                        A former Division I athlete with over 8 years of experience and specializations in 
+                        corrective exercise and post-rehabilitation training, he ensures each client receives 
+                        truly personalized programming.
+                    </p>
+                    <p>
+                        "I meet weekly with every trainer to review client data and optimize programs. 
+                        Your success isn't just your trainer's responsibility—it's mine too."
+                    </p>
+                    <div class="team-credentials">
+                        <span class="credential">NASM-CPT</span>
+                        <span class="credential">CES</span>
+                        <span class="credential">PES</span>
+                        <span class="credential">FNS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="team-member">
+                <img src="https://www.fit2gopt.com/wp-content/uploads/2019/05/Dani-Singer-Baltimore-Personal-Trainer.jpg" 
+                     alt="Dani Singer, Fit2Go Founder & CEO">
+                <div class="team-member-info">
+                    <h3>Dani Singer</h3>
+                    <p class="team-title">Founder & CEO</p>
+                    <p>
+                        Since founding Fit2Go in 2013, Dani has built a team of elite trainers across the 
+                        DMV area. A nationally recognized fitness expert featured in Reader's Digest, 
+                        Muscle & Fitness, and SHAPE Magazine, Dani ensures every Fit2Go trainer meets 
+                        the highest standards of excellence.
+                    </p>
+                    <p>
+                        With a 99% client success rate and the industry's only 100% satisfaction guarantee, 
+                        Dani has redefined what in-home personal training can be.
+                    </p>
+                    <div class="team-credentials">
+                        <span class="credential">NSCA-CSCS</span>
+                        <span class="credential">ACSM-CPT</span>
+                        <span class="credential">Published Author</span>
+                        <span class="credential">Industry Expert</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;">
+            <p style="font-weight: 600;">All Fit2Go trainers are background checked, insured, and CPR/AED certified</p>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials">
+    <div class="container">
+        <h2>Real Results from Your McLean Neighbors</h2>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "After 6 months with Fit2Go, I've lost 32 pounds and my back pain is completely gone. 
+                    James modified every exercise around my herniated disc, and now I'm stronger than I 
+                    was in my 30s. The convenience of training at home has been life-changing."
+                </p>
+                <div class="testimonial-author">Michael Richardson</div>
+                <div class="testimonial-location">Managing Partner, Tysons Law Firm</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "The 6am sessions in my home office fit perfectly into my schedule. No commute, no 
+                    waiting for equipment. My trainer's expertise rivals any I've encountered at high-end 
+                    facilities, but with complete privacy and personalization."
+                </p>
+                <div class="testimonial-author">Jennifer Chen</div>
+                <div class="testimonial-location">Tech Executive, McLean</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "Post-baby #3, I thought I'd never feel strong again. The outdoor sessions at Nottoway 
+                    Park gave me fresh air and sanity. 8 months later, I ran my first 10K and feel better 
+                    than before kids!"
+                </p>
+                <div class="testimonial-author">Dr. Sarah Matthews</div>
+                <div class="testimonial-location">Pediatrician, Great Falls</div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px;">
+            <p style="font-weight: 600; margin-bottom: 20px;">
+                Join 500+ McLean residents who've transformed their health with Fit2Go
+            </p>
+            <a href="https://www.google.com/search?q=fit2go+personal+training+reviews" target="_blank" class="btn btn-outline">
+                Read More Google Reviews
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="section-gray">
+    <div class="container">
+        <h2>Transparent Investment in Your Health</h2>
+        <p style="text-align: center; margin-bottom: 50px;">
+            Pay as you go • No contracts • Cancel anytime
+        </p>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>1-on-1 Training</h3>
+                <div class="price">$119-149</div>
+                <p class="price-note">per 45-minute session</p>
+                <ul class="pricing-features">
+                    <li>Dedicated coach for entire program</li>
+                    <li>Weekly director oversight</li>
+                    <li>Custom program design</li>
+                    <li>All equipment provided</li>
+                    <li>Nutrition coaching included</li>
+                    <li>Trainerize app with 24h support</li>
+                    <li>Monthly reassessments</li>
+                </ul>
+                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Get Started</a>
+            </div>
+            
+            <div class="pricing-card featured">
+                <h3>Semi-Private (2-4)</h3>
+                <div class="price">$89-109</div>
+                <p class="price-note">per person, per session</p>
+                <ul class="pricing-features">
+                    <li>Share cost with friends/family</li>
+                    <li>Individual programs within group</li>
+                    <li>Same dedicated coach model</li>
+                    <li>Fun partner exercises</li>
+                    <li>All premium features included</li>
+                    <li>20% savings per person</li>
+                    <li>Perfect for couples</li>
+                </ul>
+                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Most Popular</a>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Virtual Training</h3>
+                <div class="price">$79-99</div>
+                <p class="price-note">per live video session</p>
+                <ul class="pricing-features">
+                    <li>Live 1-on-1 video coaching</li>
+                    <li>Perfect for travelers</li>
+                    <li>Form checks via video</li>
+                    <li>Equipment recommendations</li>
+                    <li>Same app features</li>
+                    <li>Most affordable option</li>
+                    <li>Train from anywhere</li>
+                </ul>
+                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="special-offer">
+            <h3>🎁 Limited Time: New Client Special</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 25px;">
+                Get your first month at <strong>$99/session</strong> for any package<br>
+                <span style="font-size: 1rem;">Save up to $50 per session!</span>
+            </p>
+            <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-white">Claim Special Offer</a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    How is Fit2Go different from other in-home training services?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Unlike franchises like GymGuyz that rotate trainers, Fit2Go has been locally owned 
+                        since 2013. You get one dedicated coach who designs your program, leads every session, 
+                        and conducts all reassessments. Your trainer meets weekly with our Director to review 
+                        your progress. We're the only service with a 100% satisfaction guarantee and 24-hour 
+                        response commitment.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What's included in the free assessment?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Your 60-minute assessment includes bio-electrical impedance body composition analysis, 
+                        full mobility screening, cardio and strength testing, personalized calorie/macro targets, 
+                        a 7-day custom meal plan, and immediate access to the Fit2Go Optimize app with pre-loaded 
+                        workouts. It's a $300 value, completely free with no obligation.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What areas of McLean do you serve?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        We serve all of McLean including Langley, West McLean, downtown McLean, and surrounding 
+                        areas like Tysons Corner, Great Falls, Vienna, and Arlington. We also offer sessions at 
+                        Nottoway Park, Clemyjontri Park, and McLean Central Park.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What if I don't have equipment or space?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        No problem! Our trainers bring everything needed including dumbbells, resistance bands, 
+                        TRX systems, agility equipment, and exercise mats. We only need about 6x6 feet of space — 
+                        a living room, bedroom, patio, or garage works perfectly. Many clients also train in 
+                        their building's gym or outdoors.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How quickly will I see results?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Most clients report feeling stronger and more energetic within 2 weeks. Visible changes 
+                        typically occur within 4-6 weeks with consistent training and nutrition adherence. We 
+                        guarantee measurable progress within 30 days or your money back. Your monthly reassessments 
+                        track exact changes in muscle mass, body fat, and performance metrics.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I train with my spouse or friends?
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Absolutely! Our semi-private training (2-4 people) is perfect for couples, friends, or 
+                        neighbors who want to train together. You'll each get individualized programs based on 
+                        your fitness levels and goals, while enjoying the motivation of working out together. 
+                        Plus, you'll save 20% compared to 1-on-1 training.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="guarantee-badge">
+            🛡️ 100% SATISFACTION GUARANTEE
+        </div>
+        <h2>Ready to Transform Your Health Without Leaving McLean?</h2>
+        <p>
+            Join 500+ Northern Virginia professionals who've made fitness fit their lifestyle. 
+            Limited trainer availability ensures personalized attention for every client.
+        </p>
+        <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-white" style="font-size: 1.1rem; padding: 20px 50px;">
+            Apply for Your Free Assessment
+        </a>
+        <p style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.9;">
+            Applications reviewed within 24 hours • Currently booking assessments for late July
+        </p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" style="padding: 80px 0;">
+    <div class="container">
+        <h2>Ready to Get Started?</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 900px; margin: 50px auto 0;">
+            <div style="text-align: center;">
+                <h3 style="color: var(--fit2go-dark-green); margin-bottom: 1rem;">Call or Text</h3>
+                <p style="font-size: 1.5rem; font-weight: 700; margin: 10px 0;">
+                    <a href="tel:+17038549587" style="color: var(--fit2go-black);">(703) 854-9587</a>
+                </p>
+                <p>Response within 2 hours during business hours</p>
+            </div>
+            <div style="text-align: center;">
+                <h3 style="color: var(--fit2go-dark-green); margin-bottom: 1rem;">Email Us</h3>
+                <p style="font-size: 1.2rem; margin: 10px 0;">
+                    <a href="mailto:info@fit2gopt.com" style="color: var(--fit2go-black);">info@fit2gopt.com</a>
+                </p>
+                <p>Detailed questions? We'll respond within 24 hours</p>
+            </div>
+            <div style="text-align: center;">
+                <h3 style="color: var(--fit2go-dark-green); margin-bottom: 1rem;">Book Online</h3>
+                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary" style="margin: 10px 0;">
+                    Schedule Free Assessment
+                </a>
+                <p>Choose a time that works for you</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="https://www.fit2gopt.com/wp-content/uploads/2019/05/Contrast-logo.png" alt="Fit2Go Logo">
+                <p>McLean's premier in-home personal training service since 2013.</p>
+                <p class="footer-contact">
+                    <strong>Direct:</strong> <a href="tel:+17038549587">(703) 854-9587</a><br>
+                    <strong>Email:</strong> <a href="mailto:info@fit2gopt.com">info@fit2gopt.com</a>
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="https://www.fit2gopt.com">Main Website</a></li>
+                    <li><a href="https://www.fit2gopt.com/about-us">About Fit2Go</a></li>
+                    <li><a href="https://www.fit2gopt.com/fit2go-approach">Our Approach</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Service Areas</h4>
+                <ul>
+                    <li>McLean (22101, 22102)</li>
+                    <li>Tysons Corner</li>
+                    <li>Great Falls</li>
+                    <li>Vienna</li>
+                    <li>Arlington</li>
+                    <li>Langley</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Popular Locations</h4>
+                <ul>
+                    <li>Nottoway Park</li>
+                    <li>McLean Central Park</li>
+                    <li>Clemyjontri Park</li>
+                    <li>Home Visits</li>
+                    <li>Office Gyms</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Fit2Go Personal Training, LLC. All rights reserved. | Licensed & Insured</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+// FAQ Toggle
+document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        item.parentElement.classList.toggle('active');
+    });
+});
+
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offset = 100;
+            const targetPosition = target.offsetTop - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>
