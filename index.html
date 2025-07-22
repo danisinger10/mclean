@@ -84,19 +84,6 @@ p {
     padding: 0 20px;
 }
 
-/* Trust Badge Bar */
-.trust-badge-bar {
-    background: var(--fit2go-dark-green);
-    color: var(--fit2go-white);
-    text-align: center;
-    padding: 12px 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
 /* Navigation */
 .navbar {
@@ -137,6 +124,14 @@ p {
 
 .nav-link:hover {
     color: var(--fit2go-light-green);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 /* Buttons */
@@ -427,7 +422,7 @@ section {
 /* Service Cards */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 60px;
 }
@@ -480,7 +475,7 @@ section {
 /* Team Section */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 50px;
     margin-top: 60px;
 }
@@ -527,7 +522,7 @@ section {
 /* Testimonials */
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     margin-top: 60px;
 }
@@ -565,7 +560,7 @@ section {
 /* Pricing */
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     max-width: 1100px;
     margin: 0 auto;
@@ -797,40 +792,44 @@ section {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
     h3 { font-size: 1.5rem; }
-    
-    .nav-menu { display: none; }
-    
+
+    .nav-container { position: relative; }
+    .nav-toggle { display: block; }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: var(--fit2go-white);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        padding: 20px;
+        border-radius: 8px;
+        gap: 15px;
+    }
+    .nav-menu.open { display: flex; }
+
     .hero h1 { font-size: 2.2rem; }
     .hero-subtitle { font-size: 1.2rem; }
-    
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
+
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
     .about-grid,
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .process-step {
-        flex-direction: column;
-    }
-    
-    .step-content {
-        margin-left: 0;
-        margin-top: 20px;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .pricing-card.featured {
-        transform: none;
-    }
+    .team-grid { grid-template-columns: 1fr; gap: 40px; }
+
+    .process-step { flex-direction: column; }
+    .step-content { margin-left: 0; margin-top: 20px; }
+
+    .footer-content { grid-template-columns: 1fr; gap: 40px; }
+
+    .pricing-card.featured { transform: none; }
+}
+
+@media (min-width: 1200px) {
+    h1 { font-size: 4rem; }
+    h2 { font-size: 3rem; }
+    h3 { font-size: 2rem; }
+    .hero h1 { font-size: 4rem; }
 }
 
 /* Popup Form Modal */
@@ -911,18 +910,11 @@ section {
 </style>
 </head>
 <body>
-<!-- Trust Badge Bar -->
-<div class="trust-badge-bar">
-    <span>📞 (703) 854-9587</span>
-    <span>✓ 100% Satisfaction Guarantee</span>
-    <span>🏆 Serving McLean Since 2013</span>
-    <span>📱 24/7 Trainer Support</span>
-</div>
-
 <!-- Navigation -->
 <nav class="navbar">
     <div class="container nav-container">
         <img src="https://www.fit2gopt.com/wp-content/uploads/2019/05/Contrast-logo.png" alt="Fit2Go Personal Training" class="nav-logo">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
         <ul class="nav-menu">
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#process" class="nav-link">How It Works</a></li>
@@ -1519,7 +1511,7 @@ section {
 <section id="contact" style="padding: 80px 0;">
     <div class="container">
         <h2>Ready to Get Started?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 900px; margin: 50px auto 0;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; max-width: 900px; margin: 50px auto 0;">
             <div style="text-align: center;">
                 <h3 style="color: var(--fit2go-dark-green); margin-bottom: 1rem;">Call or Text</h3>
                 <p style="font-size: 1.5rem; font-weight: 700; margin: 10px 0;">
@@ -1647,6 +1639,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.querySelector(".nav-menu");
+navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
 });
 
 // Popup Form functionality
