@@ -1701,15 +1701,23 @@ form.addEventListener('submit', e => {
     modal.classList.remove('active');
     modal.setAttribute('aria-hidden', 'true');
 
-    const mailto =
-        `mailto:dsinger@fit2gopt.com?subject=Fit2Go%20Consultation%20Request&body=` +
-        `First%20Name:%20${encodeURIComponent(firstName)}%0A` +
-        `Last%20Name:%20${encodeURIComponent(lastName)}%0A` +
-        `Email:%20${encodeURIComponent(email)}%0A` +
-        `Phone:%20${encodeURIComponent(phone)}%0A` +
-        `Zip:%20${encodeURIComponent(zip)}%0A` +
-        `Goals:%20${encodeURIComponent(goals)}`;
-    window.location.href = mailto;
+    // Send form data to Google Apps Script to trigger the email
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwVbEZ91H5pIJTkWo5cvBbCo4Zfzk-hgOG_lDcg3RXB_fLipSR5rI__-DeBXqzwCHlL/exec';
+    fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+            firstName,
+            lastName,
+            email,
+            phone,
+            zip,
+            goals
+        })
+    });
 
     const redirectUrl =
         `https://fit2go.youcanbook.me/?service=Fit2Go+Consultation+(Phone)` +
