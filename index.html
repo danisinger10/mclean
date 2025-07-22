@@ -981,7 +981,7 @@ section {
             </p>
             
             <div class="hero-cta">
-                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary btn-large">Apply for Free Assessment</a>
+                <a href="#" class="btn btn-primary btn-large open-apply">Apply for Free Assessment</a>
                 <p class="cta-subtext">100% Satisfaction Guaranteed</p>
             </div>
         </div>
@@ -1185,7 +1185,7 @@ section {
         </div>
         
         <div style="text-align: center; margin-top: 60px;">
-            <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Reserve Your Free Assessment</a>
+            <a href="#" class="btn btn-primary open-apply">Reserve Your Free Assessment</a>
         </div>
     </div>
 </section>
@@ -1368,7 +1368,7 @@ section {
                 Get your first month at a discounted rate!<br>
                 <span style="font-size: 1rem;">Save up to $50 per session! Offer ends Aug 31st.</span>
             </p>
-            <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-white">Claim Special Offer</a>
+            <a href="#" class="btn btn-white open-apply">Claim Special Offer</a>
         </div>
         
         <div class="pricing-grid">
@@ -1387,7 +1387,7 @@ section {
                     <li>Fit2Go app with 24h support</li>
                     <li>Monthly reassessments</li>
                 </ul>
-                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-primary open-apply">Get Started</a>
             </div>
             
             <div class="pricing-card featured">
@@ -1405,7 +1405,7 @@ section {
                     <li>20% savings per person</li>
                     <li>Perfect for couples</li>
                 </ul>
-                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-primary open-apply">Get Started</a>
             </div>
             
             <div class="pricing-card">
@@ -1423,7 +1423,7 @@ section {
                     <li>Most affordable option</li>
                     <li>Train from anywhere</li>
                 </ul>
-                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-primary open-apply">Get Started</a>
             </div>
         </div>
     </div>
@@ -1539,7 +1539,7 @@ section {
             Join 500+ Northern Virginia professionals who've made fitness fit their lifestyle. 
             Limited trainer availability ensures personalized attention for every client.
         </p>
-        <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-white" style="font-size: 1.1rem; padding: 20px 50px;">
+        <a href="#" class="btn btn-white open-apply" style="font-size: 1.1rem; padding: 20px 50px;">
             Apply for Your Free Assessment
         </a>
         <p style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.9;">
@@ -1569,7 +1569,7 @@ section {
             </div>
             <div style="text-align: center;">
                 <h3 style="color: var(--fit2go-dark-green); margin-bottom: 1rem;">Book Online</h3>
-                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary" style="margin: 10px 0;">
+                <a href="#" class="btn btn-primary open-apply" style="margin: 10px 0;">
                     Schedule Free Assessment
                 </a>
                 <p>Choose a time that works for you</p>
@@ -1700,29 +1700,33 @@ navMenu.querySelectorAll('a').forEach(link => {
 });
 
 // Popup Form functionality
-const applyBtn = document.getElementById('applyNowBtn');
+const applyLinks = document.querySelectorAll('#applyNowBtn, .open-apply');
 const modal = document.getElementById('apply-modal');
 const modalClose = document.querySelector('#apply-modal .modal-close');
 const firstInput = document.getElementById('firstName');
+let lastTrigger = null;
 
-applyBtn.addEventListener('click', e => {
-    e.preventDefault();
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
-    firstInput.focus();
+applyLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        lastTrigger = link;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        firstInput.focus();
+    });
 });
 
 modalClose.addEventListener('click', () => {
     modal.classList.remove('active');
     modal.setAttribute('aria-hidden', 'true');
-    applyBtn.focus();
+    if (lastTrigger) lastTrigger.focus();
 });
 
 modal.addEventListener('click', e => {
     if (e.target === modal) {
         modal.classList.remove('active');
         modal.setAttribute('aria-hidden', 'true');
-        applyBtn.focus();
+        if (lastTrigger) lastTrigger.focus();
     }
 });
 
@@ -1752,7 +1756,7 @@ form.addEventListener('submit', e => {
     modal.setAttribute('aria-hidden', 'true');
 
     // Send form data to Google Apps Script to trigger the email
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxDSGTcvSKBdYjhLNDQu9951v3inrFC45lqT9axFbVw9J5cdtsrGJhOo89VmwVPVNa-/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwVbEZ91H5pIJTkWo5cvBbCo4Zfzk-hgOG_lDcg3RXB_fLipSR5rI__-DeBXqzwCHlL/exec';
     fetch(scriptURL, {
         method: 'POST',
         mode: 'no-cors',
