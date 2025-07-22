@@ -10,7 +10,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 /* CSS Reset and Base Styles */
@@ -918,6 +918,17 @@ section {
     border: 0;
 }
 
+#apply-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+#apply-form .form-field {
+    display: flex;
+    flex-direction: column;
+}
+
 #apply-form input,
 #apply-form textarea {
     width: 100%;
@@ -1636,23 +1647,39 @@ section {
 <div id="apply-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="apply-title" aria-hidden="true" tabindex="-1">
     <div class="modal-content">
         <button type="button" class="modal-close" aria-label="Close">&times;</button>
-        <h2 id="apply-title">Apply Now</h2>
+        <h2 id="apply-title">Apply for Your Free Assessment</h2>
         <form id="apply-form">
             <div class="input-grid">
-                <label class="visually-hidden" for="firstName">First Name</label>
-                <input id="firstName" type="text" name="firstName" placeholder="First Name" pattern="[A-Za-z\s'-]+" autocomplete="given-name" required>
-                <label class="visually-hidden" for="lastName">Last Name</label>
-                <input id="lastName" type="text" name="lastName" placeholder="Last Name" pattern="[A-Za-z\s'-]+" autocomplete="family-name" required>
-                <label class="visually-hidden" for="email">Email</label>
-                <input id="email" type="email" name="email" placeholder="Email" autocomplete="email" required>
-                <label class="visually-hidden" for="phone">Phone</label>
-                <input id="phone" type="tel" name="phone" placeholder="Phone" pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
-                <label class="visually-hidden" for="zip">Zip</label>
-                <input id="zip" type="text" name="zip" placeholder="Zip" pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
+                <div class="form-field">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" name="firstName" placeholder="First Name" pattern="[A-Za-z\s'-]+" autocomplete="given-name" required>
+                </div>
+                <div class="form-field">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" type="text" name="lastName" placeholder="Last Name" pattern="[A-Za-z\s'-]+" autocomplete="family-name" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="Email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="phone">Phone</label>
+                    <input id="phone" type="tel" name="phone" placeholder="Phone" pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
+                </div>
+                <div class="form-field">
+                    <label for="zip">Zip</label>
+                    <input id="zip" type="text" name="zip" placeholder="Zip" pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
+                </div>
+                <div class="form-field">
+                    <label for="referral">How did you hear about us?</label>
+                    <input id="referral" type="text" name="referral" placeholder="How did you hear about us?" required>
+                </div>
             </div>
-            <label class="visually-hidden" for="goals">Describe your fitness goals</label>
-            <textarea id="goals" name="goals" placeholder="Describe your fitness goals" required></textarea>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-field" style="grid-column: 1 / -1;">
+                <label for="goals">Describe your fitness goals</label>
+                <textarea id="goals" name="goals" placeholder="Describe your fitness goals" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Application</button>
         </form>
     </div>
 </div>
@@ -1740,6 +1767,7 @@ form.addEventListener('submit', e => {
     const email = form.email.value.trim();
     const phone = form.phone.value.trim();
     const zip = form.zip.value.trim();
+    const referral = form.referral.value.trim();
     const goals = form.goals.value.trim();
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -1747,7 +1775,7 @@ form.addEventListener('submit', e => {
     const zipRegex = /^\d{5}(?:-\d{4})?$/;
 
     if (!firstName || !lastName || !emailRegex.test(email) ||
-        !phoneRegex.test(phone) || !zipRegex.test(zip) || !goals) {
+        !phoneRegex.test(phone) || !zipRegex.test(zip) || !referral || !goals) {
         alert('Please fill out all fields correctly.');
         return;
     }
@@ -1769,6 +1797,7 @@ form.addEventListener('submit', e => {
             email,
             phone,
             zip,
+            referral,
             goals
         })
     });
@@ -1781,7 +1810,7 @@ form.addEventListener('submit', e => {
         `&PHONE=+1${encodeURIComponent(phone)}` +
         `&GOAL=${encodeURIComponent(goals)}` +
         `&ZIP=${encodeURIComponent(zip)}` +
-        `&REFERREDBY=Website`;
+        `&REFERREDBY=${encodeURIComponent(referral)}`;
 
     form.reset();
 
