@@ -879,8 +879,20 @@ section {
     font-size: 1rem;
 }
 
+#apply-form .input-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
 #apply-form button {
     width: 100%;
+}
+
+@media (max-width: 500px) {
+    #apply-form .input-grid {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
@@ -1579,11 +1591,13 @@ section {
         <span class="modal-close">&times;</span>
         <h2>Apply Now</h2>
         <form id="apply-form">
-            <input type="text" name="firstName" placeholder="First Name" required>
-            <input type="text" name="lastName" placeholder="Last Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="tel" name="phone" placeholder="Phone" required>
-            <input type="text" name="zip" placeholder="Zip" required>
+            <div class="input-grid">
+                <input type="text" name="firstName" placeholder="First Name" pattern="[A-Za-z\s'-]+" required>
+                <input type="text" name="lastName" placeholder="Last Name" pattern="[A-Za-z\s'-]+" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone" pattern="[0-9\-\s()+]{7,}" required>
+                <input type="text" name="zip" placeholder="Zip" pattern="\d{5}(?:-\d{4})?" required>
+            </div>
             <textarea name="goals" placeholder="Describe your fitness goals" required></textarea>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -1635,10 +1649,31 @@ modal.addEventListener('click', e => {
     }
 });
 
-document.getElementById('apply-form').addEventListener('submit', e => {
+const form = document.getElementById('apply-form');
+
+form.addEventListener('submit', e => {
     e.preventDefault();
+
+    const firstName = form.firstName.value.trim();
+    const lastName = form.lastName.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+    const zip = form.zip.value.trim();
+    const goals = form.goals.value.trim();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[0-9\-\s()+]{7,}$/;
+    const zipRegex = /^\d{5}(?:-\d{4})?$/;
+
+    if (!firstName || !lastName || !emailRegex.test(email) ||
+        !phoneRegex.test(phone) || !zipRegex.test(zip) || !goals) {
+        alert('Please fill out all fields correctly.');
+        return;
+    }
+
     modal.classList.remove('active');
     alert('Thank you! We will be in touch shortly.');
+    form.reset();
 });
 </script>
 
