@@ -10,7 +10,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 
 <style>
 /* CSS Reset and Base Styles */
@@ -922,6 +922,7 @@ section {
     display: block;
     margin-bottom: 5px;
     font-weight: 600;
+    font-size: 0.875rem;
 }
 
 #apply-form label[for="referral"] {
@@ -929,7 +930,7 @@ section {
 }
 
 .apply-heading {
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 #apply-form .form-field {
@@ -940,11 +941,11 @@ section {
 #apply-form input,
 #apply-form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 8px;
+    margin-bottom: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 #apply-form .input-grid {
@@ -955,6 +956,7 @@ section {
 
 #apply-form button {
     width: 100%;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 500px) {
@@ -1658,7 +1660,7 @@ section {
 <div id="apply-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="apply-title" aria-hidden="true" tabindex="-1">
     <div class="modal-content">
         <button type="button" class="modal-close" aria-label="Close">&times;</button>
-        <h2 id="apply-title" class="apply-heading">Apply for your Free Fitness Assessmenr</h2>
+        <h2 id="apply-title" class="apply-heading">Apply for Your Free Assessment</h2>
         <form id="apply-form">
             <div class="input-grid">
                 <div class="form-field">
@@ -1670,20 +1672,20 @@ section {
                     <input id="lastName" type="text" name="lastName" placeholder="Last Name" pattern="[A-Za-z\s'-]+" autocomplete="family-name" required>
                 </div>
                 <div class="form-field">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" name="email" placeholder="Email" autocomplete="email" required>
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" name="email" placeholder="Email Address" autocomplete="email" required>
                 </div>
                 <div class="form-field">
-                    <label for="phone">Phone</label>
-                    <input id="phone" type="tel" name="phone" placeholder="Phone" pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" type="tel" name="phone" placeholder="Phone Number" pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
                 </div>
                 <div class="form-field" style="grid-column: 1 / -1;">
                     <label for="goals">Describe your fitness goals</label>
                     <textarea id="goals" name="goals" placeholder="Describe your fitness goals" required></textarea>
                 </div>
                 <div class="form-field">
-                    <label for="zip">Zip</label>
-                    <input id="zip" type="text" name="zip" placeholder="Zip" pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
+                    <label for="zip">Zip Code</label>
+                    <input id="zip" type="text" name="zip" placeholder="Zip Code" pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
                 </div>
                 <div class="form-field">
                     <label for="referral">How did you hear about us?</label>
