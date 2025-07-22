@@ -924,6 +924,14 @@ section {
     font-weight: 600;
 }
 
+#apply-form label[for="referral"] {
+    white-space: nowrap;
+}
+
+.apply-heading {
+    font-size: 2rem;
+}
+
 #apply-form .form-field {
     display: flex;
     flex-direction: column;
@@ -952,6 +960,9 @@ section {
 @media (max-width: 500px) {
     #apply-form .input-grid {
         grid-template-columns: 1fr;
+    }
+    #apply-form label[for="referral"] {
+        white-space: normal;
     }
 }
 </style>
@@ -1647,7 +1658,7 @@ section {
 <div id="apply-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="apply-title" aria-hidden="true" tabindex="-1">
     <div class="modal-content">
         <button type="button" class="modal-close" aria-label="Close">&times;</button>
-        <h2 id="apply-title">Apply for Your Free Assessment</h2>
+        <h2 id="apply-title" class="apply-heading">Apply for your Free Fitness Assessmenr</h2>
         <form id="apply-form">
             <div class="input-grid">
                 <div class="form-field">
@@ -1666,6 +1677,10 @@ section {
                     <label for="phone">Phone</label>
                     <input id="phone" type="tel" name="phone" placeholder="Phone" pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
                 </div>
+                <div class="form-field" style="grid-column: 1 / -1;">
+                    <label for="goals">Describe your fitness goals</label>
+                    <textarea id="goals" name="goals" placeholder="Describe your fitness goals" required></textarea>
+                </div>
                 <div class="form-field">
                     <label for="zip">Zip</label>
                     <input id="zip" type="text" name="zip" placeholder="Zip" pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
@@ -1674,10 +1689,6 @@ section {
                     <label for="referral">How did you hear about us?</label>
                     <input id="referral" type="text" name="referral" placeholder="How did you hear about us?" required>
                 </div>
-            </div>
-            <div class="form-field" style="grid-column: 1 / -1;">
-                <label for="goals">Describe your fitness goals</label>
-                <textarea id="goals" name="goals" placeholder="Describe your fitness goals" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit Application</button>
         </form>
