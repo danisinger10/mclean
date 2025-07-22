@@ -867,6 +867,20 @@ section {
     right: 15px;
     font-size: 1.5rem;
     cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 #apply-form input,
@@ -1586,19 +1600,25 @@ section {
 </footer>
 
 <!-- Popup Form Modal -->
-<div id="apply-modal" class="modal">
+<div id="apply-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="apply-title" aria-hidden="true" tabindex="-1">
     <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <h2>Apply Now</h2>
+        <button type="button" class="modal-close" aria-label="Close">&times;</button>
+        <h2 id="apply-title">Apply Now</h2>
         <form id="apply-form">
             <div class="input-grid">
-                <input type="text" name="firstName" placeholder="First Name" pattern="[A-Za-z\s'-]+" required>
-                <input type="text" name="lastName" placeholder="Last Name" pattern="[A-Za-z\s'-]+" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" name="phone" placeholder="Phone" pattern="[0-9\-\s()+]{7,}" required>
-                <input type="text" name="zip" placeholder="Zip" pattern="\d{5}(?:-\d{4})?" required>
+                <label class="visually-hidden" for="firstName">First Name</label>
+                <input id="firstName" type="text" name="firstName" placeholder="First Name" pattern="[A-Za-z\s'-]+" autocomplete="given-name" required>
+                <label class="visually-hidden" for="lastName">Last Name</label>
+                <input id="lastName" type="text" name="lastName" placeholder="Last Name" pattern="[A-Za-z\s'-]+" autocomplete="family-name" required>
+                <label class="visually-hidden" for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Email" autocomplete="email" required>
+                <label class="visually-hidden" for="phone">Phone</label>
+                <input id="phone" type="tel" name="phone" placeholder="Phone" pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
+                <label class="visually-hidden" for="zip">Zip</label>
+                <input id="zip" type="text" name="zip" placeholder="Zip" pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
             </div>
-            <textarea name="goals" placeholder="Describe your fitness goals" required></textarea>
+            <label class="visually-hidden" for="goals">Describe your fitness goals</label>
+            <textarea id="goals" name="goals" placeholder="Describe your fitness goals" required></textarea>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
@@ -1633,19 +1653,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const applyBtn = document.getElementById('applyNowBtn');
 const modal = document.getElementById('apply-modal');
 const modalClose = document.querySelector('#apply-modal .modal-close');
+const firstInput = document.getElementById('firstName');
 
 applyBtn.addEventListener('click', e => {
     e.preventDefault();
     modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    firstInput.focus();
 });
 
 modalClose.addEventListener('click', () => {
     modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    applyBtn.focus();
 });
 
 modal.addEventListener('click', e => {
     if (e.target === modal) {
         modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        applyBtn.focus();
     }
 });
 
@@ -1672,8 +1699,9 @@ form.addEventListener('submit', e => {
     }
 
     modal.classList.remove('active');
-    alert('Thank you! We will be in touch shortly.');
+    modal.setAttribute('aria-hidden', 'true');
     form.reset();
+    window.location.href = 'https://youcanbook.me';
 });
 </script>
 
