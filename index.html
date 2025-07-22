@@ -1700,8 +1700,29 @@ form.addEventListener('submit', e => {
 
     modal.classList.remove('active');
     modal.setAttribute('aria-hidden', 'true');
+
+    const mailto =
+        `mailto:dsinger@fit2gopt.com?subject=Fit2Go%20Consultation%20Request&body=` +
+        `First%20Name:%20${encodeURIComponent(firstName)}%0A` +
+        `Last%20Name:%20${encodeURIComponent(lastName)}%0A` +
+        `Email:%20${encodeURIComponent(email)}%0A` +
+        `Phone:%20${encodeURIComponent(phone)}%0A` +
+        `Zip:%20${encodeURIComponent(zip)}%0A` +
+        `Goals:%20${encodeURIComponent(goals)}`;
+    window.open(mailto);
+
+    const redirectUrl =
+        `https://fit2go.youcanbook.me/?service=Fit2Go+Consultation+(Phone)` +
+        `&FNAME=${encodeURIComponent(firstName)}` +
+        `&LNAME=${encodeURIComponent(lastName)}` +
+        `&EMAIL=${encodeURIComponent(email)}` +
+        `&PHONE=+1${encodeURIComponent(phone)}` +
+        `&GOAL=${encodeURIComponent(goals)}` +
+        `&ZIP=${encodeURIComponent(zip)}` +
+        `&REFERREDBY=Website`;
+
     form.reset();
-    window.location.href = 'https://youcanbook.me';
+    window.location.href = redirectUrl;
 });
 </script>
 
