@@ -99,10 +99,10 @@ p {
     width: 100%;
     z-index: 1000;
     padding: 20px 0;
-    background: transparent;
-    backdrop-filter: none;
-    border-bottom: none;
-    transition: none;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background 0.3s ease;
 }
 
 .nav-container {
@@ -208,7 +208,7 @@ p {
     position: relative;
     background: url('https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-4-1-scaled.jpg') center/cover no-repeat;
     color: var(--fit2go-white);
-    padding: 80px 0;
+    padding: 0 0 80px;
 }
 
 .hero-overlay {
