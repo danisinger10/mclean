@@ -28,6 +28,7 @@
     --text-primary: #1a1a1a;
     --text-secondary: #4a4a4a;
     --bg-light-gray: #f8f9fa;
+    --bg-dark: #111111;
     --accent-gold: #D4AF37;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
@@ -94,14 +95,16 @@ p {
 
 /* Navigation */
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 20px 0;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 .nav-container {
@@ -112,6 +115,7 @@ p {
 
 .nav-logo {
     height: 50px;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.8));
 }
 
 .hamburger {
@@ -139,10 +143,11 @@ p {
 }
 
 .nav-link {
-    color: var(--fit2go-black);
+    color: var(--fit2go-white);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
     transition: color 0.3s ease;
 }
 
@@ -173,8 +178,8 @@ p {
 
 .btn-primary:hover {
     background: var(--fit2go-light-green);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(9, 210, 0, 0.3);
+    transform: scale(1.03);
+    box-shadow: 0 0 8px #09D20080;
 }
 
 .btn-outline {
@@ -200,9 +205,22 @@ p {
     display: flex;
     align-items: center;
     position: relative;
-    background: url('https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-4-1-scaled.jpg') center/cover no-repeat;
+    overflow: hidden;
     color: var(--fit2go-white);
-    padding: 80px 0;
+    padding: 0 0 80px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-4-1-scaled.jpg') top center/cover no-repeat;
+    z-index: 0;
+    animation: heroKenBurns 20s ease-in-out infinite;
+    transform-origin: center;
 }
 
 .hero-overlay {
@@ -211,7 +229,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6));
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65));
     z-index: 1;
 }
 
@@ -221,42 +239,33 @@ p {
     max-width: 800px;
     text-align: center;
     margin: 0 auto;
+    padding-top: 120px;
 }
 
-.hero-badge {
-    display: inline-block;
-    background: var(--accent-gold);
-    color: var(--fit2go-black);
-    padding: 10px 30px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    border-radius: 30px;
-}
 
 .hero h1 {
     color: var(--fit2go-white);
     font-weight: 900;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 3px 3px var(--fit2go-black);
     font-size: 3.5rem;
     line-height: 1.2;
-    margin-bottom: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 3rem;
+    letter-spacing: 0.02em;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     line-height: 1.6;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     color: var(--fit2go-white);
-    max-width: 700px;
+    max-width: 60ch;
     margin-left: auto;
     margin-right: auto;
 }
 
 .hero-cta {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .btn-large {
@@ -293,11 +302,17 @@ p {
     }
 }
 
+@keyframes heroKenBurns {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
 /* Stats Bar */
 .stats-bar {
-    background: var(--fit2go-white);
+    background: linear-gradient(135deg, var(--fit2go-dark-green), #000);
     padding: 40px 0;
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    color: var(--fit2go-white);
 }
 
 .stats-grid {
@@ -314,7 +329,7 @@ p {
 .stats-bar .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--fit2go-dark-green);
+    color: var(--accent-gold);
     font-family: var(--font-heading);
     margin-bottom: 0.5rem;
 }
@@ -323,7 +338,7 @@ p {
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--text-secondary);
+    color: var(--fit2go-white);
 }
 
 /* Value Props */
@@ -373,6 +388,42 @@ section {
     background: var(--bg-light-gray);
 }
 
+.section-dark {
+    background: var(--bg-dark);
+    color: var(--fit2go-white);
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark p,
+.section-dark li {
+    color: var(--fit2go-white);
+}
+
+.section-dark .btn-outline {
+    color: var(--fit2go-white);
+    border-color: var(--fit2go-white);
+}
+
+.section-green {
+    background: linear-gradient(135deg, #0b3d02, var(--fit2go-dark-green));
+    color: var(--fit2go-white);
+}
+
+.section-green h2,
+.section-green h3,
+.section-green h4,
+.section-green p,
+.section-green li {
+    color: var(--fit2go-white);
+}
+
+.section-green .btn-outline {
+    color: var(--fit2go-white);
+    border-color: var(--fit2go-white);
+}
+
 /* About Section */
 .about-grid {
     display: grid;
@@ -383,7 +434,7 @@ section {
 }
 
 .about-content h3 {
-    color: var(--fit2go-dark-green);
+    color: var(--accent-gold);
     margin-bottom: 1.5rem;
 }
 
@@ -514,7 +565,7 @@ section {
 }
 
 .team-title {
-    color: var(--fit2go-dark-green);
+    color: var(--accent-gold);
     font-weight: 600;
     margin-bottom: 1.5rem;
 }
@@ -1004,15 +1055,13 @@ section {
     <div class="hero-overlay"></div>
     <div class="container">
         <div class="hero-content">
-            <span class="hero-badge">McLean's Premier Training Service • Est. 2013</span>
-            <h1>Elite In-Home Personal Training<br>in McLean, VA</h1>
+            <h1>McLean's In-Home Personal Training Service</h1>
             <p class="hero-subtitle">
-                Work out at your own home, apartment, or Tyson's office with a nationally certified personal trainer.
+                Work out at your home or office with our nationally certified personal trainers.
             </p>
             
             <div class="hero-cta">
                 <a href="#" class="btn btn-primary btn-large open-apply">Get Started</a>
-                <p class="cta-subtext">100% Satisfaction Guaranteed</p>
             </div>
         </div>
     </div>
@@ -1076,7 +1125,7 @@ section {
 </section>
 
 <!-- About Section -->
-<section id="about" class="section-gray">
+<section id="about" class="section-dark">
     <div class="container">
         <h2>Why McLean Professionals Choose Fit2Go</h2>
         <div class="about-grid">
@@ -1172,10 +1221,10 @@ section {
 </section>
 
 <!-- Assessment Section -->
-<section id="assessment" class="section-gray">
+<section id="assessment" class="section-green">
     <div class="container">
         <h2>Your Complimentary Comprehensive Assessment</h2>
-        <p style="text-align: center; font-size: 1.25rem; color: var(--fit2go-dark-green); font-weight: 600; margin-bottom: 60px;">
+        <p style="text-align: center; font-size: 1.25rem; color: var(--fit2go-white); font-weight: 600; margin-bottom: 60px;">
             A $300 value, absolutely free • No obligation to continue
         </p>
         
@@ -1283,7 +1332,7 @@ section {
 </section>
 
 <!-- Team Section -->
-<section id="team" class="section-gray">
+<section id="team" class="section-dark">
     <div class="container">
         <h2>Meet Your McLean Training Team</h2>
         
@@ -1343,7 +1392,7 @@ section {
 </section>
 
 <!-- Testimonials Section -->
-<section id="testimonials">
+<section id="testimonials" class="section-gray">
     <div class="container">
         <h2>Real Results from Your McLean Neighbors</h2>
         
@@ -1388,7 +1437,7 @@ section {
 </section>
 
 <!-- Pricing Section -->
-<section id="pricing" class="section-gray">
+<section id="pricing" class="section-dark">
     <div class="container">
         <h2>Transparent Investment in Your Health</h2>
         
@@ -1579,26 +1628,26 @@ section {
 </section>
 
 <!-- Contact Section -->
-<section id="contact" style="padding: 80px 0;">
+<section id="contact" class="section-dark" style="padding: 80px 0;">
     <div class="container">
         <h2>Ready to Get Started?</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; max-width: 900px; margin: 50px auto 0;">
             <div style="text-align: center;">
-                <h3 style="color: var(--fit2go-dark-green); margin-bottom: 1rem;">Call or Text</h3>
+                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Call or Text</h3>
                 <p style="font-size: 1.5rem; font-weight: 700; margin: 10px 0;">
-                    <a href="tel:+17038549587" style="color: var(--fit2go-black);">(703) 854-9587</a>
+                    <a href="tel:+17038549587" style="color: var(--fit2go-white);">(703) 854-9587</a>
                 </p>
                 <p>Response within 2 hours during business hours</p>
             </div>
             <div style="text-align: center;">
-                <h3 style="color: var(--fit2go-dark-green); margin-bottom: 1rem;">Email Us</h3>
+                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Email Us</h3>
                 <p style="font-size: 1.2rem; margin: 10px 0;">
-                    <a href="mailto:info@fit2gopt.com" style="color: var(--fit2go-black);">info@fit2gopt.com</a>
+                    <a href="mailto:info@fit2gopt.com" style="color: var(--fit2go-white);">info@fit2gopt.com</a>
                 </p>
                 <p>Detailed questions? We'll respond within 24 hours</p>
             </div>
             <div style="text-align: center;">
-                <h3 style="color: var(--fit2go-dark-green); margin-bottom: 1rem;">Book Online</h3>
+                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Book Online</h3>
                 <a href="#" class="btn btn-primary open-apply" style="margin: 10px 0;">
                     Schedule Free Assessment
                 </a>
@@ -1729,6 +1778,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
 
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
