@@ -97,11 +97,13 @@ p {
     position: sticky;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(10px);
+    /* Nearly see-through "glass" look so hero image shines through */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     z-index: 1000;
     padding: 20px 0;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .nav-container {
@@ -141,8 +143,9 @@ p {
 .nav-link {
     color: var(--fit2go-black);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.95rem;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
     transition: color 0.3s ease;
 }
 
