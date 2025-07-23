@@ -948,6 +948,10 @@ section {
     font-size: 0.9rem;
 }
 
+#apply-form textarea#goals {
+    min-height: 150px;
+}
+
 #apply-form .input-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1663,38 +1667,38 @@ section {
 <div id="apply-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="apply-title" aria-hidden="true" tabindex="-1">
     <div class="modal-content">
         <button type="button" class="modal-close" aria-label="Close">&times;</button>
-<h2 id="apply-title" class="apply-heading">Apply for Your Free Assessment</h2>
-<p class="apply-intro">Fill out the form below to get started. We’ll call you to discuss your fitness goals and see if we're a good fit.</p>
+<h2 id="apply-title" class="apply-heading">Let's Discuss Your Fitness Goals</h2>
+<p class="apply-intro">Fill out the form below to get started.</p>
         <form id="apply-form">
             <div class="input-grid">
                 <div class="form-field">
                     <label for="firstName">First Name</label>
-                    <input id="firstName" type="text" name="firstName" placeholder="John" pattern="[A-Za-z\s'-]+" autocomplete="given-name" required>
+                    <input id="firstName" type="text" name="firstName"  pattern="[A-Za-z\s'-]+" autocomplete="given-name" required>
                 </div>
                 <div class="form-field">
                     <label for="lastName">Last Name</label>
-                    <input id="lastName" type="text" name="lastName" placeholder="Doe" pattern="[A-Za-z\s'-]+" autocomplete="family-name" required>
+                    <input id="lastName" type="text" name="lastName"  pattern="[A-Za-z\s'-]+" autocomplete="family-name" required>
                 </div>
                 <div class="form-field">
                     <label for="email">Email Address</label>
-                    <input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                    <input id="email" type="email" name="email" autocomplete="email" required>
                 </div>
                 <div class="form-field">
                     <label for="phone">Phone Number</label>
-                    <input id="phone" type="tel" name="phone" placeholder="(555) 123-4567" pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
+                    <input id="phone" type="tel" name="phone"  pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
                 </div>
                 <div class="form-field" style="grid-column: 1 / -1;">
                     <label for="goals">Describe Your Fitness Goals</label>
-                    <textarea id="goals" name="goals" placeholder="e.g., lose 20 lb, train for a 10K, get back in shape after a long break" aria-describedby="goal-help" required></textarea>
+                    <textarea id="goals" name="goals"  aria-describedby="goal-help" required></textarea>
                     <p id="goal-help" class="visually-hidden">Describe one clear goal so we can match you with the right trainer.</p>
                 </div>
                 <div class="form-field">
                     <label for="zip">Zip Code</label>
-                    <input id="zip" type="text" name="zip" placeholder="Zip Code" pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
+                    <input id="zip" type="text" name="zip"  pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
                 </div>
                 <div class="form-field">
                     <label for="referral">How Did You Hear About Us?</label>
-                    <input id="referral" type="text" name="referral" placeholder="How did you hear about us?" required>
+                    <input id="referral" type="text" name="referral"  required>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">SUBMIT APPLICATION</button>
