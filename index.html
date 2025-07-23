@@ -97,10 +97,23 @@ p {
     position: sticky;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 20px 0;
+    transition: background 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Transparent style shown over the hero */
+.navbar.transparent {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Semi-opaque style once the page is scrolled */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -112,6 +125,7 @@ p {
 
 .nav-logo {
     height: 50px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .hamburger {
@@ -127,8 +141,9 @@ p {
 .hamburger span {
     height: 3px;
     width: 100%;
-    background: var(--fit2go-black);
+    background: var(--fit2go-white);
     display: block;
+    transition: background 0.3s ease;
 }
 
 .nav-menu {
@@ -139,15 +154,25 @@ p {
 }
 
 .nav-link {
-    color: var(--fit2go-black);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
     transition: color 0.3s ease;
+    color: var(--fit2go-white);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.navbar.scrolled .nav-link {
+    color: var(--fit2go-white);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
 
 .nav-link:hover {
     color: var(--fit2go-light-green);
+}
+
+.navbar.scrolled .hamburger span {
+    background: var(--fit2go-white);
 }
 
 /* Buttons */
@@ -824,6 +849,10 @@ section {
         display: none;
     }
     .nav-menu.active { display: flex; }
+    .nav-menu .nav-link { 
+        color: var(--fit2go-black); 
+        text-shadow: none; 
+    }
     
     .hero h1 { font-size: 2.2rem; }
     .hero-subtitle { font-size: 1.2rem; }
@@ -979,7 +1008,7 @@ section {
 <body>
 
 <!-- Navigation -->
-<nav class="navbar">
+<nav class="navbar transparent">
     <div class="container nav-container">
         <img src="https://www.fit2gopt.com/wp-content/uploads/2019/05/Contrast-logo.png" alt="Fit2Go Personal Training" class="nav-logo">
         <button class="hamburger" aria-label="Toggle menu" aria-controls="primary-navigation" aria-expanded="false">
@@ -1733,6 +1762,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.getElementById('primary-navigation');
+
+const navbar = document.querySelector('.navbar');
+const heroSection = document.querySelector('.hero');
+
+function handleNavbar() {
+    const offset = heroSection.offsetHeight - navbar.offsetHeight;
+    if (window.scrollY > offset) {
+        navbar.classList.add('scrolled');
+        navbar.classList.remove('transparent');
+    } else {
+        navbar.classList.add('transparent');
+        navbar.classList.remove('scrolled');
+    }
+}
+
+handleNavbar();
+window.addEventListener('scroll', handleNavbar);
 
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
