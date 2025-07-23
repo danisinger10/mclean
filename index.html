@@ -313,9 +313,7 @@ p {
 
 /* Stats Bar */
 .stats-bar {
-    background: var(--fit2go-white);
     padding: 40px 0;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }
 
 .stats-grid {
@@ -332,7 +330,6 @@ p {
 .stats-bar .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--fit2go-dark-green);
     font-family: var(--font-heading);
     margin-bottom: 0.5rem;
 }
@@ -341,18 +338,12 @@ p {
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--text-secondary);
 }
 
 /* Value Props */
 .value-props {
-    background: var(--fit2go-white);
     padding: 60px 0;
-    margin-top: -40px;
-    position: relative;
-    z-index: 10;
-    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
-    border-radius: 20px 20px 0 0;
+    background: linear-gradient(#fff, #f4f4f4);
 }
 
 .value-grid {
@@ -386,9 +377,49 @@ p {
 section {
     padding: 100px 0;
 }
+/* Premium Section Backgrounds */
+.stats-bar {
+    background: linear-gradient(135deg, #0a3312, #14880c);
+    color: var(--fit2go-white);
+}
+.stats-bar .stat-number {
+    color: var(--accent-gold);
+}
+.stats-bar .stat-label {
+    color: rgba(255,255,255,0.85);
+}
 
-.section-gray {
-    background: var(--bg-light-gray);
+#about {
+    background: radial-gradient(circle at top left, #ffffff, #ececec);
+}
+#process {
+    background: linear-gradient(135deg, #002b45, #00131a);
+    color: var(--fit2go-white);
+}
+#assessment {
+    background: linear-gradient(#f9f9f9, #ffffff);
+}
+#services {
+    background: linear-gradient(135deg, #222, #111);
+    color: var(--fit2go-white);
+}
+#team {
+    background: linear-gradient(#ffffff, #f3f3f3);
+}
+#testimonials {
+    background: linear-gradient(135deg, #111, #050505);
+    color: var(--fit2go-white);
+}
+#pricing {
+    background: linear-gradient(#f7f7f7, #eaeaea);
+}
+#faq {
+    background: linear-gradient(135deg, #00354d, #001a33);
+    color: var(--fit2go-white);
+}
+#contact {
+    background: #000;
+    color: var(--fit2go-white);
 }
 
 /* About Section */
@@ -562,6 +593,7 @@ section {
 }
 
 .testimonial-card {
+    color: var(--text-primary);
     background: var(--bg-light-gray);
     padding: 40px;
     border-radius: 10px;
@@ -1092,7 +1124,7 @@ section {
 </section>
 
 <!-- About Section -->
-<section id="about" class="section-gray">
+<section id="about">
     <div class="container">
         <h2>Why McLean Professionals Choose Fit2Go</h2>
         <div class="about-grid">
@@ -1188,7 +1220,7 @@ section {
 </section>
 
 <!-- Assessment Section -->
-<section id="assessment" class="section-gray">
+<section id="assessment">
     <div class="container">
         <h2>Your Complimentary Comprehensive Assessment</h2>
         <p style="text-align: center; font-size: 1.25rem; color: var(--fit2go-dark-green); font-weight: 600; margin-bottom: 60px;">
@@ -1299,7 +1331,7 @@ section {
 </section>
 
 <!-- Team Section -->
-<section id="team" class="section-gray">
+<section id="team">
     <div class="container">
         <h2>Meet Your McLean Training Team</h2>
         
@@ -1404,7 +1436,7 @@ section {
 </section>
 
 <!-- Pricing Section -->
-<section id="pricing" class="section-gray">
+<section id="pricing">
     <div class="container">
         <h2>Transparent Investment in Your Health</h2>
         
