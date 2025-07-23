@@ -1,0 +1,22 @@
+name: Deploy McLean landing page
+on:
+  push:
+    branches: [main]        # only runs on pushes to main
+
+jobs:
+  ftp-mclean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload /mclean folder
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5   # sync‑only diff upload
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+
+          # push just this repo’s files…
+          local-dir: ./                               # current repo root
+          # …into the isolated directory you made
+          server-dir: public_html/mclean/            
