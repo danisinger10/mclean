@@ -99,14 +99,10 @@ p {
     width: 100%;
     z-index: 1000;
     padding: 20px 0;
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
     border-bottom: none;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.navbar.scrolled {
-    background: rgba(0, 0, 0, 0.65);
+    transition: background 0.3s ease;
 }
 
 .nav-container {
@@ -1744,21 +1740,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar transparency on scroll
-const navbar = document.querySelector('.navbar');
-const hero = document.querySelector('.hero');
-
-function updateNavbar() {
-    const offset = hero.offsetHeight - navbar.offsetHeight;
-    if (window.scrollY > offset) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-}
-
-updateNavbar();
-window.addEventListener('scroll', updateNavbar);
 
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
