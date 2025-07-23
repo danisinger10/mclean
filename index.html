@@ -200,7 +200,7 @@ p {
     display: flex;
     align-items: center;
     position: relative;
-    background: url('https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-4-1-scaled.jpg') center/cover no-repeat;
+    background: url('https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-4-1-scaled.jpg') center top/cover no-repeat;
     color: var(--fit2go-white);
     padding: 80px 0;
 }
@@ -809,7 +809,16 @@ section {
     h2 { font-size: 2rem; }
     h3 { font-size: 1.5rem; }
 
-    .hamburger { display: flex; }
+    .nav-container { position: relative; }
+    .nav-logo { margin: 0 auto; }
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .hero-badge { font-size: 0.8rem; padding: 8px 24px; }
     .nav-menu {
         position: absolute;
         top: 100%;
@@ -864,6 +873,7 @@ section {
     h3 { font-size: 1.25rem; }
     .btn { padding: 12px 24px; font-size: 0.9rem; }
     .nav-logo { height: 40px; }
+    .hero-badge { font-size: 0.7rem; padding: 8px 20px; }
     .hero h1 { font-size: 1.8rem; }
     .hero-subtitle { font-size: 1rem; }
 }
@@ -881,6 +891,7 @@ section {
     align-items: center;
     padding: 20px;
     z-index: 2000;
+    overflow-y: auto;
 }
 
 .modal.active {
@@ -894,6 +905,8 @@ section {
     max-width: 500px;
     width: 100%;
     position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .modal-close {
@@ -994,6 +1007,7 @@ section {
             <li><a href="#team" class="nav-link">Your Team</a></li>
             <li><a href="#testimonials" class="nav-link">Results</a></li>
             <li><a href="#pricing" class="nav-link">Investment</a></li>
+            <li><a href="#faq" class="nav-link">FAQs</a></li>
             <li><a href="#" id="applyNowBtn" class="btn btn-primary">Get Started</a></li>
         </ul>
     </div>
