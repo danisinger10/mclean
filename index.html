@@ -111,9 +111,9 @@ p {
 
 /* Semi-opaque style once the page is scrolled */
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -163,8 +163,8 @@ p {
 }
 
 .navbar.scrolled .nav-link {
-    color: var(--fit2go-black);
-    text-shadow: none;
+    color: var(--fit2go-white);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
 
 .nav-link:hover {
@@ -172,7 +172,7 @@ p {
 }
 
 .navbar.scrolled .hamburger span {
-    background: var(--fit2go-black);
+    background: var(--fit2go-white);
 }
 
 /* Buttons */
