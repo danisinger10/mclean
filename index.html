@@ -98,12 +98,15 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1000;
     padding: 20px 0;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease;
+}
+
+.navbar.transparent {
+    background: transparent;
 }
 
 .nav-container {
@@ -175,8 +178,8 @@ p {
 
 .btn-primary:hover {
     background: var(--fit2go-light-green);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(9, 210, 0, 0.3);
+    transform: scale(1.03);
+    box-shadow: 0 0 8px #09D20080;
 }
 
 .btn-outline {
@@ -202,9 +205,22 @@ p {
     display: flex;
     align-items: center;
     position: relative;
-    background: url('https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-4-1-scaled.jpg') center/cover no-repeat;
+    overflow: hidden;
     color: var(--fit2go-white);
     padding: 0 0 80px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-4-1-scaled.jpg') center/cover no-repeat;
+    z-index: 0;
+    animation: heroKenBurns 20s ease-in-out infinite;
+    transform-origin: center;
 }
 
 .hero-overlay {
@@ -213,7 +229,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6));
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65));
     z-index: 1;
 }
 
@@ -230,10 +246,12 @@ p {
 .hero h1 {
     color: var(--fit2go-white);
     font-weight: 900;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 3px 3px var(--fit2go-black);
     font-size: 3.5rem;
     line-height: 1.2;
+    margin-top: 40px;
     margin-bottom: 3rem;
+    letter-spacing: 0.02em;
 }
 
 .hero-subtitle {
@@ -282,6 +300,11 @@ p {
     60% {
         transform: translateX(-50%) translateY(-5px);
     }
+}
+
+@keyframes heroKenBurns {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
 }
 
 /* Stats Bar */
@@ -1718,6 +1741,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Navbar transparency toggle
+const navbar = document.querySelector('.navbar');
+function updateNavbar() {
+    if (window.scrollY > 300) {
+        navbar.classList.add('transparent');
+    } else {
+        navbar.classList.remove('transparent');
+    }
+}
+updateNavbar();
+window.addEventListener('scroll', updateNavbar);
 
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
