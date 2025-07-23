@@ -1,9 +1,3 @@
-
-'use client';
-
-import { useEffect, useState } from 'react';
-
-const referenceHtmlContent = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +10,7 @@ const referenceHtmlContent = `
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 
 <style>
 /* CSS Reset and Base Styles */
@@ -41,6 +35,7 @@ const referenceHtmlContent = `
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -50,6 +45,12 @@ body {
     font-weight: 400;
     background: var(--fit2go-white);
     overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Typography */
@@ -90,19 +91,6 @@ p {
     padding: 0 20px;
 }
 
-/* Trust Badge Bar */
-.trust-badge-bar {
-    background: var(--fit2go-dark-green);
-    color: var(--fit2go-white);
-    text-align: center;
-    padding: 12px 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
 /* Navigation */
 .navbar {
@@ -124,6 +112,23 @@ p {
 
 .nav-logo {
     height: 50px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    width: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 100%;
+    background: var(--fit2go-black);
+    display: block;
 }
 
 .nav-menu {
@@ -433,7 +438,7 @@ section {
 /* Service Cards */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
     margin-top: 60px;
 }
@@ -486,7 +491,7 @@ section {
 /* Team Section */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 50px;
     margin-top: 60px;
 }
@@ -533,7 +538,7 @@ section {
 /* Testimonials */
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     margin-top: 60px;
 }
@@ -571,7 +576,7 @@ section {
 /* Pricing */
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
     max-width: 1100px;
     margin: 0 auto;
@@ -803,8 +808,22 @@ section {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
     h3 { font-size: 1.5rem; }
-    
-    .nav-menu { display: none; }
+
+    .hamburger { display: flex; }
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.97);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        display: none;
+    }
+    .nav-menu.active { display: flex; }
     
     .hero h1 { font-size: 2.2rem; }
     .hero-subtitle { font-size: 1.2rem; }
@@ -838,29 +857,144 @@ section {
         transform: none;
     }
 }
+
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    .btn { padding: 12px 24px; font-size: 0.9rem; }
+    .nav-logo { height: 40px; }
+    .hero h1 { font-size: 1.8rem; }
+    .hero-subtitle { font-size: 1rem; }
+}
+
+/* Popup Form Modal */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 2000;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--fit2go-white);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+#apply-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+#apply-form label[for="referral"] {
+    white-space: nowrap;
+}
+
+.apply-heading {
+    font-size: 1.6rem;
+}
+
+#apply-form .form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+#apply-form input,
+#apply-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+#apply-form textarea#goals {
+    min-height: 150px;
+}
+
+#apply-form .input-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+#apply-form button {
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 500px) {
+    #apply-form .input-grid {
+        grid-template-columns: 1fr;
+    }
+    #apply-form label[for="referral"] {
+        white-space: normal;
+    }
+}
+</style>
+<style>
+    .form-field { margin-bottom: 1.25rem; }
 </style>
 </head>
 <body>
-<!-- Trust Badge Bar -->
-<div class="trust-badge-bar">
-    <span>📞 (703) 854-9587</span>
-    <span>✓ 100% Satisfaction Guarantee</span>
-    <span>🏆 Serving McLean Since 2013</span>
-    <span>📱 24/7 Trainer Support</span>
-</div>
 
 <!-- Navigation -->
 <nav class="navbar">
     <div class="container nav-container">
         <img src="https://www.fit2gopt.com/wp-content/uploads/2019/05/Contrast-logo.png" alt="Fit2Go Personal Training" class="nav-logo">
-        <ul class="nav-menu">
+        <button class="hamburger" aria-label="Toggle menu" aria-controls="primary-navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="primary-navigation">
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#process" class="nav-link">How It Works</a></li>
             <li><a href="#services" class="nav-link">Services</a></li>
             <li><a href="#team" class="nav-link">Your Team</a></li>
             <li><a href="#testimonials" class="nav-link">Results</a></li>
             <li><a href="#pricing" class="nav-link">Investment</a></li>
-            <li><a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Apply Now</a></li>
+            <li><a href="#" id="applyNowBtn" class="btn btn-primary">Apply Now</a></li>
         </ul>
     </div>
 </nav>
@@ -878,7 +1012,7 @@ section {
             </p>
             
             <div class="hero-cta">
-                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary btn-large">Apply for Free Assessment</a>
+                <a href="#" class="btn btn-primary btn-large open-apply">Apply for Free Assessment</a>
                 <p class="cta-subtext">100% Satisfaction Guaranteed</p>
             </div>
         </div>
@@ -1082,7 +1216,7 @@ section {
         </div>
         
         <div style="text-align: center; margin-top: 60px;">
-            <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Reserve Your Free Assessment</a>
+            <a href="#" class="btn btn-primary open-apply">Reserve Your Free Assessment</a>
         </div>
     </div>
 </section>
@@ -1265,7 +1399,7 @@ section {
                 Get your first month at a discounted rate!<br>
                 <span style="font-size: 1rem;">Save up to $50 per session! Offer ends Aug 31st.</span>
             </p>
-            <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-white">Claim Special Offer</a>
+            <a href="#" class="btn btn-white open-apply">Claim Special Offer</a>
         </div>
         
         <div class="pricing-grid">
@@ -1284,7 +1418,7 @@ section {
                     <li>Fit2Go app with 24h support</li>
                     <li>Monthly reassessments</li>
                 </ul>
-                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-primary open-apply">Get Started</a>
             </div>
             
             <div class="pricing-card featured">
@@ -1302,7 +1436,7 @@ section {
                     <li>20% savings per person</li>
                     <li>Perfect for couples</li>
                 </ul>
-                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-primary open-apply">Get Started</a>
             </div>
             
             <div class="pricing-card">
@@ -1320,7 +1454,7 @@ section {
                     <li>Most affordable option</li>
                     <li>Train from anywhere</li>
                 </ul>
-                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-primary open-apply">Get Started</a>
             </div>
         </div>
     </div>
@@ -1436,7 +1570,7 @@ section {
             Join 500+ Northern Virginia professionals who've made fitness fit their lifestyle. 
             Limited trainer availability ensures personalized attention for every client.
         </p>
-        <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-white" style="font-size: 1.1rem; padding: 20px 50px;">
+        <a href="#" class="btn btn-white open-apply" style="font-size: 1.1rem; padding: 20px 50px;">
             Apply for Your Free Assessment
         </a>
         <p style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.9;">
@@ -1449,7 +1583,7 @@ section {
 <section id="contact" style="padding: 80px 0;">
     <div class="container">
         <h2>Ready to Get Started?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 900px; margin: 50px auto 0;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; max-width: 900px; margin: 50px auto 0;">
             <div style="text-align: center;">
                 <h3 style="color: var(--fit2go-dark-green); margin-bottom: 1rem;">Call or Text</h3>
                 <p style="font-size: 1.5rem; font-weight: 700; margin: 10px 0;">
@@ -1466,7 +1600,7 @@ section {
             </div>
             <div style="text-align: center;">
                 <h3 style="color: var(--fit2go-dark-green); margin-bottom: 1rem;">Book Online</h3>
-                <a href="https://Fit2GoPT.com/dani-meeting" class="btn btn-primary" style="margin: 10px 0;">
+                <a href="#" class="btn btn-primary open-apply" style="margin: 10px 0;">
                     Schedule Free Assessment
                 </a>
                 <p>Choose a time that works for you</p>
@@ -1529,6 +1663,49 @@ section {
     </div>
 </footer>
 
+<!-- Popup Form Modal -->
+<div id="apply-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="apply-title" aria-hidden="true" tabindex="-1">
+    <div class="modal-content">
+        <button type="button" class="modal-close" aria-label="Close">&times;</button>
+<h2 id="apply-title" class="apply-heading">Let's Discuss Your Fitness Goals</h2>
+<p class="apply-intro">Fill out the form below to get started.</p>
+        <form id="apply-form">
+            <div class="input-grid">
+                <div class="form-field">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" name="firstName"  pattern="[A-Za-z\s'-]+" autocomplete="given-name" required>
+                </div>
+                <div class="form-field">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" type="text" name="lastName"  pattern="[A-Za-z\s'-]+" autocomplete="family-name" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" type="tel" name="phone"  pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
+                </div>
+                <div class="form-field" style="grid-column: 1 / -1;">
+                    <label for="goals">Describe Your Fitness Goals</label>
+                    <textarea id="goals" name="goals"  aria-describedby="goal-help" required></textarea>
+                    <p id="goal-help" class="visually-hidden">Describe one clear goal so we can match you with the right trainer.</p>
+                </div>
+                <div class="form-field">
+                    <label for="zip">Zip Code</label>
+                    <input id="zip" type="text" name="zip"  pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
+                </div>
+                <div class="form-field">
+                    <label for="referral">How Did You Hear About Us?</label>
+                    <input id="referral" type="text" name="referral"  required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">SUBMIT APPLICATION</button>
+        </form>
+    </div>
+</div>
+
 <!-- Scripts -->
 <script>
 // FAQ Toggle
@@ -1553,57 +1730,117 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Mobile Navigation Toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.getElementById('primary-navigation');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+});
+
+navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    });
+});
+
+// Popup Form functionality
+const applyLinks = document.querySelectorAll('#applyNowBtn, .open-apply');
+const modal = document.getElementById('apply-modal');
+const modalClose = document.querySelector('#apply-modal .modal-close');
+const firstInput = document.getElementById('firstName');
+let lastTrigger = null;
+
+applyLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        lastTrigger = link;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        firstInput.focus();
+    });
+});
+
+modalClose.addEventListener('click', () => {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    if (lastTrigger) lastTrigger.focus();
+});
+
+modal.addEventListener('click', e => {
+    if (e.target === modal) {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        if (lastTrigger) lastTrigger.focus();
+    }
+});
+
+const form = document.getElementById('apply-form');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const firstName = form.firstName.value.trim();
+    const lastName = form.lastName.value.trim();
+    const email = form.email.value.trim();
+    const phone = form.phone.value.trim();
+    const zip = form.zip.value.trim();
+    const referral = form.referral.value.trim();
+    const goals = form.goals.value.trim();
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[0-9\-\s()+]{7,}$/;
+    const zipRegex = /^\d{5}(?:-\d{4})?$/;
+
+    if (!firstName || !lastName || !emailRegex.test(email) ||
+        !phoneRegex.test(phone) || !zipRegex.test(zip) || !referral || !goals) {
+        alert('Please fill out all fields correctly.');
+        return;
+    }
+
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+
+    // Send form data to Google Apps Script to trigger the email
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwVbEZ91H5pIJTkWo5cvBbCo4Zfzk-hgOG_lDcg3RXB_fLipSR5rI__-DeBXqzwCHlL/exec';
+    fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams({
+            firstName,
+            lastName,
+            email,
+            phone,
+            zip,
+            referral,
+            goals
+        })
+    });
+
+    const redirectUrl =
+        `https://fit2go.youcanbook.me/?service=Fit2Go+Consultation+(Phone)` +
+        `&FNAME=${encodeURIComponent(firstName)}` +
+        `&LNAME=${encodeURIComponent(lastName)}` +
+        `&EMAIL=${encodeURIComponent(email)}` +
+        `&PHONE=+1${encodeURIComponent(phone)}` +
+        `&GOAL=${encodeURIComponent(goals)}` +
+        `&ZIP=${encodeURIComponent(zip)}` +
+        `&REFERREDBY=${encodeURIComponent(referral)}`;
+
+    form.reset();
+
+    setTimeout(() => {
+        window.location.href = redirectUrl;
+    }, 500);
+});
 </script>
 
 </body>
 </html>
-`;
-
-export default function Home() {
-  const [isClient, setIsClient] = useState(false);
-  const [htmlContent, setHtmlContent] = useState('');
-
-  useEffect(() => {
-    setIsClient(true);
-    setHtmlContent(referenceHtmlContent);
-  }, []);
-
-  useEffect(() => {
-    if (isClient) {
-      // FAQ Toggle Script
-      document.querySelectorAll('.faq-question').forEach(item => {
-        item.addEventListener('click', () => {
-          const parent = item.parentElement;
-          if (parent) {
-            parent.classList.toggle('active');
-          }
-        });
-      });
-
-      // Smooth Scroll Script
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const href = this.getAttribute('href');
-          if (href) {
-            const target = document.querySelector(href);
-            if (target) {
-              const offset = 100; 
-              const elementPosition = target.getBoundingClientRect().top;
-              const offsetPosition = elementPosition + window.pageYOffset - offset;
-            
-              window.scrollTo({
-                  top: offsetPosition,
-                  behavior: "smooth"
-              });
-            }
-          }
-        });
-      });
-    }
-  }, [isClient, htmlContent]);
-
-  return (
-    <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
-  );
-}
