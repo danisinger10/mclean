@@ -19,6 +19,6 @@ jobs:
           # push just this repo’s files…
           local-dir: ./                               # current repo root
           # …into the isolated directory you made
-          server-dir: public_html/mclean/
+          server-dir: mclean/
           protocol: ftps
           port: 21
