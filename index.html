@@ -99,11 +99,12 @@ p {
     position: sticky;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 20px 0;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background 0.3s ease;
 }
 
 .nav-container {
@@ -114,6 +115,7 @@ p {
 
 .nav-logo {
     height: 50px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 .hamburger {
@@ -129,8 +131,9 @@ p {
 .hamburger span {
     height: 3px;
     width: 100%;
-    background: var(--fit2go-black);
+    background: var(--fit2go-white);
     display: block;
+    transition: background 0.3s ease;
 }
 
 .nav-menu {
@@ -141,16 +144,19 @@ p {
 }
 
 .nav-link {
-    color: var(--fit2go-black);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
     transition: color 0.3s ease;
+    color: var(--fit2go-white);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
+
 
 .nav-link:hover {
     color: var(--fit2go-light-green);
 }
+
 
 /* Buttons */
 .btn {
@@ -204,7 +210,7 @@ p {
     position: relative;
     background: url('https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-4-1-scaled.jpg') center/cover no-repeat;
     color: var(--fit2go-white);
-    padding: 80px 0;
+    padding: 0 0 80px;
 }
 
 .hero-overlay {
@@ -213,7 +219,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6));
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
     z-index: 1;
 }
 
@@ -826,6 +832,10 @@ section {
         display: none;
     }
     .nav-menu.active { display: flex; }
+    .nav-menu .nav-link { 
+        color: var(--fit2go-black); 
+        text-shadow: none; 
+    }
     
     .hero h1 { font-size: 2.2rem; }
     .hero-subtitle { font-size: 1.2rem; }
@@ -1737,9 +1747,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.getElementById('primary-navigation');
+
 
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
