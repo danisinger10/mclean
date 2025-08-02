@@ -866,6 +866,7 @@ section {
     .nav-logo { height: 40px; }
     .hero h1 { font-size: 1.8rem; }
     .hero-subtitle { font-size: 1rem; }
+    .modal-content { padding: 20px; }
 }
 
 /* Popup Form Modal */
@@ -881,6 +882,7 @@ section {
     align-items: center;
     padding: 20px;
     z-index: 2000;
+    overflow-y: auto;
 }
 
 .modal.active {
@@ -894,6 +896,8 @@ section {
     max-width: 500px;
     width: 100%;
     position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .modal-close {
