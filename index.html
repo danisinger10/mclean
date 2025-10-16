@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="McLean's premier in-home personal training since 2013. Expert trainers come to your home, office, or Nottoway Park. Free consultation. 100% satisfaction guarantee. Call (703) 854-9587.">
-<meta name="keywords" content="personal trainer McLean VA, in-home personal training McLean, mobile personal trainer Tysons, fitness trainer Great Falls, private personal training Northern Virginia">
-<title>In-Home Personal Training McLean VA | Fit2Go - Elite Since 2013</title>
+<meta name="description" content="Fit2Go Rockville brings elite personal trainers to your home, condo gym, or favorite Rock Creek Park trail. Book a free in-home assessment and start transforming your health.">
+<meta name="keywords" content="personal trainer Rockville MD, in-home personal training Rockville, mobile fitness coach Montgomery County, corporate wellness Rockville, Fit2Go Rockville">
+<title>In-Home Personal Training Rockville MD | Fit2Go Rockville</title>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha384-t1nt8BQoYMLFN5p42tRAtuAAFQaCQODekUVeKKZrEnEyp4H2R0RHFz0KWpmj7i8g" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
@@ -94,7 +94,6 @@ p {
     margin: 0 auto;
     padding: 0 20px;
 }
-
 
 /* Navigation */
 .navbar {
@@ -220,7 +219,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-4-1-scaled.jpg') top center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     z-index: 0;
     animation: heroKenBurns 20s ease-in-out infinite;
     transform-origin: center;
@@ -232,7 +231,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65));
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75));
     z-index: 1;
 }
 
@@ -244,7 +243,6 @@ p {
     margin: 0 auto;
     padding-top: 120px;
 }
-
 
 .hero h1 {
     color: var(--fit2go-white);
@@ -415,7 +413,6 @@ section {
     border-color: var(--fit2go-white);
 }
 
-/* Ensure card content remains legible on dark sections */
 .section-dark .team-member,
 .section-dark .pricing-card {
     background: var(--fit2go-white);
@@ -447,72 +444,55 @@ section {
     color: var(--fit2go-white);
 }
 
-.section-green .btn-outline {
-    color: var(--fit2go-white);
-    border-color: var(--fit2go-white);
-}
-
-/* Ensure cards remain readable on green sections */
 .section-green .service-card {
-    background: var(--fit2go-white);
-    color: var(--text-secondary);
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
 }
 
-.section-green .service-card h3 {
-    color: var(--text-primary);
-}
-
+.section-green .service-card h3,
 .section-green .service-card p,
 .section-green .service-card li {
-    color: var(--text-secondary);
+    color: var(--fit2go-white);
 }
 
 /* About Section */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px;
     align-items: center;
-    margin-top: 60px;
-}
-
-.about-content h3 {
-    color: var(--accent-gold);
-    margin-bottom: 1.5rem;
 }
 
 .about-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
 }
 
-/* Process Steps */
+/* Process Timeline */
 .process-timeline {
-    max-width: 1000px;
-    margin: 60px auto 0;
+    position: relative;
+    margin-top: 60px;
 }
 
 .process-step {
     display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
     align-items: flex-start;
-    margin-bottom: 60px;
-    opacity: 1;
 }
 
 .step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     background: var(--fit2go-dark-green);
     color: var(--fit2go-white);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 1.5rem;
-    flex-shrink: 0;
-    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    box-shadow: 0 10px 25px rgba(20, 136, 12, 0.3);
 }
 
 .step-content {
@@ -580,53 +560,6 @@ section {
     color: var(--fit2go-light-green);
     font-weight: bold;
     font-size: 1.2rem;
-}
-
-/* Team Section */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 50px;
-    margin-top: 60px;
-}
-
-.team-member {
-    background: var(--fit2go-white);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-}
-
-.team-member img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-}
-
-.team-member-info {
-    padding: 40px;
-}
-
-.team-title {
-    color: var(--accent-gold);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-}
-
-.team-credentials {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.credential {
-    background: var(--fit2go-dark-green);
-    color: var(--fit2go-white);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
 }
 
 /* Testimonials */
@@ -761,77 +694,52 @@ section {
     max-width: 800px;
 }
 
-.special-offer h3 {
-    color: var(--fit2go-white);
-    margin-bottom: 1rem;
-}
-
 /* FAQ */
 .faq-container {
-    max-width: 800px;
-    margin: 60px auto 0;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .faq-item {
-    background: var(--bg-light-gray);
+    background: var(--fit2go-white);
     margin-bottom: 20px;
     border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     overflow: hidden;
 }
 
 .faq-question {
-    padding: 25px 30px;
-    cursor: pointer;
+    padding: 20px 30px;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    transition: background 0.3s;
-}
-
-.faq-question:hover {
-    background: rgba(20, 136, 12, 0.05);
+    align-items: start;
+    cursor: pointer;
+    gap: 20px;
 }
 
 .faq-answer {
-    padding: 0 30px;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: max-height 0.3s ease;
+    padding: 0 30px;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 500px;
-    padding: 20px 30px 30px;
+    max-height: 400px;
+    padding-bottom: 20px;
 }
 
-.faq-toggle {
-    transition: transform 0.3s;
-    color: var(--accent-gold);
-}
-
-.faq-item.active .faq-toggle {
+.faq-item.active .faq-question i {
     transform: rotate(180deg);
 }
 
 /* CTA Section */
 .cta-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, var(--fit2go-dark-green), var(--fit2go-light-green));
+    background: linear-gradient(135deg, #000, var(--fit2go-dark-green));
     color: var(--fit2go-white);
     text-align: center;
-}
-
-.cta-section h2 {
-    color: var(--fit2go-white);
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-.cta-section p {
-    color: var(--fit2go-white);
-    font-size: 1.25rem;
-    margin-bottom: 2.5rem;
+    padding: 120px 0;
 }
 
 .guarantee-badge {
@@ -920,35 +828,34 @@ section {
         display: none;
     }
     .nav-menu.active { display: flex; }
-    
+
     .hero h1 { font-size: 2.2rem; }
     .hero-subtitle { font-size: 1.2rem; }
-    
+
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-    
-    .about-grid,
-    .team-grid {
+
+    .about-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .process-step {
         flex-direction: column;
     }
-    
+
     .step-content {
         margin-left: 0;
         margin-top: 20px;
     }
-    
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .pricing-card.featured {
         transform: none;
     }
@@ -1085,887 +992,724 @@ section {
         white-space: normal;
     }
 }
-
-@media (min-width: 600px) {
-    .modal-content {
-        max-width: 550px;
-    }
-}
-
-@media (min-width: 900px) {
-    .modal-content {
-        max-width: 600px;
-    }
-}
-</style>
-<style>
-    .form-field { margin-bottom: 1.25rem; }
 </style>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="container nav-container">
-        <img src="https://www.fit2gopt.com/wp-content/uploads/2019/05/Contrast-logo.png" alt="Fit2Go Personal Training" class="nav-logo">
-        <button class="hamburger" aria-label="Toggle menu" aria-controls="primary-navigation" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-menu" id="primary-navigation">
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#process" class="nav-link">How It Works</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#team" class="nav-link">Your Team</a></li>
-            <li><a href="#testimonials" class="nav-link">Results</a></li>
-            <li><a href="#pricing" class="nav-link">Investment</a></li>
-            <li><a href="#" id="applyNowBtn" class="btn btn-primary">Get Started</a></li>
-        </ul>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="container">
-        <div class="hero-content">
-            <h1>McLean's In-Home Personal Training Service</h1>
-            <p class="hero-subtitle">
-                Our nationally, certified personal trainers come to YOU.
-            </p>
-            
-            <div class="hero-cta">
-                <a href="#" class="btn btn-primary btn-large open-apply">Get Started</a>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Move stats below the fold as a separate section -->
-    <div class="hero-scroll-indicator">
-        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-    </div>
-</section>
-
-<!-- Stats Bar - Separate from hero -->
-<section class="stats-bar">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Satisfaction Guarantee</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Lives Transformed</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5.0<i class="fa-solid fa-star premium-icon" aria-hidden="true"></i></div>
-                <div class="stat-label">Google Rating</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24h</div>
-                <div class="stat-label">Response Time</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Value Props -->
-<section class="value-props">
-    <div class="container">
-        <div class="value-grid">
-            <div class="value-item">
-                <div class="value-icon"><i class="fa-solid fa-house premium-icon"></i></div>
-                <h4>We Come to You</h4>
-                <p>Home, office, or Nottoway Park — no gym commute needed</p>
-            </div>
-            <div class="value-item">
-                <div class="value-icon"><i class="fa-solid fa-chalkboard-user premium-icon"></i></div>
-                <h4>Expert Trainers</h4>
-                <p>NASM, ACE & ACSM certified professionals with 5+ years experience</p>
-            </div>
-            <div class="value-item">
-                <div class="value-icon"><i class="fa-solid fa-chart-column premium-icon"></i></div>
-                <h4>Proven System</h4>
-                <p>Custom programs + nutrition coaching + app tracking = real results</p>
-            </div>
-            <div class="value-item">
-                <div class="value-icon"><i class="fa-solid fa-chart-line premium-icon"></i></div>
-                <h4>Track Progress</h4>
-                <p>Advanced body composition analysis & monthly reassessments</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="section-dark">
-    <div class="container">
-        <h2>Why McLean Professionals Choose Fit2Go</h2>
-        <div class="about-grid">
-            <div class="about-content">
-                <h3>The Fit2Go Difference: Where Excellence Meets Convenience</h3>
-                <p>
-                    Since 2013, we've been Northern Virginia's most trusted in-home training service. 
-                    Unlike franchise operations that rotate trainers weekly, Fit2Go assigns you one 
-                    dedicated coach who designs your program, leads every session, and ensures your satisfaction.
-                </p>
-                <p>
-                    <strong>Your success is our only metric.</strong> While competitors evaluate trainers on sales quotas, 
-                    we measure performance exclusively on client outcomes. Your trainer meets weekly with our 
-                    Division Director to analyze your progress and optimize your program.
-                </p>
-                <p>
-                    Whether you prefer morning sessions at your Langley home, lunch workouts at your Tysons 
-                    office, or evening training at Nottoway Park's scenic trails, we bring everything you 
-                    need for a world-class fitness experience.
-                </p>
-                <a href="#process" class="btn btn-outline" style="margin-top: 20px;">Discover Our Process</a>
-            </div>
-            <div class="about-image">
-                <img src="https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-3-scaled.jpg" 
-                     alt="Fit2Go trainer coaching at Nottoway Park in McLean">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Process Section -->
-<section id="process">
-    <div class="container">
-        <h2>Your Journey to Peak Performance in 4 Simple Steps</h2>
-        <p style="text-align: center; font-size: 1.25rem; margin-bottom: 60px;">
-            From application to transformation, every detail is optimized for busy professionals 
-            who value their time and demand excellence.
-        </p>
-        
-        <div class="process-timeline">
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h3>Submit Your Application</h3>
-                    <div class="step-duration">2 Minutes Online</div>
-                    <p>
-                        Complete our brief online form and you'll be immediately redirected to schedule 
-                        a 15-30 minute vetting call with James, your McLean Division Director.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h3>Director Vetting Call</h3>
-                    <div class="step-duration">15-30 Minute Phone Consultation</div>
-                    <p>
-                        James personally reviews your goals, injuries, schedule, and location to ensure 
-                        mutual fit. We'll confirm pricing aligns with your budget before proceeding—this 
-                        ensures we only meet if we can deliver the results you expect.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h3>Free Comprehensive Assessment</h3>
-                    <div class="step-duration">60 Minutes at Your Location</div>
-                    <p>
-                        The cornerstone of your transformation. James conducts advanced body composition 
-                        testing, movement screening, and performance benchmarks. You'll receive your results instantly via the Fit2Go app. We'll then start designing your customized fitness program.
-                    </p>
-                    <a href="#assessment" class="btn btn-outline" style="margin-top: 15px;">See What's Included</a>
-                </div>
-            </div>
-            
-            <div class="process-step">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h3>Begin Your Transformation</h3>
-                    <div class="step-duration">First Session Within 7 Days</div>
-                    <p>
-                        Your dedicated coach arrives with all equipment for your first 45-minute session. 
-                        This same trainer will guide every workout, track every metric, and ensure your 
-                        success with weekly director oversight. Welcome to the Fit2Go family.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Assessment Section -->
-<section id="assessment" class="section-green">
-    <div class="container">
-        <h2>Your Complimentary Comprehensive Assessment</h2>
-        <p style="text-align: center; font-size: 1.25rem; color: var(--fit2go-white); font-weight: 600; margin-bottom: 60px;">
-            A $300 value, absolutely free • No obligation to continue
-        </p>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <h3><i class="fa-solid fa-microscope premium-icon"></i> Body Composition Analysis</h3>
-                <ul>
-                    <li>Bio-electrical impedance testing</li>
-                    <li>Body fat percentage & lean muscle mass</li>
-                    <li>Visceral fat & metabolic age</li>
-                    <li>Hydration levels & bone density</li>
-                    <li>Circumference measurements via MyoTape</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <h3><i class="fa-solid fa-person-running premium-icon"></i> Performance Testing</h3>
-                <ul>
-                    <li>Full-body mobility screening</li>
-                    <li>Functional movement assessment</li>
-                    <li>Cardiovascular capacity testing</li>
-                    <li>Strength benchmarks (push/pull/core)</li>
-                    <li>Balance & coordination evaluation</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <h3><i class="fa-solid fa-mobile-screen-button premium-icon"></i> Instant Deliverables</h3>
-                <ul>
-                    <li>Complete assessment report in app</li>
-                    <li>Custom calorie & macro targets</li>
-                    <li>7-day personalized meal plan</li>
-                    <li>Pre-loaded mobility & workout routines</li>
-                    <li>24/7 trainer messaging access</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 60px;">
-            <a href="#" class="btn btn-primary open-apply">Reserve Your Free Assessment</a>
-        </div>
-    </div>
-</section>
-
-<!-- Services Section -->
-<section id="services">
-    <div class="container">
-        <h2>Training Programs Tailored to Your Lifestyle</h2>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>1-on-1 Personal Training</h3>
-                <p>The gold standard in personalized fitness. Perfect for executives, busy parents, and anyone serious about transformation.</p>
-                <ul>
-                    <li>One dedicated coach for entire program</li>
-                    <li>Weekly director oversight</li>
-                    <li>Flexible scheduling 6am-8pm</li>
-                    <li>All equipment provided</li>
-                    <li>Nutrition coaching included</li>
-                </ul>
-            </div>
-            
-            <div class="service-card featured">
-                <h3>Semi-Private Training (2-4)</h3>
-                <p>Train with your spouse, friends, or colleagues. Get motivated together while saving 20% per person.</p>
-                <ul>
-                    <li>Individual programs within group</li>
-                    <li>Built-in accountability partners</li>
-                    <li>Fun partner exercises</li>
-                    <li>Perfect for couples or families</li>
-                    <li>Same premium service, better value</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <h3>Corporate Wellness</h3>
-                <p>Boost productivity and reduce healthcare costs with on-site training for your Tysons or McLean office.</p>
-                <ul>
-                    <li>Lunch-hour group classes</li>
-                    <li>Executive 1-on-1 sessions</li>
-                    <li>Quarterly health screenings</li>
-                    <li>Wellness workshops & seminars</li>
-                    <li>Employee fitness challenges</li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- Specialized Programs -->
-        <h3 style="text-align: center; margin-top: 80px; margin-bottom: 40px;">Specialized Programs for Every Stage of Life</h3>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3><i class="fa-solid fa-person-pregnant premium-icon"></i> Pre & Post-Natal Training</h3>
-                <p>Safe, effective exercises for expecting and new mothers. Core recovery, diastasis recti rehabilitation, and stroller workouts at Nottoway Park.</p>
-            </div>
-            <div class="service-card">
-                <h3><i class="fa-solid fa-person-cane premium-icon"></i> Senior Fitness (55+)</h3>
-                <p>Maintain independence with balance training, fall prevention, bone density exercises, and functional strength for daily activities.</p>
-            </div>
-            <div class="service-card">
-                <h3><i class="fa-solid fa-bolt premium-icon"></i> Youth Athletic Development</h3>
-                <p>Build proper movement patterns, injury prevention, and sport-specific training for young athletes (ages 12-18).</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Team Section -->
-<section id="team" class="section-dark">
-    <div class="container">
-        <h2>Meet Your McLean Training Team</h2>
-        
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-2-scaled.jpg" 
-                     alt="James Shulman, Fit2Go McLean Director">
-                <div class="team-member-info">
-                    <h3>James Shulman</h3>
-                    <p class="team-title">McLean Division Director & Lead Trainer</p>
-                    <p>
-                        James personally conducts every initial assessment and oversees all McLean programs. 
-                        A military veteran with over 8 years of experience and specializations in 
-                        corrective exercise and post-rehabilitation training, he ensures each client receives 
-                        truly personalized programming.
-                    </p>
-                    <p>
-                        "I meet weekly with every trainer to review client data and optimize programs. 
-                        Your success isn't just your trainer's responsibility—it's mine too."
-                    </p>
-                    <div class="team-credentials">
-                        <span class="credential">Military Veteran</span>
-                        <span class="credential">Specialization in Corrective Exercise and Post-Rehab</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="team-member">
-                <img src="https://www.fit2gopt.com/wp-content/uploads/2021/02/Dani-Headshot-Final.jpg" style="object-position: top;"
-                     alt="Dani Singer, Fit2Go Founder & CEO">
-                <div class="team-member-info">
-                    <h3>Dani Singer</h3>
-                    <p class="team-title">Founder & CEO</p>
-                    <p>
-                        Since founding Fit2Go in 2013, Dani has built a team of elite trainers across the 
-                        DMV area. A nationally recognized fitness expert featured in Reader's Digest, 
-                        Muscle & Fitness, and SHAPE Magazine, Dani ensures every Fit2Go trainer meets 
-                        the highest standards of excellence.
-                    </p>
-                    <p>
-                        With a special dedication to making fitness practical for busy professionals, 
-                        Dani has redefined what in-home personal training can be.
-                    </p>
-                    <div class="team-credentials">
-                        <span class="credential">Published Author</span>
-                        <span class="credential">Industry Expert</span>
-                        <span class="credential">Teacher to 200,000+ Personal Trainers Worldwide</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 50px;">
-            <p style="font-weight: 600;">All Fit2Go trainers are nationally certified, background checked, insured, and CPR/AED certified</p>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section id="testimonials" class="section-gray">
-    <div class="container">
-        <h2>Real Results from Your McLean Neighbors</h2>
-        
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-stars"><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i></div>
-                <p class="testimonial-text">
-                    "I travel for work and was struggling to find a consistent routine. My trainer, James, has been fantastic. He's incredibly knowledgeable and has designed a program that I can do both at home and on the road. I've seen more progress in the last 3 months than I have in the last 3 years."
-                </p>
-                <div class="testimonial-author">David G.</div>
-                <div class="testimonial-location">Tysons, VA</div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-stars"><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i></div>
-                <p class="testimonial-text">
-                    "I was skeptical about in-home training, but Fit2Go has been a game changer. My trainer is always on time, brings all the equipment, and the workouts are challenging but fun. I'm stronger, have more energy, and my clothes fit better. Highly recommend!"
-                </p>
-                <div class="testimonial-author">Karen S.</div>
-                <div class="testimonial-location">McLean, VA</div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-stars"><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i></div>
-                <p class="testimonial-text">
-                    "As a new mom, finding time for the gym was impossible. Fit2Go's post-natal program was perfect. My trainer helped me rebuild my core strength safely and effectively. It's been amazing to feel like myself again."
-                </p>
-                <div class="testimonial-author">Jessica L.</div>
-                <div class="testimonial-location">Arlington, VA</div>
-            </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 50px;">
-            <p style="font-weight: 600; margin-bottom: 20px;">
-                Join 500+ McLean residents who've transformed their health with Fit2Go
-            </p>
-            <a href="https://share.google/EvWxObeMOPWAbcywf" target="_blank" class="btn btn-outline">
-                Read More Google Reviews
+    <header class="navbar" role="banner">
+        <div class="container nav-container">
+            <a href="#top" class="nav-logo-link" aria-label="Fit2Go Rockville Home">
+                <img src="https://www.fit2gopt.com/wp-content/uploads/2021/09/fit2go-logo.png" alt="Fit2Go Rockville" class="nav-logo">
             </a>
-        </div>
-    </div>
-</section>
-
-<!-- Pricing Section -->
-<section id="pricing" class="section-dark">
-    <div class="container">
-        <h2>Transparent Investment in Your Health</h2>
-        
-        <div class="special-offer" style="margin-bottom: 60px;">
-            <h3><i class="fa-solid fa-gift"></i> Limited Time: New Client Special</h3>
-            <p style="font-size: 1.2rem; margin-bottom: 25px; color: white;">
-                Get your first month at a discounted rate!<br>
-                <span style="font-size: 1rem;">Save up to $50 per session! Offer ends Aug 31st.</span>
-            </p>
-            <a href="#" class="btn btn-white open-apply">Claim Special Offer</a>
-        </div>
-        
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3>1-on-1 Training</h3>
-                <div class="price-original">$119-149</div>
-                <div class="price">$79-99</div>
-                <p class="price-note">per 45-minute session</p>
-                 <div class="promo-badge">Offer ends Aug 31st</div>
-                <ul class="pricing-features">
-                    <li>Dedicated coach for entire program</li>
-                    <li>Weekly director oversight</li>
-                    <li>Custom program design</li>
-                    <li>All equipment provided</li>
-                    <li>Nutrition coaching included</li>
-                    <li>Fit2Go app with 24h support</li>
-                    <li>Monthly reassessments</li>
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav aria-label="Primary" role="navigation">
+                <ul class="nav-menu" id="primary-navigation">
+                    <li><a class="nav-link" href="#programs">Programs</a></li>
+                    <li><a class="nav-link" href="#process">Process</a></li>
+                    <li><a class="nav-link" href="#assessment">Assessment</a></li>
+                    <li><a class="nav-link" href="#testimonials">Results</a></li>
+                    <li><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li><a class="nav-link open-apply" href="#apply">Apply Now</a></li>
                 </ul>
-                <a href="#" class="btn btn-primary open-apply">Get Started</a>
-            </div>
-            
-            <div class="pricing-card featured">
-                <h3>Semi-Private (2-4)</h3>
-                 <div class="price-original">$89-109</div>
-                <div class="price">$59-79</div>
-                <p class="price-note">per person, per session</p>
-                <div class="promo-badge">Offer ends Aug 31st</div>
-                <ul class="pricing-features">
-                    <li>Share cost with friends/family</li>
-                    <li>Individual programs within group</li>
-                    <li>Same dedicated coach model</li>
-                    <li>Fun partner exercises</li>
-                    <li>All premium features included</li>
-                    <li>20% savings per person</li>
-                    <li>Perfect for couples</li>
-                </ul>
-                <a href="#" class="btn btn-primary open-apply">Get Started</a>
-            </div>
-            
-            <div class="pricing-card">
-                <h3>Virtual Training</h3>
-                <div class="price-original">$79-99</div>
-                <div class="price">$69-89</div>
-                <p class="price-note">per live video session</p>
-                <div class="promo-badge">Offer ends Aug 31st</div>
-                <ul class="pricing-features">
-                    <li>Live 1-on-1 video coaching</li>
-                    <li>Perfect for travelers</li>
-                    <li>Form checks via video</li>
-                    <li>Equipment recommendations</li>
-                    <li>Same app features</li>
-                    <li>Most affordable option</li>
-                    <li>Train from anywhere</li>
-                </ul>
-                <a href="#" class="btn btn-primary open-apply">Get Started</a>
-            </div>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- FAQ Section -->
-<section id="faq">
-    <div class="container">
-        <h2>Frequently Asked Questions</h2>
-        
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">
-                    How is Fit2Go different from other in-home training services?
-                    <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        Unlike franchises like GymGuyz that rotate trainers, Fit2Go has been locally owned 
-                        since 2013. You get one dedicated coach who designs your program, leads every session, 
-                        and conducts all reassessments. Your trainer meets weekly with our Director to review 
-                        your progress. We're the only service with a 100% satisfaction guarantee and 24-hour 
-                        response commitment.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    What's included in the free assessment?
-                    <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        Your 60-minute assessment includes bio-electrical impedance body composition analysis, 
-                        full mobility screening, cardio and strength testing, personalized calorie/macro targets, 
-                        a 7-day custom meal plan, and immediate access to the Fit2Go app with pre-loaded 
-                        workouts. It's a $300 value, completely free with no obligation.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    What areas of McLean do you serve?
-                    <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        We serve all of McLean including Langley, West McLean, downtown McLean, and surrounding 
-                        areas like Tysons Corner, Great Falls, Vienna, and Arlington. We also offer sessions at 
-                        Nottoway Park, Clemyjontri Park, and McLean Central Park.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    What if I don't have equipment or space?
-                    <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        No problem! Our trainers bring everything needed including dumbbells, resistance bands, 
-                        TRX systems, agility equipment, and exercise mats. We only need about 6x6 feet of space — 
-                        a living room, bedroom, patio, or garage works perfectly. Many clients also train in 
-                        their building's gym or outdoors.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    How quickly will I see results?
-                    <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        Most clients report feeling stronger and more energetic within 2 weeks. Visible changes 
-                        typically occur within 4-6 weeks with consistent training and nutrition adherence. We 
-                        offer a 100% satisfaction guarantee. Your monthly reassessments 
-                        track exact changes in muscle mass, body fat, and performance metrics.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    Can I train with my spouse or friends?
-                    <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        Absolutely! Our semi-private training (2-4 people) is perfect for couples, friends, or 
-                        neighbors who want to train together. You'll each get individualized programs based on 
-                        your fitness levels and goals, while enjoying the motivation of working out together. 
-                        Plus, you'll save 20% compared to 1-on-1 training.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta-section">
-    <div class="container">
-        <div class="guarantee-badge">
-            <i class="fa-solid fa-shield-heart premium-icon" aria-hidden="true"></i> 100% SATISFACTION GUARANTEE
-        </div>
-        <h2>Ready to Transform Your Health Without Leaving McLean?</h2>
-        <p>
-            Join 500+ Northern Virginia professionals who've made fitness fit their lifestyle. 
-            Limited trainer availability ensures personalized attention for every client.
-        </p>
-        <a href="#" class="btn btn-white open-apply" style="font-size: 1.1rem; padding: 20px 50px;">
-            Apply for Your Free Assessment
-        </a>
-        <p style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.9;">
-            Applications reviewed within 24 hours • Currently booking assessments for late July
-        </p>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="section-dark" style="padding: 80px 0;">
-    <div class="container">
-        <h2>Ready to Get Started?</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; max-width: 900px; margin: 50px auto 0;">
-            <div style="text-align: center;">
-                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Call or Text</h3>
-                <p style="font-size: 1.5rem; font-weight: 700; margin: 10px 0;">
-                    <a href="tel:+17038549587" style="color: var(--fit2go-white);">(703) 854-9587</a>
+    <main id="top">
+        <section class="hero" role="region" aria-label="Hero">
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="hero-content">
+                <h1>Rockville's Premier In-Home Personal Training</h1>
+                <p class="hero-subtitle">
+                    Elite Fit2Go coaches come to your Rockville home, condo gym, or favorite Rock Creek Park trail with everything needed for a 45-minute session tailored to your goals.
                 </p>
-                <p>Response within 2 hours during business hours</p>
+                <div class="hero-cta">
+                    <a href="#" id="applyNowBtn" class="btn btn-primary btn-large">Book Your Free Assessment</a>
+                    <p class="cta-subtext">Limited openings this month • Applications answered within 24 hours</p>
+                </div>
+                <div class="hero-scroll-indicator" aria-hidden="true">
+                    <i class="fa-solid fa-angles-down"></i>
+                </div>
             </div>
-            <div style="text-align: center;">
-                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Email Us</h3>
-                <p style="font-size: 1.2rem; margin: 10px 0;">
-                    <a href="mailto:info@fit2gopt.com" style="color: var(--fit2go-white);">info@fit2gopt.com</a>
+        </section>
+
+        <section class="stats-bar" aria-label="Key statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">2013</div>
+                        <div class="stat-label">Serving Montgomery County</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">600+</div>
+                        <div class="stat-label">Rockville Clients Transformed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5.0<i class="fa-solid fa-star premium-icon" aria-hidden="true"></i></div>
+                        <div class="stat-label">Google Rating</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24h</div>
+                        <div class="stat-label">Response Guarantee</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="value-props" aria-label="Value propositions">
+            <div class="container">
+                <div class="value-grid">
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fa-solid fa-dumbbell premium-icon"></i></div>
+                        <h4>We Train Anywhere</h4>
+                        <p>High-rise condos in Pike &amp; Rose, homes in Fallsgrove, or outdoor sessions at Lake Needwood.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fa-solid fa-user-tie premium-icon"></i></div>
+                        <h4>Elite Coaching Team</h4>
+                        <p>Only nationally certified trainers with 5+ years experience and medical clearance expertise.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fa-solid fa-utensils premium-icon"></i></div>
+                        <h4>360° Support</h4>
+                        <p>Customized programming, habit coaching, and nutrition plans managed inside the Fit2Go app.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon"><i class="fa-solid fa-chart-line premium-icon"></i></div>
+                        <h4>Measured Progress</h4>
+                        <p>Monthly body composition, performance testing, and director reviews to keep you on track.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="section-dark" aria-label="About Fit2Go Rockville">
+            <div class="container">
+                <h2>Why Rockville Professionals Trust Fit2Go</h2>
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h3>The Most Convenient Way to Achieve Elite-Level Fitness</h3>
+                        <p>
+                            Fit2Go has led the in-home personal training movement in the DMV since 2013. Our Rockville division pairs you with one dedicated coach who designs every workout, tracks every metric, and meets with our director weekly to review your progress.
+                        </p>
+                        <p>
+                            <strong>No crowded gyms, no wasted time.</strong> We bring commercial-grade equipment to King Farm townhomes, West End colonials, and apartment gyms across Twinbrook, giving you a private, premium experience without the commute.
+                        </p>
+                        <p>
+                            Prefer to train outside? We'll meet you at Rock Creek Trail, Woodley Gardens Park, or your building's rooftop terrace. Wherever you are in Montgomery County, we create the environment and accountability you need to win.
+                        </p>
+                        <a href="#process" class="btn btn-outline" style="margin-top: 20px;">See How Our Process Works</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?auto=format&fit=crop&w=1200&q=80" alt="Fit2Go trainer working with a client in Rockville living room">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" aria-label="Process">
+            <div class="container">
+                <h2>Your Rockville Transformation Roadmap</h2>
+                <p style="text-align: center; font-size: 1.25rem; margin-bottom: 60px;">
+                    Busy schedule? Our proven 4-step onboarding ensures you get elite results without sacrificing your routine.
                 </p>
-                <p>Detailed questions? We'll respond within 24 hours</p>
+
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Submit a 2-Minute Application</h3>
+                            <div class="step-duration">Online • 2 Minutes</div>
+                            <p>
+                                Share your goals, schedule, and Rockville neighborhood. The more we know, the faster we can match you with the perfect coach.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Director Consultation</h3>
+                            <div class="step-duration">Phone Call • 15-20 Minutes</div>
+                            <p>
+                                Lauren, our Rockville Director, will confirm fit, answer your questions, and make sure pricing, logistics, and expectations align before we ever step through your door.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Complimentary In-Home Assessment</h3>
+                            <div class="step-duration">60 Minutes • Your Location</div>
+                            <p>
+                                We deliver advanced body composition testing, movement screening, and baseline performance work. Leave with a full results report, nutrition roadmap, and your first week of programming.
+                            </p>
+                            <a href="#assessment" class="btn btn-outline" style="margin-top: 15px;">What's Included</a>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Launch Your Program</h3>
+                            <div class="step-duration">Start Within 7 Days</div>
+                            <p>
+                                Your dedicated coach arrives with everything needed for your first 45-minute session. Expect weekly director oversight, app-based accountability, and measurable wins every month.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div style="text-align: center;">
-                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Book Online</h3>
-                <a href="#" class="btn btn-primary open-apply" style="margin: 10px 0;">
-                    Schedule Free Assessment
+        </section>
+
+        <section id="assessment" class="section-green" aria-label="Assessment">
+            <div class="container">
+                <h2>Your Complimentary $300 Assessment</h2>
+                <p style="text-align: center; font-size: 1.25rem; color: var(--fit2go-white); font-weight: 600; margin-bottom: 60px;">
+                    Everything we need to design a program that fits your Rockville lifestyle.
+                </p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3><i class="fa-solid fa-microscope premium-icon"></i> Body Composition Analysis</h3>
+                        <ul>
+                            <li>InBody-style bio-impedance testing</li>
+                            <li>Lean mass, body fat, visceral fat &amp; hydration</li>
+                            <li>Circumference measurements with MyoTape</li>
+                            <li>Metabolic age &amp; basal caloric needs</li>
+                            <li>Progress tracked every 4 weeks</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <h3><i class="fa-solid fa-person-running premium-icon"></i> Functional Movement Screen</h3>
+                        <ul>
+                            <li>Mobility &amp; stability testing</li>
+                            <li>Strength &amp; power benchmarks</li>
+                            <li>Cardio capacity evaluation</li>
+                            <li>Balance &amp; core endurance checks</li>
+                            <li>Customized corrective exercise plan</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <h3><i class="fa-solid fa-mobile-screen-button premium-icon"></i> Immediate Deliverables</h3>
+                        <ul>
+                            <li>Same-day results via Fit2Go app</li>
+                            <li>Personalized calorie &amp; macro targets</li>
+                            <li>Seven-day meal plan tailored to you</li>
+                            <li>Warm-up &amp; mobility library</li>
+                            <li>24/7 messaging with your coach</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 60px;">
+                    <a href="#" class="btn btn-primary open-apply">Reserve Your Assessment</a>
+                </div>
+            </div>
+        </section>
+        <section id="programs" aria-label="Programs">
+            <div class="container">
+                <h2>Programs Built for Rockville Residents</h2>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>1-on-1 Personal Training</h3>
+                        <p>Perfect for executives, physicians, and parents who want concierge-level coaching without leaving home.</p>
+                        <ul>
+                            <li>Dedicated coach for entire journey</li>
+                            <li>Flexible scheduling 5am-9pm</li>
+                            <li>All equipment provided</li>
+                            <li>Weekly habit &amp; nutrition coaching</li>
+                            <li>Monthly reassessments</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card featured">
+                        <h3>Semi-Private Training (2-4)</h3>
+                        <p>Train with a spouse, neighbor, or small group. Individualized programs with the energy of a shared session.</p>
+                        <ul>
+                            <li>Save 20% per person</li>
+                            <li>Individual progress tracking</li>
+                            <li>Accountability partners built in</li>
+                            <li>Great for couples &amp; families</li>
+                            <li>Same premium Fit2Go experience</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Corporate Wellness</h3>
+                        <p>Bring Fit2Go to your office at Pike &amp; Rose, Federal Plaza, or Rockville Town Center.</p>
+                        <ul>
+                            <li>On-site group classes &amp; workshops</li>
+                            <li>Executive coaching blocks</li>
+                            <li>Quarterly health screenings</li>
+                            <li>Team accountability challenges</li>
+                            <li>Virtual support for hybrid teams</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="text-align: center; margin-top: 80px; margin-bottom: 40px;">Specialized Programs for Every Goal</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3><i class="fa-solid fa-person-pregnant premium-icon"></i> Pre &amp; Post-Natal</h3>
+                        <p>Rebuild safely with pelvic-floor friendly workouts, diastasis recti care, and stroller sessions along the Carl Henn Millennium Trail.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3><i class="fa-solid fa-person-cane premium-icon"></i> Active Aging (55+)</h3>
+                        <p>Improve balance, bone density, and functional strength to stay independent and confident.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3><i class="fa-solid fa-heart-pulse premium-icon"></i> Medical &amp; Rehab Support</h3>
+                        <p>Experienced coaches collaborate with your PT or physician for safe post-rehab training and chronic condition management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section-gray" aria-label="Testimonials">
+            <div class="container">
+                <h2>Rockville Success Stories</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i></div>
+                        <p class="testimonial-text">
+                            "Fit2Go has been the best investment I've made in my health. My trainer meets me before work at my King Farm condo gym and somehow makes every session fresh. Down 18 pounds and my energy is through the roof."
+                        </p>
+                        <div class="testimonial-author">Megan R.</div>
+                        <div class="testimonial-location">King Farm, Rockville</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i></div>
+                        <p class="testimonial-text">
+                            "After shoulder surgery I was nervous to lift again. Lauren paired me with a trainer who coordinated with my PT and built my confidence back. I'm back to hiking Rock Creek every weekend."
+                        </p>
+                        <div class="testimonial-author">David S.</div>
+                        <div class="testimonial-location">West End, Rockville</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i></div>
+                        <p class="testimonial-text">
+                            "We train as a couple twice a week after work. Fit2Go brings the equipment, handles the nutrition side, and keeps us accountable even when travel gets hectic. It's like having a performance team on speed dial."
+                        </p>
+                        <div class="testimonial-author">Priya &amp; Aman T.</div>
+                        <div class="testimonial-location">College Gardens, Rockville</div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 50px;">
+                    <p style="font-weight: 600; margin-bottom: 20px;">
+                        Join hundreds of Rockville residents who trust Fit2Go with their results.
+                    </p>
+                    <a href="https://share.google.com/fit2go-reviews" target="_blank" rel="noopener" class="btn btn-outline">
+                        Read Additional Google Reviews
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="pricing" class="section-dark" aria-label="Pricing">
+            <div class="container">
+                <h2>Simple, Transparent Investment</h2>
+
+                <div class="special-offer" style="margin-bottom: 60px;">
+                    <h3><i class="fa-solid fa-gift"></i> September Intro Offer</h3>
+                    <p style="font-size: 1.2rem; margin-bottom: 25px; color: white;">
+                        Save up to $200 in your first month when you enroll by September 30.<br>
+                        <span style="font-size: 1rem;">Applies to Rockville residents only.</span>
+                    </p>
+                    <a href="#" class="btn btn-white open-apply">Claim Your Offer</a>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>1-on-1 Training</h3>
+                        <div class="price-original">$119-149</div>
+                        <div class="price">$89-109</div>
+                        <p class="price-note">per 45-minute session</p>
+                        <div class="promo-badge">Limited September Spots</div>
+                        <ul class="pricing-features">
+                            <li>Dedicated elite coach</li>
+                            <li>Weekly director oversight</li>
+                            <li>Custom training &amp; nutrition</li>
+                            <li>Equipment provided</li>
+                            <li>Fit2Go app with 24/7 messaging</li>
+                            <li>Monthly progress labs</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary open-apply">Get Started</a>
+                    </div>
+
+                    <div class="pricing-card featured">
+                        <h3>Semi-Private (2-4)</h3>
+                        <div class="price-original">$89-109</div>
+                        <div class="price">$69-89</div>
+                        <p class="price-note">per person • 45 minutes</p>
+                        <div class="promo-badge">Save 20% Together</div>
+                        <ul class="pricing-features">
+                            <li>Shared sessions, personalized plans</li>
+                            <li>Ideal for families &amp; neighbors</li>
+                            <li>Flexible scheduling options</li>
+                            <li>Includes nutrition support</li>
+                            <li>Weekly accountability check-ins</li>
+                            <li>Equipment delivered to you</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary open-apply">Reserve Your Group</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3>Virtual Performance Coaching</h3>
+                        <div class="price-original">$79-99</div>
+                        <div class="price">$59-79</div>
+                        <p class="price-note">per live video session</p>
+                        <div class="promo-badge">Great for Travelers</div>
+                        <ul class="pricing-features">
+                            <li>Live 1-on-1 Zoom workouts</li>
+                            <li>Movement feedback in real time</li>
+                            <li>Minimal equipment required</li>
+                            <li>Workout library in the app</li>
+                            <li>Weekly accountability messages</li>
+                            <li>Nutrition &amp; habit coaching</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary open-apply">Train From Anywhere</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" aria-label="Frequently Asked Questions">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What makes Fit2Go Rockville different?
+                            <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                We're not a franchise. Every Fit2Go Rockville client works with one vetted coach, receives director oversight, and gets access to our custom accountability platform. We guarantee a 24-hour response time and your satisfaction with every session.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Which areas do you serve?
+                            <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                We serve all of Rockville including King Farm, Woodley Gardens, Twinbrook, Fallsgrove, College Gardens, and Rockville Town Square. We also travel to North Bethesda, Potomac, and Kensington with no extra fees.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do I need my own equipment?
+                            <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                No. Your coach brings commercial-grade dumbbells, kettlebells, resistance bands, TRX, mobility tools, and everything else required. A 6x6 space is plenty—living room, home office, patio, or condo gym.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How fast will I see results?
+                            <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Most clients feel stronger and more energetic within two weeks. Visible changes typically happen within 4-6 weeks when training and nutrition protocols are followed. Monthly assessments show exactly how your body is responding.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can we train as a couple or group?
+                            <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>
+                                Absolutely. Semi-private training is one of our most popular options. We customize each participant's plan and pace while keeping the session collaborative and fun. Couples, families, and neighbors love the built-in accountability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="apply" class="cta-section" aria-label="Call to action">
+            <div class="container">
+                <div class="guarantee-badge">
+                    <i class="fa-solid fa-shield-heart premium-icon" aria-hidden="true"></i> 100% SATISFACTION GUARANTEE
+                </div>
+                <h2>Ready to Feel Stronger Without Leaving Rockville?</h2>
+                <p>
+                    Apply today to secure one of our limited Rockville onboarding spots. Your dedicated coach, director oversight, and full accountability system are waiting.
+                </p>
+                <a href="#" class="btn btn-white open-apply" style="font-size: 1.1rem; padding: 20px 50px;">
+                    Apply for Your Free Assessment
                 </a>
-                <p>Choose a time that works for you</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="https://www.fit2gopt.com/wp-content/uploads/2019/05/Contrast-logo.png" alt="Fit2Go Logo">
-                <p>McLean's premier in-home personal training service since 2013.</p>
-                <p class="footer-contact">
-                    <strong>Direct:</strong> <a href="tel:+17038549587">(703) 854-9587</a><br>
-                    <strong>Email:</strong> <a href="mailto:info@fit2gopt.com">info@fit2gopt.com</a>
+                <p style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.9;">
+                    Applications reviewed within 24 hours • Currently scheduling assessments for early October
                 </p>
             </div>
-            
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="https://www.fit2gopt.com">Main Website</a></li>
-                    <li><a href="https://www.fit2gopt.com/about-us">About Fit2Go</a></li>
-                    <li><a href="https://www.fit2gopt.com/fit2go-approach">Our Approach</a></li>
-                    <li><a href="#faq">FAQs</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                </ul>
+        </section>
+
+        <section id="contact" class="section-dark" style="padding: 80px 0;" aria-label="Contact">
+            <div class="container">
+                <h2>Talk With Our Rockville Team</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; max-width: 900px; margin: 50px auto 0;">
+                    <div style="text-align: center;">
+                        <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Call or Text</h3>
+                        <p style="font-size: 1.5rem; font-weight: 700; margin: 10px 0;">
+                            <a href="tel:+17038549587" style="color: var(--fit2go-white);">(703) 854-9587</a>
+                        </p>
+                        <p>Response within 2 hours during business hours</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Email</h3>
+                        <p style="font-size: 1.2rem; margin: 10px 0;">
+                            <a href="mailto:info@fit2gopt.com" style="color: var(--fit2go-white);">info@fit2gopt.com</a>
+                        </p>
+                        <p>Share details about your goals and schedule</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Service Area</h3>
+                        <p>Rockville • North Bethesda • Potomac • Gaithersburg • Kensington</p>
+                        <p style="font-size: 0.95rem; opacity: 0.8;">No travel fees inside Montgomery County</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="footer-section">
-                <h4>Service Areas</h4>
-                <ul>
-                    <li>McLean (22101, 22102)</li>
-                    <li>Tysons Corner</li>
-                    <li>Great Falls</li>
-                    <li>Vienna</li>
-                    <li>Arlington</li>
-                    <li>Langley</li>
-                </ul>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://www.fit2gopt.com/wp-content/uploads/2021/09/fit2go-logo.png" alt="Fit2Go Rockville logo">
+                    <p>Concierge in-home personal training for Rockville, MD and surrounding Montgomery County communities.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li>King Farm &amp; Fallsgrove</li>
+                        <li>Woodley Gardens</li>
+                        <li>Rockville Town Square</li>
+                        <li>North Bethesda &amp; Potomac</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+17038549587">(703) 854-9587</a></li>
+                        <li><a href="mailto:info@fit2gopt.com">info@fit2gopt.com</a></li>
+                        <li>Available Monday – Saturday</li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="footer-section">
-                <h4>Popular Locations</h4>
-                <ul>
-                    <li>Nottoway Park</li>
-                    <li>McLean Central Park</li>
-                    <li>Clemyjontri Park</li>
-                    <li>Home Visits</li>
-                    <li>Office Gyms</li>
-                </ul>
+            <div class="footer-bottom">
+                © <span id="year"></span> Fit2Go Rockville. All Rights Reserved.
             </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>© 2025 Fit2Go Personal Training, LLC. All rights reserved. | Licensed & Insured</p>
+    </footer>
+    <div class="modal" id="apply-modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close application form">&times;</button>
+            <h3 class="apply-heading">Rockville Free Assessment Application</h3>
+            <p style="margin-bottom: 1.5rem;">Complete the form below and you'll be redirected to schedule your consultation call.</p>
+            <form id="apply-form" novalidate>
+                <div class="input-grid">
+                    <div class="form-field">
+                        <label for="firstName">First Name</label>
+                        <input id="firstName" type="text" name="firstName" pattern="[A-Za-z\s'-]+" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="lastName">Last Name</label>
+                        <input id="lastName" type="text" name="lastName" pattern="[A-Za-z\s'-]+" autocomplete="family-name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email Address</label>
+                        <input id="email" type="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" type="tel" name="phone" pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
+                    </div>
+                    <div class="form-field" style="grid-column: 1 / -1;">
+                        <label for="goals">Describe Your Fitness Goals</label>
+                        <textarea id="goals" name="goals" aria-describedby="goal-help" required></textarea>
+                        <p id="goal-help" class="visually-hidden">Share at least one goal so we can prepare for your consultation.</p>
+                    </div>
+                    <div class="form-field">
+                        <label for="zip">Zip Code</label>
+                        <input id="zip" type="text" name="zip" pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="referral">How Did You Hear About Us?</label>
+                        <input id="referral" type="text" name="referral" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </form>
         </div>
     </div>
-</footer>
 
-<!-- Popup Form Modal -->
-<div id="apply-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="apply-title" aria-hidden="true" tabindex="-1">
-    <div class="modal-content">
-        <button type="button" class="modal-close" aria-label="Close">&times;</button>
-<h2 id="apply-title" class="apply-heading">Let's Discuss Your Fitness Goals</h2>
-<p class="apply-intro" style="text-align: center;">Fill out the form below to get started.</p>
-        <form id="apply-form">
-            <div class="input-grid">
-                <div class="form-field">
-                    <label for="firstName">First Name</label>
-                    <input id="firstName" type="text" name="firstName"  pattern="[A-Za-z\s'-]+" autocomplete="given-name" required>
-                </div>
-                <div class="form-field">
-                    <label for="lastName">Last Name</label>
-                    <input id="lastName" type="text" name="lastName"  pattern="[A-Za-z\s'-]+" autocomplete="family-name" required>
-                </div>
-                <div class="form-field">
-                    <label for="email">Email Address</label>
-                    <input id="email" type="email" name="email" autocomplete="email" required>
-                </div>
-                <div class="form-field">
-                    <label for="phone">Phone Number</label>
-                    <input id="phone" type="tel" name="phone"  pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
-                </div>
-                <div class="form-field" style="grid-column: 1 / -1;">
-                    <label for="goals">Describe Your Fitness Goals</label>
-                    <textarea id="goals" name="goals"  aria-describedby="goal-help" required></textarea>
-                    <p id="goal-help" class="visually-hidden">Describe one clear goal so we can match you with the right trainer.</p>
-                </div>
-                <div class="form-field">
-                    <label for="zip">Zip Code</label>
-                    <input id="zip" type="text" name="zip"  pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
-                </div>
-                <div class="form-field">
-                    <label for="referral">How Did You Hear About Us?</label>
-                    <input id="referral" type="text" name="referral"  required>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">SUBMIT APPLICATION</button>
-        </form>
-    </div>
-</div>
+    <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-<!-- Scripts -->
-<script>
-// FAQ Toggle
-document.querySelectorAll('.faq-question').forEach(item => {
-    item.addEventListener('click', () => {
-        item.parentElement.classList.toggle('active');
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            item.parentElement.classList.toggle('active');
+        });
     });
-});
 
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const offset = 100;
-            const targetPosition = target.offsetTop - offset;
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#') {
+                return;
+            }
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const offset = 100;
+                const targetPosition = target.offsetTop - offset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
-});
 
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.getElementById('primary-navigation');
 
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.getElementById('primary-navigation');
-
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-    hamburger.setAttribute('aria-expanded', !expanded);
-});
-
-navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', (!expanded).toString());
     });
-});
 
-// Popup Form functionality
-const applyLinks = document.querySelectorAll('#applyNowBtn, .open-apply');
-const modal = document.getElementById('apply-modal');
-const modalClose = document.querySelector('#apply-modal .modal-close');
-const firstInput = document.getElementById('firstName');
-let lastTrigger = null;
-
-applyLinks.forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        lastTrigger = link;
-        modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-        firstInput.focus();
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
     });
-});
 
-modalClose.addEventListener('click', () => {
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-    if (lastTrigger) lastTrigger.focus();
-});
+    const applyLinks = document.querySelectorAll('#applyNowBtn, .open-apply');
+    const modal = document.getElementById('apply-modal');
+    const modalClose = document.querySelector('#apply-modal .modal-close');
+    const firstInput = document.getElementById('firstName');
+    let lastTrigger = null;
 
-modal.addEventListener('click', e => {
-    if (e.target === modal) {
+    applyLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            lastTrigger = link;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            firstInput.focus();
+        });
+    });
+
+    modalClose.addEventListener('click', () => {
         modal.classList.remove('active');
         modal.setAttribute('aria-hidden', 'true');
         if (lastTrigger) lastTrigger.focus();
-    }
-});
-
-const form = document.getElementById('apply-form');
-
-form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    const firstName = form.firstName.value.trim();
-    const lastName = form.lastName.value.trim();
-    const email = form.email.value.trim();
-    const phone = form.phone.value.trim();
-    const zip = form.zip.value.trim();
-    const referral = form.referral.value.trim();
-    const goals = form.goals.value.trim();
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const phoneRegex = /^[0-9\-\s()+]{7,}$/;
-    const zipRegex = /^\d{5}(?:-\d{4})?$/;
-
-    if (!firstName || !lastName || !emailRegex.test(email) ||
-        !phoneRegex.test(phone) || !zipRegex.test(zip) || !referral || !goals) {
-        alert('Please fill out all fields correctly.');
-        return;
-    }
-
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-
-    // Send form data to Google Apps Script to trigger the email
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwVbEZ91H5pIJTkWo5cvBbCo4Zfzk-hgOG_lDcg3RXB_fLipSR5rI__-DeBXqzwCHlL/exec';
-    fetch(scriptURL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: new URLSearchParams({
-            firstName,
-            lastName,
-            email,
-            phone,
-            zip,
-            referral,
-            goals
-        })
     });
 
-    const redirectUrl =
-        `https://fit2go.youcanbook.me/?service=Fit2Go+Consultation+(Phone)` +
-        `&FNAME=${encodeURIComponent(firstName)}` +
-        `&LNAME=${encodeURIComponent(lastName)}` +
-        `&EMAIL=${encodeURIComponent(email)}` +
-        `&PHONE=+1${encodeURIComponent(phone)}` +
-        `&GOAL=${encodeURIComponent(goals)}` +
-        `&ZIP=${encodeURIComponent(zip)}` +
-        `&REFERREDBY=${encodeURIComponent(referral)}`;
+    modal.addEventListener('click', e => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            if (lastTrigger) lastTrigger.focus();
+        }
+    });
 
-    form.reset();
+    const form = document.getElementById('apply-form');
 
-    setTimeout(() => {
-        window.location.href = redirectUrl;
-    }, 500);
-});
-</script>
+    form.addEventListener('submit', e => {
+        e.preventDefault();
 
+        const firstName = form.firstName.value.trim();
+        const lastName = form.lastName.value.trim();
+        const email = form.email.value.trim();
+        const phone = form.phone.value.trim();
+        const zip = form.zip.value.trim();
+        const referral = form.referral.value.trim();
+        const goals = form.goals.value.trim();
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^[0-9\-\s()+]{7,}$/;
+        const zipRegex = /^\d{5}(?:-\d{4})?$/;
+
+        if (!firstName || !lastName || !emailRegex.test(email) ||
+            !phoneRegex.test(phone) || !zipRegex.test(zip) || !referral || !goals) {
+            alert('Please fill out all fields correctly.');
+            return;
+        }
+
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwVbEZ91H5pIJTkWo5cvBbCo4Zfzk-hgOG_lDcg3RXB_fLipSR5rI__-DeBXqzwCHlL/exec';
+        fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({
+                firstName,
+                lastName,
+                email,
+                phone,
+                zip,
+                referral,
+                goals
+            })
+        });
+
+        const redirectUrl =
+            `https://fit2go.youcanbook.me/?service=Fit2Go+Consultation+(Phone)` +
+            `&FNAME=${encodeURIComponent(firstName)}` +
+            `&LNAME=${encodeURIComponent(lastName)}` +
+            `&EMAIL=${encodeURIComponent(email)}` +
+            `&PHONE=+1${encodeURIComponent(phone)}` +
+            `&GOAL=${encodeURIComponent(goals)}` +
+            `&ZIP=${encodeURIComponent(zip)}` +
+            `&REFERREDBY=${encodeURIComponent(referral)}`;
+
+        form.reset();
+
+        setTimeout(() => {
+            window.location.href = redirectUrl;
+        }, 500);
+    });
+    </script>
 </body>
 </html>
-
