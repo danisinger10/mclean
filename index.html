@@ -6,45 +6,56 @@
   <title>Fit2Go Ocean City Recess</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-<body class="bg-slate-50 text-slate-900">
-  <header class="relative overflow-hidden bg-gradient-to-br from-cyan-600 via-sky-600 to-blue-700 text-white">
-    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_#fff,_transparent_35%)]"></div>
+<body class="bg-gradient-to-b from-slate-50 via-white to-sky-50 text-slate-900">
+  <header class="relative overflow-hidden bg-gradient-to-br from-cyan-700 via-sky-600 to-blue-700 text-white">
+    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_20%,_#fff,_transparent_35%)]"></div>
+    <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/10 to-transparent"></div>
     <div class="relative max-w-6xl mx-auto px-6 py-16 sm:py-20 lg:py-24 grid gap-10 lg:grid-cols-2 items-center">
       <div class="space-y-6">
-        <p class="text-sm uppercase tracking-[0.2em] font-semibold text-cyan-100">Fit2Go Personal Training</p>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">Ocean City Recess: playful small-group workouts in OCMD that feel like recess, not the gym grind.</h1>
-        <p class="text-lg text-cyan-50">Locals, remote workers, and long-stay visitors. Simple moves, high energy, coaches who keep it light and safe.</p>
+        <div class="inline-flex items-center gap-2 bg-white/15 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg shadow-cyan-900/10">
+          <span class="h-2 w-2 rounded-full bg-amber-300"></span>
+          <span>Ocean City Recess Launch</span>
+        </div>
+        <p class="text-sm uppercase tracking-[0.18em] font-semibold text-cyan-100">Fit2Go Personal Training</p>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">Ocean City Recess: playful beachside small groups that feel like recess, not the gym grind.</h1>
+        <p class="text-lg text-cyan-50">Built for OC locals, remote workers, and long-stay visitors. Simple moves, high energy, coaches who keep it light and safe.</p>
         <div class="flex flex-col sm:flex-row gap-3">
-          <a href="#consult" class="inline-flex items-center justify-center px-6 py-3 text-lg font-semibold bg-white text-cyan-700 rounded-full shadow-lg shadow-cyan-900/20 hover:-translate-y-0.5 transition transform">Book Your Free Ocean City Recess Consult</a>
+          <a href="#consult" class="inline-flex items-center justify-center px-6 py-3 text-lg font-semibold bg-white text-cyan-800 rounded-full shadow-lg shadow-cyan-900/25 hover:-translate-y-0.5 transition transform">Book Your Free Ocean City Recess Consult</a>
           <a href="#how" class="inline-flex items-center justify-center px-6 py-3 text-lg font-semibold border border-white/70 rounded-full hover:bg-white/10">See How It Works</a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-cyan-50">
+          <div class="bg-white/10 rounded-xl p-3 border border-white/10">Boardwalk dawn, bayside parks, and open-air courts.</div>
+          <div class="bg-white/10 rounded-xl p-3 border border-white/10">Small pods so you know your coach and crew.</div>
+          <div class="bg-white/10 rounded-xl p-3 border border-white/10">Warm-ups, play, and finishers that leave you smiling.</div>
         </div>
       </div>
       <div class="bg-white/10 backdrop-blur rounded-2xl p-6 sm:p-8 shadow-xl border border-white/20" id="consult">
         <h2 class="text-2xl font-semibold mb-2">Start the conversation</h2>
-        <p class="text-cyan-100 mb-6">Tell us how to reach you. We will match you with the next Ocean City Recess session.</p>
+        <p class="text-cyan-100 mb-6">Drop your info. We’ll match you with the next Ocean City Recess session.</p>
         <form class="space-y-4" action="#" method="post">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium mb-1" for="name">Name</label>
-              <input id="name" name="name" type="text" required class="w-full rounded-lg border border-cyan-100/60 bg-white/80 text-slate-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white" />
+              <input id="name" name="name" type="text" required class="w-full rounded-lg border border-cyan-100/60 bg-white/85 text-slate-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white" />
             </div>
             <div>
               <label class="block text-sm font-medium mb-1" for="email">Email</label>
-              <input id="email" name="email" type="email" required class="w-full rounded-lg border border-cyan-100/60 bg-white/80 text-slate-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white" />
+              <input id="email" name="email" type="email" required class="w-full rounded-lg border border-cyan-100/60 bg-white/85 text-slate-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white" />
             </div>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium mb-1" for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" required pattern="[0-9+\-()\s]{7,}" class="w-full rounded-lg border border-cyan-100/60 bg-white/80 text-slate-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white" />
+              <input id="phone" name="phone" type="tel" required pattern="[0-9+\-()\s]{7,}" class="w-full rounded-lg border border-cyan-100/60 bg-white/85 text-slate-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white" />
             </div>
             <div>
               <label class="block text-sm font-medium mb-1" for="message">How can we help?</label>
-              <input id="message" name="message" type="text" required class="w-full rounded-lg border border-cyan-100/60 bg-white/80 text-slate-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white" />
+              <input id="message" name="message" type="text" required class="w-full rounded-lg border border-cyan-100/60 bg-white/85 text-slate-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white" />
             </div>
           </div>
-          <button type="submit" class="w-full inline-flex items-center justify-center px-4 py-3 text-lg font-semibold bg-white text-cyan-700 rounded-full shadow-lg shadow-cyan-900/20 hover:-translate-y-0.5 transition transform">Book Your Free Ocean City Recess Consult</button>
+          <button type="submit" class="w-full inline-flex items-center justify-center px-4 py-3 text-lg font-semibold bg-white text-cyan-800 rounded-full shadow-lg shadow-cyan-900/25 hover:-translate-y-0.5 transition transform">Book Your Free Ocean City Recess Consult</button>
         </form>
+        <p class="text-xs text-cyan-100/80 mt-4">We keep it small. Expect a quick text or call to place you in the right pod.</p>
       </div>
     </div>
   </header>
@@ -53,16 +64,17 @@
     <section id="what" class="grid gap-8 lg:grid-cols-2 lg:items-center">
       <div class="space-y-6">
         <h2 class="text-3xl font-bold text-slate-900">What is Ocean City Recess</h2>
-        <p class="text-lg text-slate-700">Small-group, recess-style workouts at the beach, parks, and open spaces. Simple moves, quick sessions, and coaches who keep it light but dialed in.</p>
+        <p class="text-lg text-slate-700">Recess-style small groups on the sand, bayside parks, and quiet courts. Simple moves, quick hits, and coaches who keep it lively without the drill-sergeant vibe.</p>
         <ul class="space-y-3 text-slate-800">
           <li class="flex gap-3 items-start"><span class="mt-1 h-2 w-2 rounded-full bg-cyan-600"></span><span>Recess for grown ups, not boot camp.</span></li>
           <li class="flex gap-3 items-start"><span class="mt-1 h-2 w-2 rounded-full bg-cyan-600"></span><span>Simple moves, smart coaching, real results.</span></li>
-          <li class="flex gap-3 items-start"><span class="mt-1 h-2 w-2 rounded-full bg-cyan-600"></span><span>Built for locals, remote workers, and long-stay visitors.</span></li>
+          <li class="flex gap-3 items-start"><span class="mt-1 h-2 w-2 rounded-full bg-cyan-600"></span><span>Built for OC locals, remote workers, and long-stay visitors.</span></li>
         </ul>
       </div>
       <div class="bg-white rounded-2xl shadow-lg p-4 border border-slate-100">
-        <div class="aspect-[4/3] rounded-xl bg-slate-100 overflow-hidden flex items-center justify-center">
-          <img src="/images/ocean-city-recess-hero.jpg" alt="Adults enjoying an outdoor recess style workout in Ocean City" class="w-full h-full object-cover" />
+        <div class="aspect-[4/3] rounded-xl bg-slate-100 overflow-hidden flex items-center justify-center relative">
+          <div class="absolute inset-0 bg-gradient-to-br from-sky-100 via-transparent to-amber-100"></div>
+          <img src="/images/ocean-city-recess-hero.jpg" alt="Adults enjoying an outdoor recess style workout in Ocean City" class="w-full h-full object-cover relative" />
         </div>
       </div>
     </section>
@@ -77,17 +89,17 @@
           <div class="space-y-3">
             <div class="h-10 w-10 rounded-full bg-cyan-600 text-white flex items-center justify-center font-semibold">1</div>
             <h3 class="text-xl font-semibold">Book a quick call</h3>
-            <p class="text-slate-700">A short screen to match you with the right session.</p>
+            <p class="text-slate-700">A short screen to place you in the right Ocean City pod.</p>
           </div>
           <div class="space-y-3">
             <div class="h-10 w-10 rounded-full bg-cyan-600 text-white flex items-center justify-center font-semibold">2</div>
             <h3 class="text-xl font-semibold">Show up in comfy clothes</h3>
-            <p class="text-slate-700">No equipment needed; we bring the structure and coaching.</p>
+            <p class="text-slate-700">No gear needed. We bring the structure, cones, and coaching.</p>
           </div>
           <div class="space-y-3">
             <div class="h-10 w-10 rounded-full bg-cyan-600 text-white flex items-center justify-center font-semibold">3</div>
             <h3 class="text-xl font-semibold">Play, sweat, and leave lighter</h3>
-            <p class="text-slate-700">Feel better in your body and head before you head back to life.</p>
+            <p class="text-slate-700">You finish with a clear head, better hips, and a crew to wave to on the Boardwalk.</p>
           </div>
         </div>
         <div class="text-center">
@@ -101,9 +113,9 @@
         <h2 class="text-2xl font-bold">Perfect if you</h2>
         <ul class="space-y-3 text-slate-700">
           <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-cyan-600"></span><span>Want to move more without a hardcore gym vibe.</span></li>
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-cyan-600"></span><span>Like the idea of short, energetic sessions that fit your day.</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-cyan-600"></span><span>Like short, energetic sessions that fit between meetings or beach time.</span></li>
           <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-cyan-600"></span><span>Value smart coaching that keeps you safe and progressing.</span></li>
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-cyan-600"></span><span>Enjoy meeting locals and fellow long-stay visitors.</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-cyan-600"></span><span>Enjoy meeting OC locals and fellow long-stay visitors.</span></li>
         </ul>
       </div>
       <div class="bg-slate-900 text-white rounded-3xl shadow-lg border border-slate-800 p-8 space-y-4">
@@ -120,12 +132,12 @@
     <section class="bg-white rounded-3xl shadow-lg border border-slate-100 p-8 space-y-6">
       <div class="space-y-3">
         <h2 class="text-3xl font-bold text-slate-900">Why Fit2Go</h2>
-        <p class="text-lg text-slate-700">We built Ocean City Recess to give adults a way to move hard enough to feel it, without the punishment vibe. High-quality coaches keep you safe, engaged, and progressing.</p>
+        <p class="text-lg text-slate-700">We built Ocean City Recess so locals and visitors can move hard enough to feel it without the punishment vibe. High-quality coaches keep you safe, engaged, and progressing on the sand and beyond.</p>
       </div>
       <div class="grid gap-6 sm:grid-cols-3">
         <div class="space-y-2">
           <h3 class="text-xl font-semibold text-cyan-700">[NUMBER]+ years coaching</h3>
-          <p class="text-slate-700">Experienced trainers who know when to push and when to adjust.</p>
+          <p class="text-slate-700">Seasoned trainers who know when to push and when to adjust.</p>
         </div>
         <div class="space-y-2">
           <h3 class="text-xl font-semibold text-cyan-700">[NUMBER] clients served</h3>
