@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="McLean's premier in-home personal training since 2013. Expert trainers come to your home, office, or Nottoway Park. Free consultation. 100% satisfaction guarantee. Call (703) 854-9587.">
-<meta name="keywords" content="personal trainer McLean VA, in-home personal training McLean, mobile personal trainer Tysons, fitness trainer Great Falls, private personal training Northern Virginia">
-<title>In-Home Personal Training McLean VA | Fit2Go - Elite Since 2013</title>
+<meta name="description" content="Ocean City Recess is the affordable community workout club for OC residents. Free Monday classes, $5 Wednesdays, and $10 Fridays so every neighbor can move together.">
+<meta name="keywords" content="Ocean City fitness, free workout Monday, affordable exercise Ocean City MD, community fitness classes, sliding scale workouts">
+<title>Ocean City Recess | Free Monday Fitness for Ocean City Residents</title>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,15 +22,15 @@
 }
 
 :root {
-    --fit2go-dark-green: #14880C;
-    --fit2go-light-green: #09D200;
+    --fit2go-dark-green: #0b3d52;
+    --fit2go-light-green: #1ec0ff;
     --fit2go-white: #FFFFFF;
-    --fit2go-black: #000000;
-    --text-primary: #1a1a1a;
-    --text-secondary: #4a4a4a;
-    --bg-light-gray: #f8f9fa;
-    --bg-dark: #111111;
-    --accent-gold: #D4AF37;
+    --fit2go-black: #0a1f33;
+    --text-primary: #12202c;
+    --text-secondary: #4a6475;
+    --bg-light-gray: #f5f8fb;
+    --bg-dark: #081724;
+    --accent-gold: #f4a261;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -220,7 +220,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-4-1-scaled.jpg') top center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center center/cover no-repeat;
     z-index: 0;
     animation: heroKenBurns 20s ease-in-out infinite;
     transform-origin: center;
@@ -1107,7 +1107,10 @@ section {
 <!-- Navigation -->
 <nav class="navbar">
     <div class="container nav-container">
-        <img src="https://www.fit2gopt.com/wp-content/uploads/2019/05/Contrast-logo.png" alt="Fit2Go Personal Training" class="nav-logo">
+        <div class="nav-logo" style="display:flex; align-items:center; gap:12px;">
+            <div style="width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, var(--fit2go-dark-green), var(--fit2go-light-green)); display:flex; align-items:center; justify-content:center; color: var(--fit2go-white); font-weight:800; font-family: var(--font-heading); letter-spacing: 0.02em; box-shadow: 0 6px 16px rgba(0,0,0,0.2);">OC</div>
+            <span style="font-weight:800; font-size:1.05rem; color: var(--fit2go-black); text-transform:uppercase; letter-spacing:0.08em;">Ocean City Recess</span>
+        </div>
         <button class="hamburger" aria-label="Toggle menu" aria-controls="primary-navigation" aria-expanded="false">
             <span></span>
             <span></span>
@@ -1115,12 +1118,12 @@ section {
         </button>
         <ul class="nav-menu" id="primary-navigation">
             <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#process" class="nav-link">How It Works</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#team" class="nav-link">Your Team</a></li>
-            <li><a href="#testimonials" class="nav-link">Results</a></li>
-            <li><a href="#pricing" class="nav-link">Investment</a></li>
-            <li><a href="#" id="applyNowBtn" class="btn btn-primary">Get Started</a></li>
+            <li><a href="#process" class="nav-link">Schedule</a></li>
+            <li><a href="#assessment" class="nav-link">What You Get</a></li>
+            <li><a href="#pricing" class="nav-link">Pricing</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#" id="applyNowBtn" class="btn btn-primary">Reserve</a></li>
         </ul>
     </div>
 </nav>
@@ -1130,13 +1133,14 @@ section {
     <div class="hero-overlay"></div>
     <div class="container">
         <div class="hero-content">
-            <h1>McLean's In-Home Personal Training Service</h1>
+            <h1>Ocean City Recess</h1>
             <p class="hero-subtitle">
-                Our nationally, certified personal trainers come to YOU.
+                Free Monday workouts for every Ocean City neighbor. $5 Wednesdays and $10 Fridays so staying healthy never breaks the budget.
             </p>
-            
+
             <div class="hero-cta">
-                <a href="#" class="btn btn-primary btn-large open-apply">Get Started</a>
+                <a href="#" class="btn btn-primary btn-large open-apply">Reserve Your Spot</a>
+                <p class="cta-subtext">No contracts • Bring friends & family • All fitness levels welcome</p>
             </div>
         </div>
     </div>
@@ -1152,20 +1156,20 @@ section {
     <div class="container">
         <div class="stats-grid">
             <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Satisfaction Guarantee</div>
+                <div class="stat-number">$0</div>
+                <div class="stat-label">Every Monday — always free</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Lives Transformed</div>
+                <div class="stat-number">$5-10</div>
+                <div class="stat-label">Sliding scale Wed & Fri</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">5.0<i class="fa-solid fa-star premium-icon" aria-hidden="true"></i></div>
-                <div class="stat-label">Google Rating</div>
+                <div class="stat-number">40 mins</div>
+                <div class="stat-label">High-energy, low-pressure sessions</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">24h</div>
-                <div class="stat-label">Response Time</div>
+                <div class="stat-number">Community</div>
+                <div class="stat-label">Built for Ocean City residents</div>
             </div>
         </div>
     </div>
@@ -1177,23 +1181,23 @@ section {
         <div class="value-grid">
             <div class="value-item">
                 <div class="value-icon"><i class="fa-solid fa-house premium-icon"></i></div>
-                <h4>We Come to You</h4>
-                <p>Home, office, or Nottoway Park — no gym commute needed</p>
+                <h4>Neighborhood First</h4>
+                <p>Designed for Ocean City locals with routes near bus lines and public parks</p>
             </div>
             <div class="value-item">
                 <div class="value-icon"><i class="fa-solid fa-chalkboard-user premium-icon"></i></div>
-                <h4>Expert Trainers</h4>
-                <p>NASM, ACE & ACSM certified professionals with 5+ years experience</p>
+                <h4>Coaches Who Get You</h4>
+                <p>Instructors skilled in beginner-friendly movement, mobility, and bodyweight strength</p>
             </div>
             <div class="value-item">
                 <div class="value-icon"><i class="fa-solid fa-chart-column premium-icon"></i></div>
-                <h4>Proven System</h4>
-                <p>Custom programs + nutrition coaching + app tracking = real results</p>
+                <h4>Simple Structure</h4>
+                <p>Show up, stretch, sweat, smile. No memberships, contracts, or confusing signups</p>
             </div>
             <div class="value-item">
                 <div class="value-icon"><i class="fa-solid fa-chart-line premium-icon"></i></div>
-                <h4>Track Progress</h4>
-                <p>Advanced body composition analysis & monthly reassessments</p>
+                <h4>Affordable Access</h4>
+                <p>Free on Mondays so everyone can try. Keep coming back for just $5-$10</p>
             </div>
         </div>
     </div>
@@ -1202,30 +1206,29 @@ section {
 <!-- About Section -->
 <section id="about" class="section-dark">
     <div class="container">
-        <h2>Why McLean Professionals Choose Fit2Go</h2>
+        <h2>Built for Ocean City's Hardworking Residents</h2>
         <div class="about-grid">
             <div class="about-content">
-                <h3>The Fit2Go Difference: Where Excellence Meets Convenience</h3>
+                <h3>Movement that matches your budget, schedule, and neighborhood.</h3>
                 <p>
-                    Since 2013, we've been Northern Virginia's most trusted in-home training service. 
-                    Unlike franchise operations that rotate trainers weekly, Fit2Go assigns you one 
-                    dedicated coach who designs your program, leads every session, and ensures your satisfaction.
+                    Ocean City Recess was dreamed up to make fitness feel like play again — especially for families and
+                    workers who keep our shore town running. No fancy memberships, no hidden fees, just accessible
+                    coaching and community energy.
                 </p>
                 <p>
-                    <strong>Your success is our only metric.</strong> While competitors evaluate trainers on sales quotas, 
-                    we measure performance exclusively on client outcomes. Your trainer meets weekly with our 
-                    Division Director to analyze your progress and optimize your program.
+                    Monday classes are always free because everyone deserves a place to move. If you love it, you can
+                    return on Wednesdays for $5 or Fridays for $10. Bring your kids, bring your friends, and meet the
+                    neighbors you haven't had time to see this season.
                 </p>
                 <p>
-                    Whether you prefer morning sessions at your Langley home, lunch workouts at your Tysons 
-                    office, or evening training at Nottoway Park's scenic trails, we bring everything you 
-                    need for a world-class fitness experience.
+                    Sessions are designed for all levels with short, safe progressions. We set up near playgrounds and
+                    bus stops so you can drop in before or after shifts without extra travel.
                 </p>
-                <a href="#process" class="btn btn-outline" style="margin-top: 20px;">Discover Our Process</a>
+                <a href="#process" class="btn btn-outline" style="margin-top: 20px;">See the Weekly Flow</a>
             </div>
             <div class="about-image">
-                <img src="https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-3-scaled.jpg" 
-                     alt="Fit2Go trainer coaching at Nottoway Park in McLean">
+                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80"
+                     alt="Neighbors working out together near the beach">
             </div>
         </div>
     </div>
@@ -1234,61 +1237,43 @@ section {
 <!-- Process Section -->
 <section id="process">
     <div class="container">
-        <h2>Your Journey to Peak Performance in 4 Simple Steps</h2>
+        <h2>Weekly Rhythm: Show Up When You Can</h2>
         <p style="text-align: center; font-size: 1.25rem; margin-bottom: 60px;">
-            From application to transformation, every detail is optimized for busy professionals 
-            who value their time and demand excellence.
+            One simple schedule so you always know when to move. Come once a week or all three days — it's up to you.
         </p>
-        
+
         <div class="process-timeline">
             <div class="process-step">
-                <div class="step-number">1</div>
+                <div class="step-number">Mon</div>
                 <div class="step-content">
-                    <h3>Submit Your Application</h3>
-                    <div class="step-duration">2 Minutes Online</div>
+                    <h3>Free Community Class</h3>
+                    <div class="step-duration">After-work energy boost</div>
                     <p>
-                        Complete our brief online form and you'll be immediately redirected to schedule 
-                        a 15-30 minute vetting call with James, your McLean Division Director.
+                        Bring friends, kids, and coworkers. We focus on low-impact movement, light cardio, and feel-good stretching so everyone leaves energized.
                     </p>
                 </div>
             </div>
-            
+
             <div class="process-step">
-                <div class="step-number">2</div>
+                <div class="step-number">Wed</div>
                 <div class="step-content">
-                    <h3>Director Vetting Call</h3>
-                    <div class="step-duration">15-30 Minute Phone Consultation</div>
+                    <h3>$5 Skill Builder</h3>
+                    <div class="step-duration">Technique + strength</div>
                     <p>
-                        James personally reviews your goals, injuries, schedule, and location to ensure 
-                        mutual fit. We'll confirm pricing aligns with your budget before proceeding—this 
-                        ensures we only meet if we can deliver the results you expect.
+                        We layer in basic strength circuits and posture work. Sliding-scale pricing keeps it accessible while giving you a mid-week reset.
                     </p>
                 </div>
             </div>
-            
+
             <div class="process-step">
-                <div class="step-number">3</div>
+                <div class="step-number">Fri</div>
                 <div class="step-content">
-                    <h3>Free Comprehensive Assessment</h3>
-                    <div class="step-duration">60 Minutes at Your Location</div>
+                    <h3>$10 Finish Strong</h3>
+                    <div class="step-duration">Celebrate the week</div>
                     <p>
-                        The cornerstone of your transformation. James conducts advanced body composition 
-                        testing, movement screening, and performance benchmarks. You'll receive your results instantly via the Fit2Go app. We'll then start designing your customized fitness program.
+                        A little more sweat, still beginner-friendly. Expect upbeat playlists, partner drills, and plenty of high-fives before the weekend.
                     </p>
-                    <a href="#assessment" class="btn btn-outline" style="margin-top: 15px;">See What's Included</a>
-                </div>
-            </div>
-            
-            <div class="process-step">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                    <h3>Begin Your Transformation</h3>
-                    <div class="step-duration">First Session Within 7 Days</div>
-                    <p>
-                        Your dedicated coach arrives with all equipment for your first 45-minute session. 
-                        This same trainer will guide every workout, track every metric, and ensure your 
-                        success with weekly director oversight. Welcome to the Fit2Go family.
-                    </p>
+                    <a href="#assessment" class="btn btn-outline" style="margin-top: 15px;">What's included each class?</a>
                 </div>
             </div>
         </div>
@@ -1298,109 +1283,81 @@ section {
 <!-- Assessment Section -->
 <section id="assessment" class="section-green">
     <div class="container">
-        <h2>Your Complimentary Comprehensive Assessment</h2>
+        <h2>What Every Class Includes</h2>
         <p style="text-align: center; font-size: 1.25rem; color: var(--fit2go-white); font-weight: 600; margin-bottom: 60px;">
-            A $300 value, absolutely free • No obligation to continue
+            Show up with water and comfortable shoes. We'll guide the rest.
         </p>
-        
+
         <div class="services-grid">
             <div class="service-card">
-                <h3><i class="fa-solid fa-microscope premium-icon"></i> Body Composition Analysis</h3>
+                <h3><i class="fa-solid fa-heart-pulse premium-icon"></i> Gentle Warmup</h3>
                 <ul>
-                    <li>Bio-electrical impedance testing</li>
-                    <li>Body fat percentage & lean muscle mass</li>
-                    <li>Visceral fat & metabolic age</li>
-                    <li>Hydration levels & bone density</li>
-                    <li>Circumference measurements via MyoTape</li>
+                    <li>Breathing and mobility to loosen up after work</li>
+                    <li>Dynamic stretches to protect knees, hips, and back</li>
+                    <li>Options to stay seated or standing as needed</li>
                 </ul>
             </div>
-            
+
             <div class="service-card">
-                <h3><i class="fa-solid fa-person-running premium-icon"></i> Performance Testing</h3>
+                <h3><i class="fa-solid fa-dumbbell premium-icon"></i> Strength & Cardio Mix</h3>
                 <ul>
-                    <li>Full-body mobility screening</li>
-                    <li>Functional movement assessment</li>
-                    <li>Cardiovascular capacity testing</li>
-                    <li>Strength benchmarks (push/pull/core)</li>
-                    <li>Balance & coordination evaluation</li>
+                    <li>Bodyweight and resistance-band circuits</li>
+                    <li>Low-impact cardio bursts with walking or step options</li>
+                    <li>Coaching on form so beginners feel confident</li>
                 </ul>
             </div>
-            
+
             <div class="service-card">
-                <h3><i class="fa-solid fa-mobile-screen-button premium-icon"></i> Instant Deliverables</h3>
+                <h3><i class="fa-solid fa-people-group premium-icon"></i> Community Cooldown</h3>
                 <ul>
-                    <li>Complete assessment report in app</li>
-                    <li>Custom calorie & macro targets</li>
-                    <li>7-day personalized meal plan</li>
-                    <li>Pre-loaded mobility & workout routines</li>
-                    <li>24/7 trainer messaging access</li>
+                    <li>Stretching, breathwork, and gratitude moments</li>
+                    <li>Neighbor check-ins to share wins and stay accountable</li>
+                    <li>Announcements on childcare spots and bus-friendly meetups</li>
                 </ul>
             </div>
         </div>
-        
+
         <div style="text-align: center; margin-top: 60px;">
-            <a href="#" class="btn btn-primary open-apply">Reserve Your Free Assessment</a>
+            <a href="#" class="btn btn-primary open-apply">Save My Spot</a>
         </div>
     </div>
 </section>
 
+
 <!-- Services Section -->
 <section id="services">
     <div class="container">
-        <h2>Training Programs Tailored to Your Lifestyle</h2>
-        
+        <h2>Where We Meet & What to Expect</h2>
+
         <div class="services-grid">
             <div class="service-card">
-                <h3>1-on-1 Personal Training</h3>
-                <p>The gold standard in personalized fitness. Perfect for executives, busy parents, and anyone serious about transformation.</p>
+                <h3>Beachside Meetups</h3>
+                <p>Sunset and sunrise options near the Boardwalk with soft-sand and boardwalk-friendly exercises.</p>
                 <ul>
-                    <li>One dedicated coach for entire program</li>
-                    <li>Weekly director oversight</li>
-                    <li>Flexible scheduling 6am-8pm</li>
-                    <li>All equipment provided</li>
-                    <li>Nutrition coaching included</li>
+                    <li>Minutes from downtown bus stops</li>
+                    <li>Plenty of space for strollers and chairs</li>
+                    <li>Weather-safe plans ready for rain or wind</li>
                 </ul>
             </div>
-            
+
             <div class="service-card featured">
-                <h3>Semi-Private Training (2-4)</h3>
-                <p>Train with your spouse, friends, or colleagues. Get motivated together while saving 20% per person.</p>
+                <h3>Park & Playground Circuits</h3>
+                <p>Kid-friendly stations so parents can move while little ones play within sight.</p>
                 <ul>
-                    <li>Individual programs within group</li>
-                    <li>Built-in accountability partners</li>
-                    <li>Fun partner exercises</li>
-                    <li>Perfect for couples or families</li>
-                    <li>Same premium service, better value</li>
+                    <li>Light equipment: bands, cones, mats</li>
+                    <li>Options for seated, standing, or supported moves</li>
+                    <li>Breaks built in so everyone keeps up</li>
                 </ul>
             </div>
-            
+
             <div class="service-card">
-                <h3>Corporate Wellness</h3>
-                <p>Boost productivity and reduce healthcare costs with on-site training for your Tysons or McLean office.</p>
+                <h3>Indoor Backup Plan</h3>
+                <p>Community center or church-hall sessions when the weather turns. Same energy, safe surfaces.</p>
                 <ul>
-                    <li>Lunch-hour group classes</li>
-                    <li>Executive 1-on-1 sessions</li>
-                    <li>Quarterly health screenings</li>
-                    <li>Wellness workshops & seminars</li>
-                    <li>Employee fitness challenges</li>
+                    <li>Text updates if we pivot indoors</li>
+                    <li>Plenty of chairs for mobility modifications</li>
+                    <li>Music, mats, and sanitizer provided</li>
                 </ul>
-            </div>
-        </div>
-        
-        <!-- Specialized Programs -->
-        <h3 style="text-align: center; margin-top: 80px; margin-bottom: 40px;">Specialized Programs for Every Stage of Life</h3>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3><i class="fa-solid fa-person-pregnant premium-icon"></i> Pre & Post-Natal Training</h3>
-                <p>Safe, effective exercises for expecting and new mothers. Core recovery, diastasis recti rehabilitation, and stroller workouts at Nottoway Park.</p>
-            </div>
-            <div class="service-card">
-                <h3><i class="fa-solid fa-person-cane premium-icon"></i> Senior Fitness (55+)</h3>
-                <p>Maintain independence with balance training, fall prevention, bone density exercises, and functional strength for daily activities.</p>
-            </div>
-            <div class="service-card">
-                <h3><i class="fa-solid fa-bolt premium-icon"></i> Youth Athletic Development</h3>
-                <p>Build proper movement patterns, injury prevention, and sport-specific training for young athletes (ages 12-18).</p>
             </div>
         </div>
     </div>
@@ -1409,59 +1366,48 @@ section {
 <!-- Team Section -->
 <section id="team" class="section-dark">
     <div class="container">
-        <h2>Meet Your McLean Training Team</h2>
-        
+        <h2>Meet the Crew Keeping OC Moving</h2>
+
         <div class="team-grid">
             <div class="team-member">
-                <img src="https://www.fit2gopt.com/wp-content/uploads/2025/07/Fit2Go-Mclean-2-scaled.jpg" 
-                     alt="James Shulman, Fit2Go McLean Director">
+                <img src="https://images.unsplash.com/photo-1594737625785-c223f12390b8?auto=format&fit=crop&w=900&q=80"
+                     alt="Coach leading a community workout on the boardwalk">
                 <div class="team-member-info">
-                    <h3>James Shulman</h3>
-                    <p class="team-title">McLean Division Director & Lead Trainer</p>
+                    <h3>Coach Maya</h3>
+                    <p class="team-title">Community Lead & Mobility Specialist</p>
                     <p>
-                        James personally conducts every initial assessment and oversees all McLean programs. 
-                        A military veteran with over 8 years of experience and specializations in 
-                        corrective exercise and post-rehabilitation training, he ensures each client receives 
-                        truly personalized programming.
-                    </p>
-                    <p>
-                        "I meet weekly with every trainer to review client data and optimize programs. 
-                        Your success isn't just your trainer's responsibility—it's mine too."
+                        Maya designs every Ocean City Recess session to be joint-friendly and fun. She brings a background in
+                        youth athletics and senior fitness so every neighbor feels seen and supported.
                     </p>
                     <div class="team-credentials">
-                        <span class="credential">Military Veteran</span>
-                        <span class="credential">Specialization in Corrective Exercise and Post-Rehab</span>
+                        <span class="credential">ACE CPT</span>
+                        <span class="credential">Mobility & Stretching Specialist</span>
+                        <span class="credential">Ocean City resident</span>
                     </div>
                 </div>
             </div>
-            
+
             <div class="team-member">
-                <img src="https://www.fit2gopt.com/wp-content/uploads/2021/02/Dani-Headshot-Final.jpg" style="object-position: top;"
-                     alt="Dani Singer, Fit2Go Founder & CEO">
+                <img src="https://images.unsplash.com/photo-1597341440384-44a9c87c1b06?auto=format&fit=crop&w=900&q=80" style="object-position: top;"
+                     alt="Coach smiling with a group after class">
                 <div class="team-member-info">
-                    <h3>Dani Singer</h3>
-                    <p class="team-title">Founder & CEO</p>
+                    <h3>Coach Darryl</h3>
+                    <p class="team-title">Strength Coach & Playlist Captain</p>
                     <p>
-                        Since founding Fit2Go in 2013, Dani has built a team of elite trainers across the 
-                        DMV area. A nationally recognized fitness expert featured in Reader's Digest, 
-                        Muscle & Fitness, and SHAPE Magazine, Dani ensures every Fit2Go trainer meets 
-                        the highest standards of excellence.
-                    </p>
-                    <p>
-                        With a special dedication to making fitness practical for busy professionals, 
-                        Dani has redefined what in-home personal training can be.
+                        Darryl focuses on simple, powerful movements that work even if you're new to exercise. He keeps the
+                        music upbeat, the cues clear, and the vibes welcoming for first-timers.
                     </p>
                     <div class="team-credentials">
-                        <span class="credential">Published Author</span>
-                        <span class="credential">Industry Expert</span>
-                        <span class="credential">Teacher to 200,000+ Personal Trainers Worldwide</span>
+                        <span class="credential">NASM CPT</span>
+                        <span class="credential">Trauma-informed coaching</span>
+                        <span class="credential">Speaks English & Spanish</span>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div style="text-align: center; margin-top: 50px;">
-            <p style="font-weight: 600;">All Fit2Go trainers are nationally certified, background checked, insured, and CPR/AED certified</p>
+            <p style="font-weight: 600;">Every class includes modification options, hydration breaks, and coaches who learn your name.</p>
         </div>
     </div>
 </section>
@@ -1469,43 +1415,43 @@ section {
 <!-- Testimonials Section -->
 <section id="testimonials" class="section-gray">
     <div class="container">
-        <h2>Real Results from Your McLean Neighbors</h2>
-        
+        <h2>Neighbors Already Feeling the Difference</h2>
+
         <div class="testimonial-grid">
             <div class="testimonial-card">
                 <div class="testimonial-stars"><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i></div>
                 <p class="testimonial-text">
-                    "I travel for work and was struggling to find a consistent routine. My trainer, James, has been fantastic. He's incredibly knowledgeable and has designed a program that I can do both at home and on the road. I've seen more progress in the last 3 months than I have in the last 3 years."
+                    "I usually get home from work exhausted. Mondays at Recess give me energy instead of taking it. It's free, it's fun, and my kids run around nearby while I move."
                 </p>
-                <div class="testimonial-author">David G.</div>
-                <div class="testimonial-location">Tysons, VA</div>
+                <div class="testimonial-author">Tasha M.</div>
+                <div class="testimonial-location">Downtown OC</div>
             </div>
-            
+
             <div class="testimonial-card">
                 <div class="testimonial-stars"><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i></div>
                 <p class="testimonial-text">
-                    "I was skeptical about in-home training, but Fit2Go has been a game changer. My trainer is always on time, brings all the equipment, and the workouts are challenging but fun. I'm stronger, have more energy, and my clothes fit better. Highly recommend!"
+                    "I'm new to exercise and was nervous. The coaches gave me chair options and never rushed me. Five dollars on Wednesdays is doable for my budget." 
                 </p>
-                <div class="testimonial-author">Karen S.</div>
-                <div class="testimonial-location">McLean, VA</div>
+                <div class="testimonial-author">Luis M.</div>
+                <div class="testimonial-location">West OC</div>
             </div>
-            
+
             <div class="testimonial-card">
                 <div class="testimonial-stars"><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i><i class="fa-solid fa-star premium-icon"></i></div>
                 <p class="testimonial-text">
-                    "As a new mom, finding time for the gym was impossible. Fit2Go's post-natal program was perfect. My trainer helped me rebuild my core strength safely and effectively. It's been amazing to feel like myself again."
+                    "The Friday class feels like a celebration. I work service shifts, so having a spot to move, stretch, and laugh with neighbors for ten bucks is the highlight of my week."
                 </p>
-                <div class="testimonial-author">Jessica L.</div>
-                <div class="testimonial-location">Arlington, VA</div>
+                <div class="testimonial-author">Sonia M.</div>
+                <div class="testimonial-location">Midtown OC</div>
             </div>
         </div>
-        
+
         <div style="text-align: center; margin-top: 50px;">
             <p style="font-weight: 600; margin-bottom: 20px;">
-                Join 500+ McLean residents who've transformed their health with Fit2Go
+                Come see why Ocean City Recess is the most welcoming workout on the shore.
             </p>
-            <a href="https://share.google/EvWxObeMOPWAbcywf" target="_blank" class="btn btn-outline">
-                Read More Google Reviews
+            <a href="#" class="btn btn-outline open-apply">
+                Save Your Spot for Monday
             </a>
         </div>
     </div>
@@ -1514,70 +1460,55 @@ section {
 <!-- Pricing Section -->
 <section id="pricing" class="section-dark">
     <div class="container">
-        <h2>Transparent Investment in Your Health</h2>
-        
+        <h2>Affordable on Purpose</h2>
+
         <div class="special-offer" style="margin-bottom: 60px;">
-            <h3><i class="fa-solid fa-gift"></i> Limited Time: New Client Special</h3>
+            <h3><i class="fa-solid fa-gift"></i> Mondays Are Always Free</h3>
             <p style="font-size: 1.2rem; margin-bottom: 25px; color: white;">
-                Get your first month at a discounted rate!<br>
-                <span style="font-size: 1rem;">Save up to $50 per session! Offer ends Aug 31st.</span>
+                Show up, sign in, and move with your neighbors. No surprises, no upsells.
+                <span style="display:block; font-size: 1rem; margin-top:10px;">If you love it, come back mid-week for just a few dollars.</span>
             </p>
-            <a href="#" class="btn btn-white open-apply">Claim Special Offer</a>
+            <a href="#" class="btn btn-white open-apply">Reserve for Monday</a>
         </div>
-        
+
         <div class="pricing-grid">
             <div class="pricing-card">
-                <h3>1-on-1 Training</h3>
-                <div class="price-original">$119-149</div>
-                <div class="price">$79-99</div>
-                <p class="price-note">per 45-minute session</p>
-                 <div class="promo-badge">Offer ends Aug 31st</div>
+                <h3>Monday Community Class</h3>
+                <div class="price">$0</div>
+                <p class="price-note">Everyone welcome</p>
+                <div class="promo-badge">No cap, but RSVP helps</div>
                 <ul class="pricing-features">
-                    <li>Dedicated coach for entire program</li>
-                    <li>Weekly director oversight</li>
-                    <li>Custom program design</li>
-                    <li>All equipment provided</li>
-                    <li>Nutrition coaching included</li>
-                    <li>Fit2Go app with 24h support</li>
-                    <li>Monthly reassessments</li>
+                    <li>Gentle warmup + bodyweight basics</li>
+                    <li>Kid-friendly spaces nearby</li>
+                    <li>Chairs available for seated options</li>
                 </ul>
-                <a href="#" class="btn btn-primary open-apply">Get Started</a>
+                <a href="#" class="btn btn-primary open-apply">RSVP Free</a>
             </div>
-            
+
             <div class="pricing-card featured">
-                <h3>Semi-Private (2-4)</h3>
-                 <div class="price-original">$89-109</div>
-                <div class="price">$59-79</div>
-                <p class="price-note">per person, per session</p>
-                <div class="promo-badge">Offer ends Aug 31st</div>
+                <h3>Wednesday Skill Builder</h3>
+                <div class="price">$5</div>
+                <p class="price-note">Pay-what-you-can option</p>
+                <div class="promo-badge">Sliding scale available</div>
                 <ul class="pricing-features">
-                    <li>Share cost with friends/family</li>
-                    <li>Individual programs within group</li>
-                    <li>Same dedicated coach model</li>
-                    <li>Fun partner exercises</li>
-                    <li>All premium features included</li>
-                    <li>20% savings per person</li>
-                    <li>Perfect for couples</li>
+                    <li>Form coaching for strength moves</li>
+                    <li>Small-group attention</li>
+                    <li>Mobility drills to ease stress</li>
                 </ul>
-                <a href="#" class="btn btn-primary open-apply">Get Started</a>
+                <a href="#" class="btn btn-primary open-apply">Save My Spot</a>
             </div>
-            
+
             <div class="pricing-card">
-                <h3>Virtual Training</h3>
-                <div class="price-original">$79-99</div>
-                <div class="price">$69-89</div>
-                <p class="price-note">per live video session</p>
-                <div class="promo-badge">Offer ends Aug 31st</div>
+                <h3>Friday Finish Strong</h3>
+                <div class="price">$10</div>
+                <p class="price-note">Drop-in welcome</p>
+                <div class="promo-badge">Includes music + mats</div>
                 <ul class="pricing-features">
-                    <li>Live 1-on-1 video coaching</li>
-                    <li>Perfect for travelers</li>
-                    <li>Form checks via video</li>
-                    <li>Equipment recommendations</li>
-                    <li>Same app features</li>
-                    <li>Most affordable option</li>
-                    <li>Train from anywhere</li>
+                    <li>Upbeat circuits with plenty of breaks</li>
+                    <li>Partner options for extra motivation</li>
+                    <li>Cool-down stretch to start your weekend</li>
                 </ul>
-                <a href="#" class="btn btn-primary open-apply">Get Started</a>
+                <a href="#" class="btn btn-primary open-apply">Join Friday</a>
             </div>
         </div>
     </div>
@@ -1587,94 +1518,70 @@ section {
 <section id="faq">
     <div class="container">
         <h2>Frequently Asked Questions</h2>
-        
+
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question">
-                    How is Fit2Go different from other in-home training services?
+                    What should I bring?
                     <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
                 </div>
                 <div class="faq-answer">
                     <p>
-                        Unlike franchises like GymGuyz that rotate trainers, Fit2Go has been locally owned 
-                        since 2013. You get one dedicated coach who designs your program, leads every session, 
-                        and conducts all reassessments. Your trainer meets weekly with our Director to review 
-                        your progress. We're the only service with a 100% satisfaction guarantee and 24-hour 
-                        response commitment.
+                        Comfortable shoes, a water bottle, and a light jacket if it's breezy. We provide mats, resistance bands,
+                        chairs for seated options, and sanitizer. If you have kids, feel free to bring them — we set up near
+                        playgrounds when possible.
                     </p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
-                    What's included in the free assessment?
+                    How do payments work for Wednesday and Friday?
                     <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
                 </div>
                 <div class="faq-answer">
                     <p>
-                        Your 60-minute assessment includes bio-electrical impedance body composition analysis, 
-                        full mobility screening, cardio and strength testing, personalized calorie/macro targets, 
-                        a 7-day custom meal plan, and immediate access to the Fit2Go app with pre-loaded 
-                        workouts. It's a $300 value, completely free with no obligation.
+                        We keep it simple: $5 on Wednesdays, $10 on Fridays. Cash, Venmo, or Cash App on-site. If money is
+                        tight, pay what you can — we just want you moving with us.
                     </p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
-                    What areas of McLean do you serve?
+                    What happens if it rains?
                     <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
                 </div>
                 <div class="faq-answer">
                     <p>
-                        We serve all of McLean including Langley, West McLean, downtown McLean, and surrounding 
-                        areas like Tysons Corner, Great Falls, Vienna, and Arlington. We also offer sessions at 
-                        Nottoway Park, Clemyjontri Park, and McLean Central Park.
+                        We'll text updates the morning of class. If weather looks rough, we shift to an indoor community space
+                        nearby or run a shorter, sheltered session. Your RSVP helps us plan the best backup.
                     </p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
-                    What if I don't have equipment or space?
+                    Are beginners welcome?
                     <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
                 </div>
                 <div class="faq-answer">
                     <p>
-                        No problem! Our trainers bring everything needed including dumbbells, resistance bands, 
-                        TRX systems, agility equipment, and exercise mats. We only need about 6x6 feet of space — 
-                        a living room, bedroom, patio, or garage works perfectly. Many clients also train in 
-                        their building's gym or outdoors.
+                        Absolutely. Every move has a seated, supported, and advanced version. We cap intensity before it becomes
+                        intimidating and check in often to keep everyone safe.
                     </p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
-                    How quickly will I see results?
+                    Can I bring family members?
                     <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
                 </div>
                 <div class="faq-answer">
                     <p>
-                        Most clients report feeling stronger and more energetic within 2 weeks. Visible changes 
-                        typically occur within 4-6 weeks with consistent training and nutrition adherence. We 
-                        offer a 100% satisfaction guarantee. Your monthly reassessments 
-                        track exact changes in muscle mass, body fat, and performance metrics.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    Can I train with my spouse or friends?
-                    <i class="fa-solid fa-chevron-down faq-toggle" aria-hidden="true"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>
-                        Absolutely! Our semi-private training (2-4 people) is perfect for couples, friends, or 
-                        neighbors who want to train together. You'll each get individualized programs based on 
-                        your fitness levels and goals, while enjoying the motivation of working out together. 
-                        Plus, you'll save 20% compared to 1-on-1 training.
+                        Yes! Teens and adults can join the workout. Younger kids can hang out nearby. The more neighbors, the
+                        better the energy.
                     </p>
                 </div>
             </div>
@@ -1686,18 +1593,17 @@ section {
 <section class="cta-section">
     <div class="container">
         <div class="guarantee-badge">
-            <i class="fa-solid fa-shield-heart premium-icon" aria-hidden="true"></i> 100% SATISFACTION GUARANTEE
+            <i class="fa-solid fa-shield-heart premium-icon" aria-hidden="true"></i> ACCESSIBLE FOR EVERY NEIGHBOR
         </div>
-        <h2>Ready to Transform Your Health Without Leaving McLean?</h2>
+        <h2>Ready for Recess?</h2>
         <p>
-            Join 500+ Northern Virginia professionals who've made fitness fit their lifestyle. 
-            Limited trainer availability ensures personalized attention for every client.
+            Claim your free Monday class and we'll text you the meetup spot, what to bring, and how to request indoor options if you need them.
         </p>
         <a href="#" class="btn btn-white open-apply" style="font-size: 1.1rem; padding: 20px 50px;">
-            Apply for Your Free Assessment
+            Reserve My Free Monday
         </a>
         <p style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.9;">
-            Applications reviewed within 24 hours • Currently booking assessments for late July
+            We confirm within 24 hours • Sliding-scale seats available every week
         </p>
     </div>
 </section>
@@ -1705,28 +1611,26 @@ section {
 <!-- Contact Section -->
 <section id="contact" class="section-dark" style="padding: 80px 0;">
     <div class="container">
-        <h2>Ready to Get Started?</h2>
+        <h2>Questions or Group Requests?</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; max-width: 900px; margin: 50px auto 0;">
             <div style="text-align: center;">
-                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Call or Text</h3>
+                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Text or Call</h3>
                 <p style="font-size: 1.5rem; font-weight: 700; margin: 10px 0;">
-                    <a href="tel:+17038549587" style="color: var(--fit2go-white);">(703) 854-9587</a>
+                    <a href="tel:+14435551234" style="color: var(--fit2go-white);">(443) 555-1234</a>
                 </p>
-                <p>Response within 2 hours during business hours</p>
+                <p>Fastest way to confirm your spot or request indoor access</p>
             </div>
             <div style="text-align: center;">
-                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Email Us</h3>
+                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Email</h3>
                 <p style="font-size: 1.2rem; margin: 10px 0;">
-                    <a href="mailto:info@fit2gopt.com" style="color: var(--fit2go-white);">info@fit2gopt.com</a>
+                    <a href="mailto:hello@oceancityrecess.com" style="color: var(--fit2go-white);">hello@oceancityrecess.com</a>
                 </p>
-                <p>Detailed questions? We'll respond within 24 hours</p>
+                <p>Ask about childcare spots, accessibility needs, or group bookings</p>
             </div>
             <div style="text-align: center;">
-                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Book Online</h3>
-                <a href="#" class="btn btn-primary open-apply" style="margin: 10px 0;">
-                    Schedule Free Assessment
-                </a>
-                <p>Choose a time that works for you</p>
+                <h3 style="color: var(--fit2go-light-green); margin-bottom: 1rem;">Meetup Zones</h3>
+                <p style="font-size: 1.1rem; margin: 10px 0;">Boardwalk • Northside Park • Bayside community centers</p>
+                <p>We share exact locations via text the day before class</p>
             </div>
         </div>
     </div>
@@ -1737,51 +1641,43 @@ section {
     <div class="container">
         <div class="footer-content">
             <div class="footer-brand">
-                <img src="https://www.fit2gopt.com/wp-content/uploads/2019/05/Contrast-logo.png" alt="Fit2Go Logo">
-                <p>McLean's premier in-home personal training service since 2013.</p>
-                <p class="footer-contact">
-                    <strong>Direct:</strong> <a href="tel:+17038549587">(703) 854-9587</a><br>
-                    <strong>Email:</strong> <a href="mailto:info@fit2gopt.com">info@fit2gopt.com</a>
-                </p>
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <div style="width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, var(--fit2go-dark-green), var(--fit2go-light-green)); display:flex; align-items:center; justify-content:center; color: var(--fit2go-white); font-weight:800; font-family: var(--font-heading); letter-spacing: 0.02em; box-shadow: 0 6px 16px rgba(0,0,0,0.2);">OC</div>
+                    <span style="font-weight:800; font-size:1.05rem; color: var(--fit2go-white); text-transform:uppercase; letter-spacing:0.08em;">Ocean City Recess</span>
+                </div>
+                <p style="margin-top: 15px;">Sliding-scale community fitness for Ocean City residents.</p>
             </div>
-            
+
             <div class="footer-section">
-                <h4>Quick Links</h4>
+                <h4>Schedule</h4>
                 <ul>
-                    <li><a href="https://www.fit2gopt.com">Main Website</a></li>
-                    <li><a href="https://www.fit2gopt.com/about-us">About Fit2Go</a></li>
-                    <li><a href="https://www.fit2gopt.com/fit2go-approach">Our Approach</a></li>
-                    <li><a href="#faq">FAQs</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
+                    <li>Monday: Free Community Class</li>
+                    <li>Wednesday: $5 Skill Builder</li>
+                    <li>Friday: $10 Finish Strong</li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
-                <h4>Service Areas</h4>
+                <h4>Contact</h4>
                 <ul>
-                    <li>McLean (22101, 22102)</li>
-                    <li>Tysons Corner</li>
-                    <li>Great Falls</li>
-                    <li>Vienna</li>
-                    <li>Arlington</li>
-                    <li>Langley</li>
+                    <li><a href="tel:+14435551234">(443) 555-1234</a></li>
+                    <li><a href="mailto:hello@oceancityrecess.com">hello@oceancityrecess.com</a></li>
+                    <li>Meetups across Ocean City, MD</li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
-                <h4>Popular Locations</h4>
+                <h4>Follow</h4>
                 <ul>
-                    <li>Nottoway Park</li>
-                    <li>McLean Central Park</li>
-                    <li>Clemyjontri Park</li>
-                    <li>Home Visits</li>
-                    <li>Office Gyms</li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Community Updates</a></li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
-            <p>© 2025 Fit2Go Personal Training, LLC. All rights reserved. | Licensed & Insured</p>
+            <p>© 2025 Ocean City Recess. Designed for community wellness.</p>
         </div>
     </div>
 </footer>
@@ -1790,17 +1686,17 @@ section {
 <div id="apply-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="apply-title" aria-hidden="true" tabindex="-1">
     <div class="modal-content">
         <button type="button" class="modal-close" aria-label="Close">&times;</button>
-<h2 id="apply-title" class="apply-heading">Let's Discuss Your Fitness Goals</h2>
-<p class="apply-intro" style="text-align: center;">Fill out the form below to get started.</p>
+        <h2 id="apply-title" class="apply-heading">Reserve Your Spot for Ocean City Recess</h2>
+        <p class="apply-intro" style="text-align: center;">Tell us how to reach you and which days you're eyeing. We'll confirm within 24 hours.</p>
         <form id="apply-form">
             <div class="input-grid">
                 <div class="form-field">
                     <label for="firstName">First Name</label>
-                    <input id="firstName" type="text" name="firstName"  pattern="[A-Za-z\s'-]+" autocomplete="given-name" required>
+                    <input id="firstName" type="text" name="firstName" pattern="[A-Za-z\s'-]+" autocomplete="given-name" required>
                 </div>
                 <div class="form-field">
                     <label for="lastName">Last Name</label>
-                    <input id="lastName" type="text" name="lastName"  pattern="[A-Za-z\s'-]+" autocomplete="family-name" required>
+                    <input id="lastName" type="text" name="lastName" pattern="[A-Za-z\s'-]+" autocomplete="family-name" required>
                 </div>
                 <div class="form-field">
                     <label for="email">Email Address</label>
@@ -1808,23 +1704,23 @@ section {
                 </div>
                 <div class="form-field">
                     <label for="phone">Phone Number</label>
-                    <input id="phone" type="tel" name="phone"  pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
+                    <input id="phone" type="tel" name="phone" pattern="[0-9\-\s()+]{7,}" autocomplete="tel" required>
                 </div>
                 <div class="form-field" style="grid-column: 1 / -1;">
-                    <label for="goals">Describe Your Fitness Goals</label>
-                    <textarea id="goals" name="goals"  aria-describedby="goal-help" required></textarea>
-                    <p id="goal-help" class="visually-hidden">Describe one clear goal so we can match you with the right trainer.</p>
+                    <label for="goals">What do you want from Recess?</label>
+                    <textarea id="goals" name="goals" aria-describedby="goal-help" required></textarea>
+                    <p id="goal-help" class="visually-hidden">Tell us your main goal so we can prep the right modifications.</p>
                 </div>
                 <div class="form-field">
-                    <label for="zip">Zip Code</label>
-                    <input id="zip" type="text" name="zip"  pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
+                    <label for="zip">Ocean City Zip Code</label>
+                    <input id="zip" type="text" name="zip" pattern="\d{5}(?:-\d{4})?" autocomplete="postal-code" required>
                 </div>
                 <div class="form-field">
-                    <label for="referral">How Did You Hear About Us?</label>
-                    <input id="referral" type="text" name="referral"  required>
+                    <label for="referral">Preferred Day(s)</label>
+                    <input id="referral" type="text" name="referral" placeholder="Monday / Wednesday / Friday" required>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">SUBMIT APPLICATION</button>
+            <button type="submit" class="btn btn-primary">SAVE MY SPOT</button>
         </form>
     </div>
 </div>
@@ -1841,6 +1737,7 @@ document.querySelectorAll('.faq-question').forEach(item => {
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        if (this.getAttribute('href') === '#') return;
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
@@ -1853,7 +1750,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
 
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
@@ -1929,7 +1825,6 @@ form.addEventListener('submit', e => {
     modal.classList.remove('active');
     modal.setAttribute('aria-hidden', 'true');
 
-    // Send form data to Google Apps Script to trigger the email
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwVbEZ91H5pIJTkWo5cvBbCo4Zfzk-hgOG_lDcg3RXB_fLipSR5rI__-DeBXqzwCHlL/exec';
     fetch(scriptURL, {
         method: 'POST',
@@ -1944,28 +1839,19 @@ form.addEventListener('submit', e => {
             phone,
             zip,
             referral,
-            goals
+            goals,
+            source: 'Ocean City Recess Landing Page'
         })
     });
-
-    const redirectUrl =
-        `https://fit2go.youcanbook.me/?service=Fit2Go+Consultation+(Phone)` +
-        `&FNAME=${encodeURIComponent(firstName)}` +
-        `&LNAME=${encodeURIComponent(lastName)}` +
-        `&EMAIL=${encodeURIComponent(email)}` +
-        `&PHONE=+1${encodeURIComponent(phone)}` +
-        `&GOAL=${encodeURIComponent(goals)}` +
-        `&ZIP=${encodeURIComponent(zip)}` +
-        `&REFERREDBY=${encodeURIComponent(referral)}`;
 
     form.reset();
 
     setTimeout(() => {
-        window.location.href = redirectUrl;
-    }, 500);
+        alert('Thanks for saving your spot! We will text and email you with meetup details.');
+        if (lastTrigger) lastTrigger.focus();
+    }, 300);
 });
 </script>
 
 </body>
 </html>
-
