@@ -63,19 +63,18 @@
 
         /* Hero */
         .hero {
-            background: url('https://images.unsplash.com/photo-1508896694512-9beaf4995a7a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            background: linear-gradient(120deg, #0c1727 0%, #0f7f0f 100%);
             color: var(--fit2go-white);
             position: relative;
             min-height: 85vh;
             display: flex;
             align-items: center;
         }
-        .hero::before {
-            content: "";
-            position: absolute; inset: 0;
-            background: linear-gradient(120deg, rgba(11,21,35,0.82) 20%, rgba(20,136,12,0.65) 100%);
-        }
-        .hero-content { position: relative; z-index: 2; max-width: 650px; }
+        .hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 28px; align-items: center; position: relative; z-index: 2; }
+        .hero-visual { position: relative; }
+        .hero-visual img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; box-shadow: 0 18px 45px rgba(0,0,0,0.35); border: 3px solid rgba(255,255,255,0.12); }
+        .hero-visual::after { content: ""; position: absolute; inset: 0; border-radius: 18px; background: linear-gradient(180deg, rgba(20,136,12,0.25) 0%, rgba(0,0,0,0.35) 100%); pointer-events: none; }
+        .hero-content { max-width: 650px; }
         .hero h1 { font-family: var(--font-heading); font-size: 3.2rem; line-height: 1.2; margin-bottom: 18px; }
         .hero p { color: rgba(255,255,255,0.92); font-size: 1.15rem; margin-bottom: 28px; }
         .hero-badges { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
@@ -102,6 +101,12 @@
         .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 26px; align-items: center; }
         .about p { color: rgba(255,255,255,0.9); }
         .about h3 { font-family: var(--font-heading); margin-bottom: 10px; }
+
+        .gallery { background: var(--bg-light-gray); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 18px; }
+        .gallery-card { position: relative; overflow: hidden; border-radius: 14px; box-shadow: 0 12px 28px rgba(0,0,0,0.08); }
+        .gallery-card img { width: 100%; height: 100%; object-fit: cover; min-height: 220px; }
+        .gallery-label { position: absolute; left: 12px; bottom: 12px; background: rgba(0,0,0,0.55); color: #fff; padding: 8px 12px; border-radius: 999px; font-weight: 700; letter-spacing: 0.01em; }
 
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 20px; }
         .process-card { background: var(--fit2go-white); border-radius: 14px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 4px solid var(--fit2go-light-green); }
@@ -184,18 +189,26 @@
 
     <header class="hero" id="top">
         <div class="container">
-            <div class="hero-content">
-                <div class="badge">New Launch • Ocean City</div>
-                <h1>Ocean City Recess</h1>
-                <p>Monday is for everybody—free community fitness that feels like a playground. Love it? Come back Wednesday or Friday for $5-$10 drop-in sessions built for neighbors, parents, and friends.</p>
-                <div class="hero-badges">
-                    <span class="badge"><i class="fa-solid fa-heart"></i> Community-first</span>
-                    <span class="badge"><i class="fa-solid fa-sun"></i> Beachside energy</span>
-                    <span class="badge"><i class="fa-solid fa-dollar-sign"></i> Budget-friendly</span>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="badge">New Launch • Ocean City</div>
+                    <h1>Ocean City Recess</h1>
+                    <p>Monday is for everybody—free community fitness that feels like a playground. Love it? Come back Wednesday or Friday for $5-$10 drop-in sessions built for neighbors, parents, and friends.</p>
+                    <div class="hero-badges">
+                        <span class="badge"><i class="fa-solid fa-heart"></i> Community-first</span>
+                        <span class="badge"><i class="fa-solid fa-sun"></i> Beachside energy</span>
+                        <span class="badge"><i class="fa-solid fa-dollar-sign"></i> Budget-friendly</span>
+                    </div>
+                    <div class="hero-cta">
+                        <a class="btn btn-primary btn-large open-apply" href="#">Reserve Your Spot</a>
+                        <a class="btn btn-white" href="#pricing">See the plan</a>
+                    </div>
                 </div>
-                <div class="hero-cta">
-                    <a class="btn btn-primary btn-large open-apply" href="#">Reserve Your Spot</a>
-                    <a class="btn btn-white" href="#pricing">See the plan</a>
+                <div class="hero-visual" aria-hidden="true">
+                    <picture>
+                        <source srcset="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80" media="(min-width: 769px)">
+                        <img src="https://images.unsplash.com/photo-1502901930015-158e7228b4a7?auto=format&fit=crop&w=1200&q=80" alt="Neighbors doing outdoor cardio together near the beach"> 
+                    </picture>
                 </div>
             </div>
         </div>
@@ -262,6 +275,27 @@
                 </div>
                 <div>
                     <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1200&q=80" alt="Neighbors stretching together on the boardwalk at sunrise">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" aria-label="Ocean City Recess photos">
+        <div class="container">
+            <h2>See the crew in action</h2>
+            <p class="section-lead">Real movement, real neighbors. These are the kinds of moments you can expect when you pull up.</p>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80" alt="Coach leading an outdoor warmup on the boardwalk">
+                    <span class="gallery-label">Warmup & mobility</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1200&q=80" alt="Neighbors stretching together near the ocean">
+                    <span class="gallery-label">Family-friendly stretch</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1502901930015-158e7228b4a7?auto=format&fit=crop&w=1200&q=80" alt="Group doing partner drills outdoors">
+                    <span class="gallery-label">Partner games</span>
                 </div>
             </div>
         </div>
